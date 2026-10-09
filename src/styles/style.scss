@@ -1,0 +1,396 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+    background-color: rgb(42, 47, 11);
+}
+
+h4 {
+    font-weight: normal;
+    color: whitesmoke;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav {
+    position: relative; //pour le logo des langues
+}
+
+nav ul {
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+    li {
+        list-style-type: none;
+        cursor: pointer;
+    }
+}
+
+img, i {
+    user-select: none; /*pour enlever la barre de selection de texte sur les images*/
+}
+
+#bgTitreAccueil {
+    background: url("../assets/img/fondTitreAccueil.jpg") fixed center/cover;
+}
+
+#titreHeader {
+    color: white;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#titreNav {
+    color: orangered;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#langues {
+    color: whitesmoke;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    li {
+        background-color: rgb(42, 47, 11);
+        color: whitesmoke;
+        padding: 0.3rem;
+        &:hover {
+            background: rgb(141, 93, 4);
+        }
+    }
+}
+
+#languesCachees {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#langueNavbar:hover ~ #languesCachees,
+#languesCachees:hover {
+    visibility: visible;
+}
+
+#languesCachees {
+    visibility: hidden;
+}
+
+#langueNavbar {
+    background: rgb(141, 93, 4);
+    border-radius: 10px;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+}
+
+#langueNavbar {
+    text-align: center
+}
+
+.fa-car {
+    margin: 1rem 0;
+}
+
+#reparation {
+    padding: 1rem;
+}
+#repContainer {
+    background: rgba(22 22 24,);
+    color: white;
+}
+
+#introRepContainer {
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
+    margin: 0 0 0 1rem;
+    justify-content: center;
+}
+
+#bullesRepContainer {
+    display: grid;
+    grid-template-columns: 33.33% 33.34% 33.33%;
+    transition: 0.5s ease;
+    & > :nth-child(1) {
+        background: rgb(253 104 20);
+    }
+    & > :nth-child(2) {
+        background: rgb(98 145 175);
+    }
+    & > :nth-child(3) {
+        background: rgb(154, 43, 154);
+    }
+    &:has(> :nth-child(1):hover) {
+        grid-template-columns: 50% 25% 25%;
+    } //au survol de l'enfant, on agit sur le parent
+    &:has(> :nth-child(2):hover) {
+        grid-template-columns: 25% 50% 25%;
+    }
+    &:has(> :nth-child(3):hover) {
+        grid-template-columns: 25% 25% 50%
+    }
+}
+
+.bulleRep {
+    min-height: 29.6rem;
+    color: rgb(22 22 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &:hover {
+        .textePresentation {
+            visibility: hidden;
+        }
+        .texteApprofondi {
+            visibility: visible;
+        }
+    }
+}
+
+.textePresentation {
+    position: absolute;
+}
+.texteApprofondi {
+    visibility: hidden;
+    position: absolute;
+    & span {
+        color: rgb(4, 79, 4);
+    }
+}
+
+.titreBulle {
+    margin: 0 0 2rem 0;
+}
+.contenuBulle {
+    p {
+        transition: color 0.2s ease;
+        cursor: pointer;
+    }
+    p:hover {
+        color: rgb(85, 88, 85);
+    }
+}
+.psRep {
+    margin: 1rem 0 0 0;
+}
+
+#nouveautes {
+    background: url("../assets/img/boisDecor.jpg") center/cover;
+    text-align: center;
+    padding: 0 0 40px 4vw;
+    h4 {
+        padding: 15px 0;
+        margin-right: 2vw;
+        color: rgb(81, 54, 19);
+        font-weight: bold;
+    }
+}
+
+#nouvVoitures {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: url("../assets/img/acier1.jpg") center/cover;
+    //background: rgb(193, 180, 180);
+    border-radius: 15px;
+    width: 87vw;
+    p {
+        color: rgb(94, 7, 7);
+        text-shadow: whitesmoke 0px 0px 10px;
+    }
+}
+
+.nouvVoitTitre {
+    margin: 0.5rem 0;
+}
+
+.nouvVoitDescr {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.5rem 0;
+}
+
+.cercleFleche {
+    border: 1px rgb(112, 24, 24) solid;
+    border-radius: 25px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.imgVoiture {
+    height: 18vw;
+    border-radius: 15px;
+}
+
+.vis {
+    position: absolute;
+    height: 23px;
+}
+
+#vis1 {
+    right: 0.9vw;
+    top: 10px;
+}
+
+#vis2 {
+    left: 0.9vw;
+    bottom: 10px;
+}
+
+#formRechVoiture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#trouverVoitureEtPresentation {
+    padding: 0.5rem 0 0 0;
+    height: 31rem;
+}
+
+#trouverVoitureContainer {
+    text-align: center;
+    background: aliceblue;
+    background: rgbc(240, 248, 255, 0.8);
+    width: 40%;
+    margin: 4rem 0 0 30%;
+    h4 {
+        color: rgb(15, 15, 15);
+        margin: 1rem;
+        padding: 1rem 0 0 0;
+    }
+    input, select, submit, p {
+        margin: 0 0 1rem 0;
+    }
+}
+
+#presentation {
+    display: flex;
+    align-items: center;
+    padding: 6rem 0 0 0;
+    min-height: 300px;
+}
+
+#presentationContainer {
+    margin: 2rem 0 0 0;
+    background: rgb(198, 224, 234);
+    position: relative;
+    margin: 0 20%;
+}
+
+#imgPresentation {
+    position: absolute;
+    bottom: 93%;
+    left: 50%;
+    background: url("../assets/img/photoSteve.jpg") center/cover;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 100%;
+}
+
+#textePresentation {
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+#infosGarage {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.contenuInfos {
+    border: 1px dashed rgb(16, 11, 69);
+    margin: 10px;
+    justify-items: center;
+    align-content: center;
+    min-height: 15rem;
+}
+
+.fa-calendar-days {
+    margin: 0 0 0.5rem 0;
+}
+
+#heures {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+}
+
+#ferme {
+    color: rgb(183, 3, 3);
+}
+
+#fondFinal {
+    background: url("../assets/img/fond7.jpg");
+    background-size: cover;
+    min-height: 25rem;
+    margin: 11.9rem 0 0 0;
+}
+
+footer {
+    display:grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    background: rgb(19, 19, 19);
+    color: rgb(245, 245, 245);
+    align-items: center;
+    min-height: 10rem;
+    justify-items: center;
+    text-align: center;
+}
+
+#descFooter {
+    color: rgb(245, 145, 109);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    span {
+        font-size: 1.6rem;
+        color: rgb(208, 135, 0);
+        line-height: 0; //le guillemet ne cree pas d'espace inutile
+        vertical-align: middle; //il est abaissé pour qu'on puisse lire le texte
+    }
+}
+
+#adresseFooter {
+    font-size: 0.9rem;
+}
+
+.interractif p {
+    font-size: 0.85rem;
+    &:hover {
+        color: aqua;
+        cursor: pointer;
+    }
+}
+
+h6 {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+#logosFooter {
+    h5 {
+        color: rgb(171, 171, 171);
+        font-size: 0.95rem;
+        margin: 0 0 0.5rem 0 ;
+    }
+    i:hover {
+        color: aqua;
+        cursor: pointer;
+    }
+}

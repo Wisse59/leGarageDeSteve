@@ -1,0 +1,462 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: rgb(42, 47, 11);
+}
+
+h4 {
+  font-weight: normal;
+  color: whitesmoke;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0.5rem 0;
+}
+nav ul li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+img, i {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; /*pour enlever la barre de selection de texte sur les images*/
+}
+
+#bgTitreAccueil {
+  background: url("../assets/img/fondTitreAccueil.jpg") fixed center/cover;
+}
+
+#titreHeader {
+  color: white;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#titreNav {
+  color: orangered;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#langues {
+  color: whitesmoke;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#langues li {
+  background-color: rgb(42, 47, 11);
+  color: whitesmoke;
+  padding: 0.3rem;
+}
+#langues li:hover {
+  background: rgb(141, 93, 4);
+}
+
+#languesCachees {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#langueNavbar:hover ~ #languesCachees,
+#languesCachees:hover {
+  visibility: visible;
+}
+
+#languesCachees {
+  visibility: hidden;
+}
+
+#langueNavbar {
+  background: rgb(141, 93, 4);
+  border-radius: 10px;
+  padding: 0.1rem 0.5rem;
+  cursor: pointer;
+}
+
+#langueNavbar {
+  text-align: center;
+}
+
+.fa-car {
+  margin: 1rem 0;
+}
+
+#reparation {
+  padding: 1rem;
+}
+
+#repContainer {
+  background: rgb(22, 22, 24);
+  color: white;
+}
+
+#introRepContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 4rem;
+  margin: 0 0 0 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#bullesRepContainer {
+  display: grid;
+  grid-template-columns: 33.33% 33.34% 33.33%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+#bullesRepContainer > :nth-child(1) {
+  background: rgb(253, 104, 20);
+}
+#bullesRepContainer > :nth-child(2) {
+  background: rgb(98, 145, 175);
+}
+#bullesRepContainer > :nth-child(3) {
+  background: rgb(154, 43, 154);
+}
+#bullesRepContainer:has(> :nth-child(1):hover) {
+  grid-template-columns: 50% 25% 25%;
+}
+#bullesRepContainer:has(> :nth-child(2):hover) {
+  grid-template-columns: 25% 50% 25%;
+}
+#bullesRepContainer:has(> :nth-child(3):hover) {
+  grid-template-columns: 25% 25% 50%;
+}
+
+.bulleRep {
+  min-height: 29.6rem;
+  color: rgb(22, 22, 24);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.bulleRep:hover .textePresentation {
+  visibility: hidden;
+}
+.bulleRep:hover .texteApprofondi {
+  visibility: visible;
+}
+
+.textePresentation {
+  position: absolute;
+}
+
+.texteApprofondi {
+  visibility: hidden;
+  position: absolute;
+}
+.texteApprofondi span {
+  color: rgb(4, 79, 4);
+}
+
+.titreBulle {
+  margin: 0 0 2rem 0;
+}
+
+.contenuBulle p {
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+.contenuBulle p:hover {
+  color: rgb(85, 88, 85);
+}
+
+.psRep {
+  margin: 1rem 0 0 0;
+}
+
+#nouveautes {
+  background: url("../assets/img/boisDecor.jpg") center/cover;
+  text-align: center;
+  padding: 0 0 40px 4vw;
+}
+#nouveautes h4 {
+  padding: 15px 0;
+  margin-right: 2vw;
+  color: rgb(81, 54, 19);
+  font-weight: bold;
+}
+
+#nouvVoitures {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: url("../assets/img/acier1.jpg") center/cover;
+  border-radius: 15px;
+  width: 87vw;
+}
+#nouvVoitures p {
+  color: rgb(94, 7, 7);
+  text-shadow: whitesmoke 0px 0px 10px;
+}
+
+.nouvVoitTitre {
+  margin: 0.5rem 0;
+}
+
+.nouvVoitDescr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0.5rem 0;
+}
+
+.cercleFleche {
+  border: 1px rgb(112, 24, 24) solid;
+  border-radius: 25px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.imgVoiture {
+  height: 18vw;
+  border-radius: 15px;
+}
+
+.vis {
+  position: absolute;
+  height: 23px;
+}
+
+#vis1 {
+  right: 0.9vw;
+  top: 10px;
+}
+
+#vis2 {
+  left: 0.9vw;
+  bottom: 10px;
+}
+
+#formRechVoiture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#trouverVoitureEtPresentation {
+  padding: 0.5rem 0 0 0;
+  height: 31rem;
+}
+
+#trouverVoitureContainer {
+  text-align: center;
+  background: aliceblue;
+  background: rgbc(240, 248, 255, 0.8);
+  width: 40%;
+  margin: 4rem 0 0 30%;
+}
+#trouverVoitureContainer h4 {
+  color: rgb(15, 15, 15);
+  margin: 1rem;
+  padding: 1rem 0 0 0;
+}
+#trouverVoitureContainer input, #trouverVoitureContainer select, #trouverVoitureContainer submit, #trouverVoitureContainer p {
+  margin: 0 0 1rem 0;
+}
+
+#presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6rem 0 0 0;
+  min-height: 300px;
+}
+
+#presentationContainer {
+  margin: 2rem 0 0 0;
+  background: rgb(198, 224, 234);
+  position: relative;
+  margin: 0 20%;
+}
+
+#imgPresentation {
+  position: absolute;
+  bottom: 93%;
+  left: 50%;
+  background: url("../assets/img/photoSteve.jpg") center/cover;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 100%;
+}
+
+#textePresentation {
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+#infosGarage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.contenuInfos {
+  border: 1px dashed rgb(16, 11, 69);
+  margin: 10px;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  min-height: 15rem;
+}
+
+.fa-calendar-days {
+  margin: 0 0 0.5rem 0;
+}
+
+#heures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 0 0 0;
+}
+
+#ferme {
+  color: rgb(183, 3, 3);
+}
+
+#fondFinal {
+  background: url("../assets/img/fond7.jpg");
+  background-size: cover;
+  min-height: 25rem;
+  margin: 11.9rem 0 0 0;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
+  background: rgb(19, 19, 19);
+  color: rgb(245, 245, 245);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10rem;
+  justify-items: center;
+  text-align: center;
+}
+
+#descFooter {
+  color: rgb(245, 145, 109);
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+#descFooter span {
+  font-size: 1.6rem;
+  color: rgb(208, 135, 0);
+  line-height: 0;
+  vertical-align: middle;
+}
+
+#adresseFooter {
+  font-size: 0.9rem;
+}
+
+.interractif p {
+  font-size: 0.85rem;
+}
+.interractif p:hover {
+  color: aqua;
+  cursor: pointer;
+}
+
+h6 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+#logosFooter h5 {
+  color: rgb(171, 171, 171);
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem 0;
+}
+#logosFooter i:hover {
+  color: aqua;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
