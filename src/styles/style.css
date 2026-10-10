@@ -459,4 +459,18 @@ h6 {
 #logosFooter i:hover {
   color: aqua;
   cursor: pointer;
+}
+
+#voitures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+}
+
+.voiture {
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../components/Navigation";
+import visDecor from "../assets/img/visDecor.png";
 
 const Accueil = () => {
   return (
@@ -118,8 +119,8 @@ const Accueil = () => {
                   </div>
               </div>
               <p className="cercleFleche"><i className="fa-solid fa-arrow-right"></i></p>
-              <img src="/assets/img/visDecor.png" alt="une vis pour la deco" className="vis" id="vis1" />
-              <img src="/assets/img/visDecor.png" alt="une vis pour la deco" className="vis" id="vis2" />
+              <img src={visDecor} alt="une vis pour la deco" className="vis" id="vis1" />
+              <img src={visDecor} alt="une vis pour la deco" className="vis" id="vis2" />
           </div>
       </section>
       <section id="trouverVoitureEtPresentation">
