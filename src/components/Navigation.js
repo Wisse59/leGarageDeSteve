@@ -18,7 +18,7 @@ const Navigation = () => {
                     <li>Actus</li>
                 </ul>
                     <div id="langues">
-                        <p id="langueNavbar"><i class="fa-solid fa-language"></i></p>
+                        <p id="langueNavbar"><i className="fa-solid fa-language"></i></p>
                         <ul id="languesCachees">
                             <li>Français</li>
                             <li>English</li>

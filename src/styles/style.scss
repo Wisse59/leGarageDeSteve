@@ -233,11 +233,6 @@ img, i {
     cursor: pointer;
 }
 
-.imgVoiture {
-    height: 18vw;
-    border-radius: 15px;
-}
-
 .vis {
     position: absolute;
     height: 23px;
@@ -278,6 +273,11 @@ img, i {
     input, select, submit, p {
         margin: 0 0 1rem 0;
     }
+}
+
+.imgVoiture {
+    height: 18vw;
+    border-radius: 15px;
 }
 
 #presentation {
@@ -398,8 +398,129 @@ h6 {
 #voitures {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0.5rem;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+.voiture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 32.9%;
+    color: whitesmoke;
+    background: rgb(17, 19, 4);
+    border-radius: 15px;
+    padding: 0.5rem 0;
+    img {
+        width: 380px;
+        height: 251px;
+        margin: 0.5rem 0 0 0;
+    }
+    span {
+        color: green;
+        display: flex;
+        margin: 0 0 0.5rem 0;
+    }
+    @media (max-width: 1260px) {
+        flex: 0 0 49.5%; /*2 cases pour la derniere ligne*/
+    }
+    @media (max-width: 828px) {
+        flex: 0 0 100%; /*1 case pour la derniere ligne*/
+    }
+}
+.infosSup {
+    text-align: center;
+}
+/* v1
+.voiture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 22%;
+    font-size: 0.9rem;
+    max-width: 24.34%; /*pour la derniere ligne
+    background-color: rgb(17, 19, 4);
+    color: whitesmoke;
+    padding: 0.5rem 0;
+    margin: 0.25rem;
+    border-radius: 15px;
+    img {
+        width: 90%;
+        margin: 1rem 0 0 0;
+        height: 14.6rem;
+        //max-height: 48.5%;
+        border-radius: 15px;
+    }
+    span {
+        color: green;
+        display: flex;
+        margin: 0 0 0.5rem 0;
+    }
+    @media (max-width: 675.5px) {
+        max-width: 31.8%; /*3 cases pour la derniere ligne
+    }
+    @media (max-width: 518.3px) {
+        max-width: 48%; /*2 cases pour la derniere ligne
+    }
+    @media (max-width: 345px) {
+        max-width: 100%;
+    }
+}*/
+
+/* v2
+#voitures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-block-start: 2rem;
 }
 .voiture {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 20%;
+  justify-items: start;
+  min-width: 180px;
+  max-width: 280px;
+  background-color: rgb(15, 15, 30);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 25px;
+  height: 40.4rem;
+}
+*/
+.choixPages {
+    margin-block-end: 1rem;
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+    li {
+        list-style-type: none;
+        button {
+            padding: 0.5rem;
+            border-radius: 15px;
+            cursor: pointer;
+            border: none; //pour retirer le contour gris
+            background: rgb(245, 145, 109);
+            //rgb(208, 135, 0);
+            width: 30px;
+            height: 30px;
+            margin: 0 0.1rem;
+        }
+    }
+}
+
+.boutonActif {
     background-color: red;
 }
+
+/*li {
+        padding: 0.5rem;
+        background: rgb(9, 9, 167);
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        list-style-type: none;
+        cursor: pointer;
+    }*/
