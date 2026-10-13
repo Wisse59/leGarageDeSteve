@@ -6,7 +6,7 @@
         "modele": "207",
         "lienImg": "https://carapi.trustcar.info/getImage?make=peugeot&model=207",
         "prix": 3200,
-        "km": "183 200",
+        "km": 183200,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2010,
@@ -14,7 +14,7 @@
         "nbPortes" : 4,
         "puissFiscale": 5,
         "puissDIN": 90,
-        "couleur" : "Noir"
+        "couleur" : "Noire"
     },
     {
         "id": 2,
@@ -23,7 +23,7 @@
         "modele": "Alto",
         "lienImg": "https://carapi.trustcar.info/getImage?make=suzuki&model=alto",
         "prix": 2400,
-        "km": "148 068",
+        "km": 148068,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2011,
@@ -31,7 +31,7 @@
         "nbPortes" : 5,
         "puissFiscale": 4,
         "puissDIN": 68,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 3,
@@ -40,7 +40,7 @@
         "modele": "C3",
         "lienImg": "https://carapi.trustcar.info/getImage?make=citroen&model=c3",
         "prix": 3450,
-        "km": "106 124",
+        "km": 106124,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2007,
@@ -48,7 +48,7 @@
         "nbPortes" : 5,
         "puissFiscale": 4,
         "puissDIN": 70,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 4,
@@ -57,7 +57,7 @@
         "modele": "Laguna",
         "lienImg": "https://carapi.trustcar.info/getImage?make=renault&model=laguna",
         "prix": 3800,
-        "km": "176 752",
+        "km": 176752,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2013,
@@ -65,7 +65,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 110,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 5,
@@ -74,7 +74,7 @@
         "modele": "Kangoo",
         "lienImg": "https://carapi.trustcar.info/getImage?make=renault&model=kangoo",
         "prix": 5200,
-        "km": "160 546",
+        "km": 160546,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2012,
@@ -82,7 +82,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 105,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 6,
@@ -91,7 +91,7 @@
         "modele": "Classe E 200",
         "lienImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Clonskeagh%2C_Co._Dublin_-_Ireland_%284278218639%29.jpg/960px-Clonskeagh%2C_Co._Dublin_-_Ireland_%284278218639%29.jpg",
         "prix": 5000,
-        "km": "198 082",
+        "km": 198082,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2007,
@@ -99,7 +99,7 @@
         "nbPortes" : 5,
         "puissFiscale": 9,
         "puissDIN": 136,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 7,
@@ -108,7 +108,7 @@
         "modele": "Ceed",
         "lienImg": "https://carapi.trustcar.info/getImage?make=kia&model=ceed",
         "prix": 4800,
-        "km": "137 528",
+        "km": 137528,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2011,
@@ -116,7 +116,7 @@
         "nbPortes" : 5,
         "puissFiscale": 7,
         "puissDIN": 115,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 8,
@@ -125,7 +125,7 @@
         "modele": "Ami (sans permis)",
         "lienImg": "https://carapi.trustcar.info/getImage?make=citroen&model=ami",
         "prix": 5400,
-        "km": "12 720",
+        "km": 12720,
         "carburant": "Électrique",
         "boiteVitesse": "Automatique",
         "annee": 2021,
@@ -133,7 +133,7 @@
         "nbPortes" : 2,
         "puissFiscale": 1,
         "puissDIN": 8,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 9,
@@ -142,7 +142,7 @@
         "modele": "Logan",
         "lienImg": "https://carapi.trustcar.info/getImage?make=dacia&model=logan",
         "prix": 3600,
-        "km": "146 502",
+        "km": 146502,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2013,
@@ -150,7 +150,7 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 75,
-        "couleur" : "??"
+        "couleur" : "Rouge"
     },
     {
         "id": 10,
@@ -159,7 +159,7 @@
         "modele": "Golf V",
         "lienImg": "https://carapi.trustcar.info/getImage?make=volkswagen&model=golf-v",
         "prix": 4800,
-        "km": "148 068",
+        "km": 148068,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2006,
@@ -167,7 +167,7 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 90,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 11,
@@ -176,7 +176,7 @@
         "modele": "Corsa",
         "lienImg": "https://carapi.trustcar.info/getImage?make=opel&model=corsa",
         "prix": 5300,
-        "km": "57 307",
+        "km": 57307,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2012,
@@ -184,7 +184,7 @@
         "nbPortes" : 5,
         "puissFiscale": 4,
         "puissDIN": 95,
-        "couleur" : "??"
+        "couleur" : "Orange"
     },
     {
         "id": 12,
@@ -193,7 +193,7 @@
         "modele": "Octavia",
         "lienImg": "https://carapi.trustcar.info/getImage?make=skoda&model=octavia-ii",
         "prix": 6500,
-        "km": "188 969",
+        "km": 188969,
         "carburant": "Essence",
         "boiteVitesse": "Automatique",
         "annee": 2013,
@@ -201,7 +201,7 @@
         "nbPortes" : 5,
         "puissFiscale": 10,
         "puissDIN": 180,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 13,
@@ -210,7 +210,7 @@
         "modele": "Jetta",
         "lienImg": "https://carapi.trustcar.info/getImage?make=volkswagen&model=jetta",
         "prix": 2400,
-        "km": "116 312",
+        "km": 116312,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2006,
@@ -218,7 +218,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 105,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 14,
@@ -227,7 +227,7 @@
         "modele": "Quashqai",
         "lienImg": "https://carapi.trustcar.info/getImage?make=nissan&model=quashqai",
         "prix": 2500,
-        "km": "162 652",
+        "km": 162652,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2009,
@@ -235,7 +235,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 105,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 15,
@@ -244,7 +244,7 @@
         "modele": "Zafira",
         "lienImg": "https://carapi.trustcar.info/getImage?make=opel&model=zafira",
         "prix": 2900,
-        "km": "197 107",
+        "km": 197107,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2011,
@@ -252,7 +252,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 110,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 16,
@@ -261,7 +261,7 @@
         "modele": "Nemo",
         "lienImg": "https://carapi.trustcar.info/getImage?make=citroen&model=nemo",
         "prix": 7100,
-        "km": "47 426",
+        "km": 47426,
         "carburant": "Diesel",
         "boiteVitesse": "Automatique",
         "annee": 2011,
@@ -269,7 +269,7 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 68,
-        "couleur" : "??"
+        "couleur" : "Rouge"
     },
     {
         "id": 17,
@@ -278,7 +278,7 @@
         "modele": "Vitara JLX",
         "lienImg": "https://upload.wikimedia.org/wikipedia/commons/7/71/Suzuki_Vitara_JLX_%281990%29_%2853984572149%29.jpg",
         "prix": 3300,
-        "km": "198 521",
+        "km": 198521,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2001,
@@ -286,7 +286,7 @@
         "nbPortes" : 3,
         "puissFiscale": 4,
         "puissDIN": 75,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 18,
@@ -295,7 +295,7 @@
         "modele": "Focus",
         "lienImg": "https://carapi.trustcar.info/getImage?make=ford&model=focus",
         "prix": 3900,
-        "km": "189 854",
+        "km": 189854,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2011,
@@ -303,7 +303,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 115,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 19,
@@ -312,7 +312,7 @@
         "modele": "Kangoo",
         "lienImg": "https://carapi.trustcar.info/getImage?make=renault&model=kangoo",
         "prix": 4200,
-        "km": "148 068",
+        "km": 148068,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2009,
@@ -320,7 +320,7 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 70,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 20,
@@ -329,7 +329,7 @@
         "modele": "A3",
         "lienImg": "https://carapi.trustcar.info/getImage?make=audi&model=a3",
         "prix": 5300,
-        "km": "153 313",
+        "km": 153313,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2011,
@@ -337,7 +337,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 105,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 21,
@@ -346,7 +346,7 @@
         "modele": "Note",
         "lienImg": "https://carapi.trustcar.info/getImage?make=nissan&model=note",
         "prix": 3000,
-        "km": "164 513",
+        "km": 164513,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2012,
@@ -354,7 +354,7 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 90,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 22,
@@ -363,7 +363,7 @@
         "modele": "Fiesta",
         "lienImg": "https://carapi.trustcar.info/getImage?make=ford&model=fiesta",
         "prix": 3150,
-        "km": "189 988",
+        "km": 189988,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2009,
@@ -371,7 +371,7 @@
         "nbPortes" : 5,
         "puissFiscale": 4,
         "puissDIN": 80,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 23,
@@ -380,7 +380,7 @@
         "modele": "Fabia",
         "lienImg": "https://carapi.trustcar.info/getImage?make=skoda&model=fabia",
         "prix": 3700,
-        "km": "175 426",
+        "km": 175426,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2010,
@@ -388,7 +388,7 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 90,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 24,
@@ -397,7 +397,7 @@
         "modele": "500",
         "lienImg": "https://carapi.trustcar.info/getImage?make=fiat&model=500",
         "prix": 6850,
-        "km": "148 068",
+        "km": 148068,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2017,
@@ -405,7 +405,7 @@
         "nbPortes" : 3,
         "puissFiscale": 4,
         "puissDIN": 69,
-        "couleur" : "??"
+        "couleur" : "Jaune"
     },
     {
         "id": 25,
@@ -414,7 +414,7 @@
         "modele": "3",
         "lienImg": "https://carapi.trustcar.info/getImage?make=clio&model=3",
         "prix": 3800,
-        "km": "142 548",
+        "km": 142548,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2010,
@@ -422,7 +422,7 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 75,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 26,
@@ -431,7 +431,7 @@
         "modele": "Captur",
         "lienImg": "https://carapi.trustcar.info/getImage?make=renault&model=captur",
         "prix": 6800,
-        "km": "147 021",
+        "km": 147021,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2011,
@@ -439,7 +439,7 @@
         "nbPortes" : 5,
         "puissFiscale": 4,
         "puissDIN": 90,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 27,
@@ -448,7 +448,7 @@
         "modele": "207",
         "lienImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Peugeot_207_Dreit%C3%BCrer.JPG/960px-Peugeot_207_Dreit%C3%BCrer.JPG",
         "prix": 2400,
-        "km": "178 268",
+        "km": 178268,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2008,
@@ -456,7 +456,7 @@
         "nbPortes" : 4,
         "puissFiscale": 6,
         "puissDIN": 110,
-        "couleur" : "Doré"
+        "couleur" : "Jaune"
     },
     {
         "id": 28,
@@ -465,7 +465,7 @@
         "modele": "Leaf",
         "lienImg": "https://carapi.trustcar.info/getImage?make=nissan&model=leaf",
         "prix": 14600,
-        "km": "57 223",
+        "km": 57223,
         "carburant": "Électrique",
         "boiteVitesse": "Automatique",
         "annee": 2022,
@@ -473,7 +473,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 150,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 29,
@@ -482,7 +482,7 @@
         "modele": "Ibiza",
         "lienImg": "https://carapi.trustcar.info/getImage?make=seat&model=ibiza",
         "prix": 14600,
-        "km": "32 694",
+        "km": 32694,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2023,
@@ -490,7 +490,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 95,
-        "couleur" : "??"
+        "couleur" : "Rouge"
     },
     {
         "id": 30,
@@ -499,7 +499,7 @@
         "modele": "Polo GTI",
         "lienImg": "https://carapi.trustcar.info/getImage?make=volkswagen&model=polo-gti",
         "prix": 11200,
-        "km": "120 300",
+        "km": 120300,
         "carburant": "Essence",
         "boiteVitesse": "Automatique",
         "annee": 2011,
@@ -507,7 +507,7 @@
         "nbPortes" : 3,
         "puissFiscale": 10,
         "puissDIN": 180,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 31,
@@ -516,7 +516,7 @@
         "modele": "Punto",
         "lienImg": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Fiat_Punto_2012_5door_front.JPG/960px-Fiat_Punto_2012_5door_front.JPG",
         "prix": 3250,
-        "km": "134 220",
+        "km": 134220,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2012,
@@ -524,7 +524,7 @@
         "nbPortes" : 3,
         "puissFiscale": 4,
         "puissDIN": 70,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 32,
@@ -533,7 +533,7 @@
         "modele": "Panda",
         "lienImg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Fiat_Panda_%28type_169%29_132144.jpg",
         "prix": 6900,
-        "km": "34 392",
+        "km": 34392,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2020,
@@ -541,7 +541,7 @@
         "nbPortes" : 5,
         "puissFiscale": 4,
         "puissDIN": 69,
-        "couleur" : "??"
+        "couleur" : "Rouge"
     },
     {
         "id": 33,
@@ -550,7 +550,7 @@
         "modele": "Avenger",
         "lienImg": "https://carapi.trustcar.info/getImage?make=jeep&model=avenger",
         "prix": 21400,
-        "km": "34 392",
+        "km": 34392,
         "carburant": "Hybride",
         "boiteVitesse": "Automatique",
         "annee": 2024,
@@ -558,7 +558,7 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 100,
-        "couleur" : "??"
+        "couleur" : "Noire"
     },
     {
         "id": 34,
@@ -567,7 +567,7 @@
         "modele": "Countryman",
         "lienImg": "https://carapi.trustcar.info/getImage?make=mini&model=countryman",
         "prix": 10600,
-        "km": "38 240",
+        "km": 38240,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2012,
@@ -575,7 +575,7 @@
         "nbPortes" : 5,
         "puissFiscale": 6,
         "puissDIN": 98,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 35,
@@ -584,7 +584,7 @@
         "modele": "Getz",
         "lienImg": "https://carapi.trustcar.info/getImage?make=hyundai&model=getz",
         "prix": 2700,
-        "km": "122 638",
+        "km": 122638,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2005,
@@ -592,7 +592,7 @@
         "nbPortes" : 5,
         "puissFiscale": 4,
         "puissDIN": 62,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 36,
@@ -601,7 +601,7 @@
         "modele": "XC40",
         "lienImg": "https://carapi.trustcar.info/getImage?make=volvo&model=xc40",
         "prix": 26220,
-        "km": "148 068",
+        "km": 148068,
         "carburant": "Hybride",
         "boiteVitesse": "Automatique",
         "annee": 2022,
@@ -609,7 +609,7 @@
         "nbPortes" : 5,
         "puissFiscale": 9,
         "puissDIN": 163,
-        "couleur" : "??"
+        "couleur" : "Blanche"
     },
     {
         "id": 37,
@@ -618,7 +618,7 @@
         "modele": "GT86",
         "lienImg": "https://carapi.trustcar.info/getImage?make=toyota&model=gt86",
         "prix": 21300,
-        "km": "112 071",
+        "km": 112071,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2012,
@@ -626,7 +626,7 @@
         "nbPortes" : 3,
         "puissFiscale": 12,
         "puissDIN": 200,
-        "couleur" : "??"
+        "couleur" : "Bleue"
     },
     {
         "id": 38,
@@ -635,7 +635,7 @@
         "modele": "Pixo",
         "lienImg": "https://carapi.trustcar.info/getImage?make=nissan&model=pixo",
         "prix": 2780,
-        "km": "149 409",
+        "km": 149409,
         "carburant": "Essence",
         "boiteVitesse": "Manuelle",
         "annee": 2011,
@@ -643,7 +643,7 @@
         "nbPortes" : 5,
         "puissFiscale": 4,
         "puissDIN": 68,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 39,
@@ -652,7 +652,7 @@
         "modele": "Tucson",
         "lienImg": "https://carapi.trustcar.info/getImage?make=hyundai&model=tucson",
         "prix": 15400,
-        "km": "94 692",
+        "km": 94692,
         "carburant": "Diesel",
         "boiteVitesse": "Automatique",
         "annee": 2019,
@@ -660,7 +660,7 @@
         "nbPortes" : 5,
         "puissFiscale": 7,
         "puissDIN": 136,
-        "couleur" : "??"
+        "couleur" : "Grise"
     },
     {
         "id": 40,
@@ -669,7 +669,7 @@
         "modele": "Berlingo",
         "lienImg": "https://carapi.trustcar.info/getImage?make=citroen&model=berlingo",
         "prix": 4900,
-        "km": "142 291",
+        "km": 142291,
         "carburant": "Diesel",
         "boiteVitesse": "Manuelle",
         "annee": 2008,
@@ -677,6 +677,6 @@
         "nbPortes" : 5,
         "puissFiscale": 5,
         "puissDIN": 75,
-        "couleur" : "??"
+        "couleur" : "Grise"
     }
 ]

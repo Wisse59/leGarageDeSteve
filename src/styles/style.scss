@@ -432,63 +432,6 @@ h6 {
 .infosSup {
     text-align: center;
 }
-/* v1
-.voiture {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 0 22%;
-    font-size: 0.9rem;
-    max-width: 24.34%; /*pour la derniere ligne
-    background-color: rgb(17, 19, 4);
-    color: whitesmoke;
-    padding: 0.5rem 0;
-    margin: 0.25rem;
-    border-radius: 15px;
-    img {
-        width: 90%;
-        margin: 1rem 0 0 0;
-        height: 14.6rem;
-        //max-height: 48.5%;
-        border-radius: 15px;
-    }
-    span {
-        color: green;
-        display: flex;
-        margin: 0 0 0.5rem 0;
-    }
-    @media (max-width: 675.5px) {
-        max-width: 31.8%; /*3 cases pour la derniere ligne
-    }
-    @media (max-width: 518.3px) {
-        max-width: 48%; /*2 cases pour la derniere ligne
-    }
-    @media (max-width: 345px) {
-        max-width: 100%;
-    }
-}*/
-
-/* v2
-#voitures {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-block-start: 2rem;
-}
-.voiture {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 20%;
-  justify-items: start;
-  min-width: 180px;
-  max-width: 280px;
-  background-color: rgb(15, 15, 30);
-  margin: 5px;
-  padding: 10px;
-  border-radius: 25px;
-  height: 40.4rem;
-}
-*/
 .choixPages {
     margin-block-end: 1rem;
     ul {
@@ -515,12 +458,63 @@ h6 {
     background-color: red;
 }
 
-/*li {
-        padding: 0.5rem;
-        background: rgb(9, 9, 167);
-        border-radius: 15px;
-        width: 30px;
-        height: 30px;
-        list-style-type: none;
-        cursor: pointer;
-    }*/
+#conditionsVoiture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: skyblue;
+}
+
+.valeurEtDonnee {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+#rechercheTxt {
+    background: skyblue;
+    color: rgba(14, 14, 82, 0.7);
+    border-radius: 5px;
+    border: none; //pour retirer le contour gris
+    text-align: center;
+    &::placeholder {
+        color: rgba(14, 14, 82, 0.7);
+    }
+}
+
+.choixAdditionnels {
+    background: skyblue;
+    color: rgba(14, 14, 82, 0.7);
+    border-radius: 5px;
+    border: 1px solid rgb(14, 14, 82);
+}
+
+.choixAddContainer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#selectionPrix {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0.1rem;
+}
+
+.unPrix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txtSelectionPrix {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+#texteEtPrix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

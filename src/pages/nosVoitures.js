@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Navigation from "../components/Navigation";
 import voituresOccasion from "../assets/json/voituresOccasion.json";
 
@@ -10,19 +10,22 @@ const NosVoitures = () => {
   let finPage = debutPage + 15;
   //1er et dernier id de voiture affiche par page
   
+  const refPage = useRef(noPage);
   useEffect(() => {
+    /*lorsque la page change, on se retrouve en bas de la page
+    afin qu'il soit plus simple de passer plusieurs pages a la suite*/
+    if (refPage.current !== noPage) { //pour eviter le cas de l'initialisation
       window.scrollTo({
           top: document.documentElement.scrollHeight
       });
+    }
+    refPage.current = noPage;
   }, [noPage]);
-  //lorsque la page change, on se retrouve en bas de la page
-  //afin qu'il soit plus simple de passer plusieurs pages a la suite
 
-  
   const [voirPlusActif, setVoirPlusActif] = useState(
     Array(voituresOccasion.length).fill(false)
   );
-  function activerUnBouton(i) {
+  function actionnerUnBouton(i) {
     if (voirPlusActif[i-1] === false) {
       setVoirPlusActif([
         ...voirPlusActif.slice(0, i-1),
@@ -59,42 +62,142 @@ const NosVoitures = () => {
     )
   };
   
+  const [recherche, setRecherche] = useState('');
+  const [prix, setPrix] = useState(30000);
+  const [km, setKm] = useState(250000);
+  const [carburant, setCarburant] = useState('Tous');
+  const [boiteVitesse, setBoiteVitesse] = useState('Toutes');
+  const [couleur, setCouleur] = useState('Toutes');
+  const[voituresTriees, setVoituresTriees] = useState(voituresOccasion);
+  useEffect(() => {        
+    setVoituresTriees(
+      voituresOccasion.filter((valeur) =>
+        valeur.marque.toLowerCase().includes(recherche.toLowerCase())
+        && (valeur.prix <= prix)
+        && (valeur.km <= km)
+        && ((valeur.carburant === carburant) || (carburant === 'Tous'))
+        && ((valeur.boiteVitesse === boiteVitesse) || (boiteVitesse === 'Toutes'))
+        && ((valeur.couleur === couleur) || (couleur === 'Toutes')))
+    )
+  }, [recherche, prix, km, carburant, boiteVitesse, couleur]);
+
+  const mesPrix = [0, 2500, 3000, 4500, 5000, 6000, 7000, 8000, 9000, 10000, 20000, 30000];
+  const [mesValeurs, setMesValeurs] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+  function trierPrix() {
+    const nouvValeurs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const voituresTrieesIndepPrix = voituresOccasion.filter((valeur) =>
+        valeur.marque.toLowerCase().includes(recherche.toLowerCase())
+        && (valeur.km <= km)
+        && ((valeur.carburant === carburant) || (carburant === 'Tous'))
+        && ((valeur.boiteVitesse === boiteVitesse) || (boiteVitesse === 'Toutes'))
+        && ((valeur.couleur === couleur) || (couleur === 'Toutes')));
+
+    voituresTrieesIndepPrix.map((valeur) => {
+      mesPrix.map((prix, i) => {
+        if (valeur.prix <= prix) {
+          nouvValeurs[i] = nouvValeurs[i] + 1;
+        }
+      })
+    })
+    setMesValeurs(nouvValeurs);
+  }
+
+  useEffect(() => {
+    setNoPagesTotal(Math.floor((voituresTriees.length-1)/15)+1);
+
+    trierPrix();
+  }, [voituresTriees]);
+
   return (
     <div className="nosVoitures">
         <Navigation />
+        <div id="recherchesNosVoitures">
+          <form id="conditionsVoiture">
+            <input id="rechercheTxt" type="text" placeholder="Cherchez un modèle" onChange={(e) => setRecherche(e.target.value)}></input>
+            <div id="texteEtPrix">
+              <p>Prix max</p>
+              <div id="selectionPrix">
+                {
+                  mesPrix.map((valeur, i) =>
+                    <div className="unPrix">
+                      <svg onClick={() => setPrix(valeur)} width="37" height={mesValeurs[i]}>
+                        <rect
+                        width="37" height={mesValeurs[i]} fill="skyblue" />
+                      </svg>
+                      <p className="txtSelectionPrix">{valeur}€</p>
+                    </div>
+                  )
+                }
+              </div>
+            </div>
+            <label htmlFor="voituresKm">Km max</label>
+            <div className="valeurEtDonnee">
+              <input type="range" id="voituresKm" max="500000" min="0" onChange={(e) => setKm(e.target.value)}/>
+              <p>{Number(km).toLocaleString('fr-FR')} km</p>
+            </div> {/*affiche 20 000 au lieu de 20000*/}
+            <div className="choixAddContainer">
+              <p>Type de carburant :</p>
+              <select className="choixAdditionnels" defaultValue="Tous" onChange={(e) => setCarburant(e.target.value)}>
+                <option value='Tous'>Tous</option>
+                <option value='Essence'>Essence</option>
+                <option value='Diesel'>Diesel</option>
+                <option value='Électrique'>Électrique</option>
+                <option value='Hybride'>Hybride</option>
+              </select>
+            </div>
+            <div className="choixAddContainer">
+              <p>Boite à vitesse :</p>
+              <select className="choixAdditionnels" defaultValue="Toutes" onChange={(e) => setBoiteVitesse(e.target.value)}>
+                <option value='Toutes' selected="selected">Toutes</option>
+                <option value='Manuelle'>Manuelle</option>
+                <option value='Automatique'>Automatique</option>
+              </select>
+            </div>
+            <div className="choixAddContainer">
+              <p>Couleur :</p>
+              <select className="choixAdditionnels" defaultValue="Toutes" onChange={(e) => setCouleur(e.target.value)}>
+                <option value='Toutes' selected="selected">Toutes</option>
+                <option value='Noire'>Noire</option>
+                <option value='Blanche'>Blanche</option>
+                <option value='Rouge'>Rouge</option>
+                <option value='Bleue'>Bleue</option>
+                <option value='Jaune'>Jaune</option>
+              </select>
+            </div>
+          </form>
+        </div>
         <div id="voitures">
           {
-            voituresOccasion.slice(debutPage, finPage).map((valeur) => {
-              return (
-                <div className='voiture' key={valeur.id}>
-                  <p>{valeur.marque} {valeur.modele}</p>
-                  <img src={valeur.lienImg} alt={`voiture ${valeur.marque} ${valeur.modele}`} />
-                  <p><span>{valeur.prix} €</span></p>
-                  <p>{valeur.km} km</p>
-                  <p>{valeur.carburant}</p>
-                  <p>{valeur.boiteVitesse}</p>
-                  <p>{valeur.annee}</p>
-                  <button onClick={() => (activerUnBouton(valeur.id))}>Voir plus</button>
-                  {
-                    voirPlusActif[valeur.id-1]===true && (
-                        <div className="infosSup">
-                          <p>{valeur.nbPlaces} places</p>
-                          <p>{valeur.nbPortes} portes</p>
-                          <p>Puissance fiscale : {valeur.puissFiscale} CV</p>
-                          <p>Puissance DIN : {valeur.puissDIN} CH</p>
-                          <p>Couleur : {valeur.couleur}</p>
-                        </div>
-                    )
-                  }
-                </div>
-              )
+            voituresTriees.slice(debutPage, finPage).map((valeur) => {
+                return (
+                  <div className='voiture' key={valeur.id}>
+                    <p>{valeur.marque} {valeur.modele}</p>
+                    <img src={valeur.lienImg} alt={`voiture ${valeur.marque} ${valeur.modele}`} />
+                    <p><span>{valeur.prix} €</span></p>
+                    <p>{valeur.km} km</p>
+                    <p>{valeur.carburant}</p>
+                    <p>{valeur.boiteVitesse}</p>
+                    <p>{valeur.annee}</p>
+                    <button onClick={() => (actionnerUnBouton(valeur.id))}>Voir plus</button>
+                    {
+                      voirPlusActif[valeur.id-1]===true && (
+                          <div className="infosSup">
+                            <p>{valeur.nbPlaces} places</p>
+                            <p>{valeur.nbPortes} portes</p>
+                            <p>Puissance fiscale : {valeur.puissFiscale} CV</p>
+                            <p>Puissance DIN : {valeur.puissDIN} CH</p>
+                            <p>Couleur : {valeur.couleur}</p>
+                          </div>
+                      )
+                    }
+                  </div>
+                )
             })
           }
         </div>
         <div className="choixPages">
           <ul>
             <li><button onClick={() => reculerPage()}><i className="fa-solid fa-angles-left"></i></button></li>
-            {/* className={(boutonPage) => (boutonPage.isActive ? "boutonActif" : "")} */}
             {choixPages}
             <li><button onClick={() => avancerPage()}><i className="fa-solid fa-angles-right"></i></button></li>
           </ul>
