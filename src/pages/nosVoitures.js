@@ -63,7 +63,7 @@ const NosVoitures = () => {
   };
   
   const [recherche, setRecherche] = useState('');
-  const [prix, setPrix] = useState(30000);
+  const [prix, setPrix] = useState(30001);
   const [km, setKm] = useState(250000);
   const [carburant, setCarburant] = useState('Tous');
   const [boiteVitesse, setBoiteVitesse] = useState('Toutes');
@@ -72,7 +72,7 @@ const NosVoitures = () => {
   useEffect(() => {        
     setVoituresTriees(
       voituresOccasion.filter((valeur) =>
-        valeur.marque.toLowerCase().includes(recherche.toLowerCase())
+        (valeur.marque+" "+valeur.modele).toLowerCase().includes(recherche.toLowerCase())
         && (valeur.prix <= prix)
         && (valeur.km <= km)
         && ((valeur.carburant === carburant) || (carburant === 'Tous'))
@@ -111,6 +111,16 @@ const NosVoitures = () => {
   return (
     <div className="nosVoitures">
         <Navigation />
+        <div id='introNosVoituresContainer'>
+          <div id='introNosVoitures'>
+            <p>Bienvenue dans la section de vente de nos voitures !</p>
+            <p>Ici, vous pouvez voir les véhicules disponibles afin de</p>
+            <p>prendre rendez-vous pour vérifier l'état d'un véhicule en</p>
+            <p>personne et de l'essayer si vous souhaitez l'acheter.</p>
+            <br/>
+            <p>Bonne recherche !</p>
+          </div>
+        </div>
         <div id="recherchesNosVoitures">
           <form id="conditionsVoiture">
             <input id="rechercheTxt" type="text" placeholder="Cherchez un modèle" onChange={(e) => setRecherche(e.target.value)}></input>
@@ -119,10 +129,10 @@ const NosVoitures = () => {
               <div id="selectionPrix">
                 {
                   mesPrix.map((valeur, i) =>
-                    <div className="unPrix">
-                      <svg onClick={() => setPrix(valeur)} width="37" height={mesValeurs[i]}>
+                    <div className="unPrix" onClick={() => setPrix(valeur)}>
+                      <svg width="37" height={mesValeurs[i]}>
                         <rect
-                        width="37" height={mesValeurs[i]} fill="skyblue" />
+                        width="37" height={mesValeurs[i]} fill={prix === mesPrix[i]? 'rgb(237, 98, 80)' : 'rgb(60, 198, 205)'} />
                       </svg>
                       <p className="txtSelectionPrix">{valeur}€</p>
                     </div>
@@ -168,6 +178,16 @@ const NosVoitures = () => {
         </div>
         <div id="voitures">
           {
+            (voituresTriees.length === 0) && (
+              <div id="resultatsVidesContainer">
+                <div id="resultatsVides">
+                  <p>Aucun résultat n'a été trouvé !</p>
+                  <p>Veuillez revoir les critères.</p>
+                </div>
+              </div>
+            )
+          }
+          {
             voituresTriees.slice(debutPage, finPage).map((valeur) => {
                 return (
                   <div className='voiture' key={valeur.id}>
@@ -178,7 +198,11 @@ const NosVoitures = () => {
                     <p>{valeur.carburant}</p>
                     <p>{valeur.boiteVitesse}</p>
                     <p>{valeur.annee}</p>
-                    <button onClick={() => (actionnerUnBouton(valeur.id))}>Voir plus</button>
+                    {
+                      voirPlusActif[valeur.id-1]===false && (
+                        <button className="boutonVoir" onClick={() => (actionnerUnBouton(valeur.id))}>Voir plus</button>
+                      )
+                    }
                     {
                       voirPlusActif[valeur.id-1]===true && (
                           <div className="infosSup">
@@ -187,6 +211,7 @@ const NosVoitures = () => {
                             <p>Puissance fiscale : {valeur.puissFiscale} CV</p>
                             <p>Puissance DIN : {valeur.puissDIN} CH</p>
                             <p>Couleur : {valeur.couleur}</p>
+                            <button className="boutonVoir" onClick={() => (actionnerUnBouton(valeur.id))}>Voir moins</button>
                           </div>
                       )
                     }

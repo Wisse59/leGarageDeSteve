@@ -14,7 +14,9 @@ const Navigation = () => {
                         <li>Nos Voitures</li>
                     </NavLink>
                     <li id="titreNav">Le Garage de Steve</li>
-                    <li>Prendre RDV</li>
+                    <NavLink to="/prendre-rdv" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                        <li>Prendre RDV</li>
+                    </NavLink>
                     <li>Actus</li>
                 </ul>
                     <div id="langues">

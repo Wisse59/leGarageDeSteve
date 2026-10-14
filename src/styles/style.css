@@ -461,6 +461,37 @@ h6 {
   cursor: pointer;
 }
 
+#introNosVoituresContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#introNosVoitures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(4, 4, 63, 0.7);
+  color: rgb(60, 198, 205);
+  -webkit-margin-before: 1.3rem;
+          margin-block-start: 1.3rem;
+  -webkit-margin-after: 1.8rem;
+          margin-block-end: 1.8rem;
+  width: 26rem;
+  padding: 1rem 0;
+  border-radius: 25px;
+}
+
 #voitures {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -469,8 +500,8 @@ h6 {
       flex-wrap: wrap;
   gap: 0.5rem;
   margin: 0 0.5rem;
-  -webkit-margin-before: 1rem;
-          margin-block-start: 1rem;
+  -webkit-margin-before: 1.8rem;
+          margin-block-start: 1.8rem;
   -webkit-margin-after: 1rem;
           margin-block-end: 1rem;
 }
@@ -521,6 +552,15 @@ h6 {
   }
 }
 
+.boutonVoir {
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  background: rgb(245, 145, 109);
+  margin: 0.2rem 0;
+}
+
 .infosSup {
   text-align: center;
 }
@@ -569,7 +609,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: skyblue;
+  color: rgb(60, 198, 205);
 }
 
 .valeurEtDonnee {
@@ -581,12 +621,14 @@ h6 {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0.5rem;
+  -webkit-margin-after: 0.7rem;
+          margin-block-end: 0.7rem;
 }
 
 #rechercheTxt {
-  background: skyblue;
+  background: rgb(60, 198, 205);
   color: rgba(14, 14, 82, 0.7);
-  border-radius: 5px;
+  border-radius: 12px;
   border: none;
   text-align: center;
 }
@@ -605,9 +647,13 @@ h6 {
 #rechercheTxt::placeholder {
   color: rgba(14, 14, 82, 0.7);
 }
+#rechercheTxt {
+  width: 19.8rem;
+  height: 2.2rem;
+}
 
 .choixAdditionnels {
-  background: skyblue;
+  background: rgb(60, 198, 205);
   color: rgba(14, 14, 82, 0.7);
   border-radius: 5px;
   border: 1px solid rgb(14, 14, 82);
@@ -618,6 +664,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  line-height: 1.55rem;
 }
 
 #selectionPrix {
@@ -632,6 +679,8 @@ h6 {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 0.1rem;
+  -webkit-margin-before: 0.4rem;
+          margin-block-start: 0.4rem;
 }
 
 .unPrix {
@@ -645,6 +694,11 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .txtSelectionPrix {
@@ -663,4 +717,38 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  -webkit-margin-after: 0.9rem;
+          margin-block-end: 0.9rem;
+}
+
+#resultatsVidesContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#resultatsVides {
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgb(17, 19, 4);
+  width: 15rem;
+  padding: 1rem 0;
+  border-radius: 25px;
+  -webkit-margin-after: 0.7rem;
+          margin-block-end: 0.7rem;
 }/*# sourceMappingURL=style.css.map */
