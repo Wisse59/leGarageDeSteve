@@ -891,4 +891,33 @@ button[type=submit] {
 button[type=submit]:hover {
   background-color: rgb(228, 82, 82);
   color: white;
+}
+
+@font-face {
+  font-family: Caveat;
+  src: url(../assets/fonts/Caveat.ttf);
+}
+#postsFacebook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+#postsFacebook p {
+  color: whitesmoke;
+  font-size: 1.8rem;
+  font-family: Caveat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 0 1.5rem 0;
+}
+
+.postFacebook {
+  background-color: aliceblue;
 }/*# sourceMappingURL=style.css.map */

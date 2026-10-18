@@ -126,6 +126,7 @@ const RDV = () => {
                         {(((horaireChoisie[0] < 8) || //avant 8h
                         (horaireChoisie[0] > 17) || //apres 17h
                         (horaireChoisie[0] === 13) || //pause du midi
+                        ((horaireChoisie[0] === 12) && (horaireChoisie[1] > 30)) ||
                         ((jourChoisi === 3) && (horaireChoisie[0] > 11))) && //horaires du mercredi
                         (jourChoisi !== 0) //le cas du dimanche est separe
                         ) && (
@@ -135,7 +136,7 @@ const RDV = () => {
                             </div>
                         )}
                         {((((horaireChoisie[0] === 17) && (horaireChoisie[1] > 10)) || //20min avant la fermeture
-                        ((horaireChoisie[0] === 12) && (horaireChoisie[1] > 10)) || //20min avant la pause de midi
+                        ((horaireChoisie[0] === 12) && ((horaireChoisie[1] > 10) && (horaireChoisie[1] < 31))) || //20min avant la pause de midi
                         ((horaireChoisie[0] === 11) && (horaireChoisie[1] > 40))) && //20min avant la fermeture du mercredi
                         (jourChoisi !== 0) //le cas du dimanche est separe
                         ) && (

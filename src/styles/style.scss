@@ -663,3 +663,25 @@ button[type="submit"] {
         color: white;
     }
 }
+
+@font-face {
+    font-family : Caveat;
+    src: url(../assets/fonts/Caveat.ttf);
+}
+
+#postsFacebook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1rem;
+    p {
+        color: whitesmoke;
+        font-size: 1.8rem;
+        font-family: Caveat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0 0 1.5rem 0;
+    }
+}
+.postFacebook {
+    background-color: aliceblue;
+}

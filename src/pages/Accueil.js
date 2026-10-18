@@ -1,7 +1,19 @@
 import Navigation from "../components/Navigation";
 import visDecor from "../assets/img/visDecor.png";
+import voituresOccasion from "../assets/json/voituresOccasion.json";
+import { useEffect, useState } from "react";
 
 const Accueil = () => {
+    const [marquesDispo, setMarquesDispo] = useState([]);
+
+    useEffect(() => {
+        setMarquesDispo(
+            [...new Set(voituresOccasion.map((voiture) => voiture.marque))]
+        );
+    }, [])
+    console.log(marquesDispo);
+
+
   return (
     <div className="accueil">
       <header>
@@ -126,19 +138,22 @@ const Accueil = () => {
           <div id="trouverVoitureContainer">
               <h4>Trouvez votre voiture :</h4>
               <form action="rechVoiture" id="formRechVoiture">
-                  <label for="rechMarque">Marque : </label>
+                  <label htmlFor="rechMarque">Marque : </label>
                   <select id="rechMarque">
-                      <option value="Peugeot">Peugeot</option>
-                      <option value="Renault">Renault</option>
+                    {
+                        marquesDispo.map((marque) => (
+                            <option value={marque}>{marque}</option>
+                        ))
+                    }
                   </select>
-                  <label for="rechModele">Modèle : </label>
+                  <label htmlFor="rechModele">Modèle : </label>
                   <select id="rechModele">
                       <option value="Peugeot">Megane</option>
                       <option value="Renault">207</option>
                   </select>
-                  <label for="rechPrix">Prix : </label>
+                  <label htmlFor="rechPrix">Prix : </label>
                   <input type="range" id="rechPrix" max="80000" />
-                  <label for="rechKm">Km max</label>
+                  <label htmlFor="rechKm">Km max</label>
                   <input type="range" id="rechKm" max="350000" />
                   <button type="submit">Rechercher (X résultats)</button>
                   <p>(Plus de critères disponibles ici. à cliquer)</p>
@@ -202,7 +217,7 @@ const Accueil = () => {
           </div>
           <div id="logosFooter">
               <h5 className="gris">Nous suivre</h5>
-              <p><i className="fa-brands fa-facebook-f"></i><i className="fa-brands fa-x-twitter"></i><i className="fa-brands fa-instagram"></i><i className="fa-brands fa-youtube"></i><i className="fa-brands fa-tiktok"></i></p>
+              <a href="https://www.facebook.com/profile.php?id=61595204774831"><i className="fa-brands fa-facebook-f"></i><i className="fa-brands fa-x-twitter"></i><i className="fa-brands fa-instagram"></i><i className="fa-brands fa-youtube"></i><i className="fa-brands fa-tiktok"></i></a>
           </div>
       </footer>
     </div>
