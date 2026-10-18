@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import '../styles/style.css';
 
@@ -13,11 +12,15 @@ const Navigation = () => {
                     <NavLink to="/nos-voitures" className={(nav) => (nav.isActive ? "nav-active" : "")}>
                         <li>Nos Voitures</li>
                     </NavLink>
-                    <li id="titreNav">Le Garage de Steve</li>
+                    <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                        <li id="titreNav">Le Garage de Steve</li>
+                    </NavLink>
                     <NavLink to="/prendre-rdv" className={(nav) => (nav.isActive ? "nav-active" : "")}>
                         <li>Prendre RDV</li>
                     </NavLink>
-                    <li>Actus</li>
+                    <NavLink to="/actus" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                        <li>Actus</li>
+                    </NavLink>
                 </ul>
                     <div id="langues">
                         <p id="langueNavbar"><i className="fa-solid fa-language"></i></p>

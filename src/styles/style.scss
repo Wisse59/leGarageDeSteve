@@ -34,6 +34,10 @@ nav ul {
     }
 }
 
+.nav-active {
+    color: rgb(87, 193, 234);
+}
+
 img, i {
     user-select: none; /*pour enlever la barre de selection de texte sur les images*/
 }
@@ -569,4 +573,93 @@ h6 {
     padding: 1rem 0;
     border-radius: 25px;
     margin-block-end: 0.7rem;
+}
+
+.pageRDV {
+    background: url("../assets/img/fondRDV.jpg") center/cover;
+    height: 100vh;
+    width: 100%;
+}
+
+#rdvContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#rdv {
+    margin-block-start: 8.9rem;
+    background-color: rgba(14, 14, 82, 0.85);
+    color: rgb(60, 198, 205);
+    width: 22%;
+    height: 25rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#raisonRDV {
+    display: flex;
+    flex-direction: column;
+    select {
+        background: rgb(60, 198, 205);
+        color: rgba(14, 14, 82, 0.7);
+        border-radius: 5px;
+        border: 1px solid rgb(14, 14, 82);
+    }
+}
+
+#jourRDV, #heureRDV, .sectionRDV [type="submit"] {
+    background: rgba(60, 198, 205, 0);
+    color: rgb(60, 198, 205);
+    border-radius: 5px;
+    border: 1px solid rgb(60, 198, 205);
+    cursor: pointer;
+
+    //pour changer la couleur des icones d'input
+    &::-webkit-calendar-picker-indicator {
+        filter: invert(72%) sepia(45%) saturate(600%)
+                hue-rotate(135deg) brightness(95%) contrast(90%);
+        //on trouve ce code grace au site CSS Color to Filter Generator
+    }
+}
+
+.sectionRDV {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#introRDV {
+    font-size: 1.5rem;
+}
+
+#motifContainer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#motifContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+.msgErreurForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(236, 65, 65);
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+
+button[type="submit"] {
+    padding: 0.1rem 0.2rem;
+    &:hover {
+        background-color: rgb(228, 82, 82);
+        color: white;
+    }
 }

@@ -39,6 +39,10 @@ nav ul li {
   cursor: pointer;
 }
 
+.nav-active {
+  color: rgb(87, 193, 234);
+}
+
 img, i {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -751,4 +755,140 @@ h6 {
   border-radius: 25px;
   -webkit-margin-after: 0.7rem;
           margin-block-end: 0.7rem;
+}
+
+.pageRDV {
+  background: url("../assets/img/fondRDV.jpg") center/cover;
+  height: 100vh;
+  width: 100%;
+}
+
+#rdvContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#rdv {
+  -webkit-margin-before: 8.9rem;
+          margin-block-start: 8.9rem;
+  background-color: rgba(14, 14, 82, 0.85);
+  color: rgb(60, 198, 205);
+  width: 22%;
+  height: 25rem;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#raisonRDV {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#raisonRDV select {
+  background: rgb(60, 198, 205);
+  color: rgba(14, 14, 82, 0.7);
+  border-radius: 5px;
+  border: 1px solid rgb(14, 14, 82);
+}
+
+#jourRDV, #heureRDV, .sectionRDV [type=submit] {
+  background: rgba(60, 198, 205, 0);
+  color: rgb(60, 198, 205);
+  border-radius: 5px;
+  border: 1px solid rgb(60, 198, 205);
+  cursor: pointer;
+}
+#jourRDV::-webkit-calendar-picker-indicator, #heureRDV::-webkit-calendar-picker-indicator, .sectionRDV [type=submit]::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(72%) sepia(45%) saturate(600%) hue-rotate(135deg) brightness(95%) contrast(90%);
+          filter: invert(72%) sepia(45%) saturate(600%) hue-rotate(135deg) brightness(95%) contrast(90%);
+}
+
+.sectionRDV {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#introRDV {
+  font-size: 1.5rem;
+}
+
+#motifContainer1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#motifContainer2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.3rem;
+}
+
+.msgErreurForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(236, 65, 65);
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+button[type=submit] {
+  padding: 0.1rem 0.2rem;
+}
+button[type=submit]:hover {
+  background-color: rgb(228, 82, 82);
+  color: white;
 }/*# sourceMappingURL=style.css.map */
