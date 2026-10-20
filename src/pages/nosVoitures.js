@@ -1,8 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 import Navigation from "../components/Navigation";
+import { useLocation } from 'react-router-dom';
 import voituresOccasion from "../assets/json/voituresOccasion.json";
 
-const NosVoitures = () => {
+const NosVoitures = ({ afficherPopUp, setAfficherPopUp }) => {  
+  const recevoir = useLocation();
+  const { 
+    marqueChoisie, 
+    modeleChoisi, 
+    prixAccueil, 
+    kmMaxAccueil,
+    noVC, 
+    carouselEstActif
+  } = recevoir.state || {};
+  
   const [noPage, setNoPage] = useState(1);
   const [noPagesTotal, setNoPagesTotal] = useState(Math.floor((voituresOccasion.length-1)/15)+1);
   let debutPage = ((noPage-1)*14 + (noPage-1));
@@ -19,6 +30,21 @@ const NosVoitures = () => {
       });
     }
     refPage.current = noPage;
+
+    /*lorsque l'on choisit une voiture depuis le carousel de l'accueil*/
+    const voitureCarousel  = noVC ? document.getElementById('voiture-' + noVC) : null
+
+    if (carouselEstActif === true && voitureCarousel) {
+      voitureCarousel.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start' //en haut de l'ecran
+      });
+      setVoirPlusActif([
+        ...voirPlusActif.slice(0, noVC-1),
+        true,
+        ...voirPlusActif.slice(noVC)
+      ]);
+    }
   }, [noPage]);
 
   const [voirPlusActif, setVoirPlusActif] = useState(
@@ -80,12 +106,12 @@ const NosVoitures = () => {
     )
   }, [recherche, prix, km, carburant, boiteVitesse, couleur]);
 
-  const mesPrix = [0, 2500, 3000, 4500, 5000, 6000, 7000, 8000, 9000, 10000, 20000, 30000];
+  const mesPrix = [0, 2500, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 20000, 30000];
   const [mesValeurs, setMesValeurs] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   function trierPrix() {
     const nouvValeurs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     const voituresTrieesIndepPrix = voituresOccasion.filter((valeur) =>
-        valeur.marque.toLowerCase().includes(recherche.toLowerCase())
+        (valeur.marque + " " + valeur.modele).toLowerCase().includes(recherche.toLowerCase())
         && (valeur.km <= km)
         && ((valeur.carburant === carburant) || (carburant === 'Tous'))
         && ((valeur.boiteVitesse === boiteVitesse) || (boiteVitesse === 'Toutes'))
@@ -107,22 +133,54 @@ const NosVoitures = () => {
     trierPrix();
   }, [voituresTriees]);
 
+  useEffect(() => {    
+    if ((marqueChoisie !== undefined) && (modeleChoisi !== undefined)) {    
+      setRecherche(marqueChoisie + " " + modeleChoisi);
+    }
+    if (kmMaxAccueil !== undefined) {
+      setKm(kmMaxAccueil);
+    }
+
+    if (prixAccueil !== undefined) {
+      //les prix de l'accueil sont de 2500€ minimum
+      if (prixAccueil < 3000) {
+        setPrix(prixAccueil - (prixAccueil % 500))
+      } else if (prixAccueil < 10000) {
+        setPrix(prixAccueil - (prixAccueil % 1000))
+      } else if (prixAccueil < 30000) {
+        setPrix(prixAccueil - (prixAccueil % 10000))
+      } else {
+        setPrix(30000)
+      }
+    }
+  }, [marqueChoisie, modeleChoisi, prixAccueil, kmMaxAccueil ]);
+
+  useEffect(() => {
+    if (noVC) {
+      setNoPage((Math.floor((noVC-1)/15))+1);
+    }
+  }, []);
+
   return (
     <div className="nosVoitures">
         <Navigation />
         <div id='introNosVoituresContainer'>
-          <div id='introNosVoitures'>
-            <p>Bienvenue dans la section de vente de nos voitures !</p>
-            <p>Ici, vous pouvez voir les véhicules disponibles afin de</p>
-            <p>prendre rendez-vous pour vérifier l'état d'un véhicule en</p>
-            <p>personne et de l'essayer si vous souhaitez l'acheter.</p>
-            <br/>
-            <p>Bonne recherche !</p>
-          </div>
+          {
+          afficherPopUp && (
+            <div id='introNosVoitures'>
+              <p onClick={() => setAfficherPopUp(false)}><i class="fa-solid fa-circle-xmark"></i></p>
+              <p>Bienvenue dans la section de vente de nos voitures !</p>
+              <p>Ici, vous pouvez voir les véhicules disponibles afin de</p>
+              <p>prendre rendez-vous pour vérifier son état en personne</p>
+              <br/>
+              <p>Bonne recherche !</p>
+            </div>
+          )
+          }
         </div>
         <div id="recherchesNosVoitures">
           <form id="conditionsVoiture">
-            <input id="rechercheTxt" type="text" placeholder="Cherchez un modèle" onChange={(e) => setRecherche(e.target.value)}></input>
+            <input id="rechercheTxt" type="text" placeholder="Cherchez un modèle" value={recherche} onChange={(e) => setRecherche(e.target.value)}></input>
             <div id="texteEtPrix">
               <p>Prix max</p>
               <div id="selectionPrix">
@@ -189,7 +247,7 @@ const NosVoitures = () => {
           {
             voituresTriees.slice(debutPage, finPage).map((valeur) => {
                 return (
-                  <div className='voiture' key={valeur.id}>
+                  <div className='voiture' id={`voiture-${valeur.id}`} key={valeur.id}>
                     <p>{valeur.marque} {valeur.modele}</p>
                     <img src={valeur.lienImg} alt={`voiture ${valeur.marque} ${valeur.modele}`} />
                     <p><span>{valeur.prix} €</span></p>
