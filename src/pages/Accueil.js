@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import visDecor from "../assets/img/visDecor.png";
 import voituresOccasion from "../assets/json/voituresOccasion.json";
 import { useEffect, useState } from "react";
@@ -172,7 +173,8 @@ const Accueil = () => {
                               <p>La totale</p>
                           </div>
                           <div className="psRep">
-                              <p>Le prix dépend de la quantité à ajouter, la vérification est gratuite.</p>
+                              <p>Le prix dépend de la quantité à ajouter,</p>
+                              <p>la vérification est gratuite.</p>
                           </div>
                       </div>
                   </div>
@@ -202,7 +204,7 @@ const Accueil = () => {
                                 <p>{voiture.annee}</p>
                                 <p>{voiture.carburant}</p>
                                 <p>État : {voiture.etat}</p>
-                                <p><span>{voiture.prix}</span></p>
+                                <p><span>{voiture.prix}€</span></p>
                             </div>
                         </div>
                     )}
@@ -220,7 +222,8 @@ const Accueil = () => {
       </section>
       <section id="trouverVoitureEtPresentation">
           <div id="trouverVoitureContainer">
-              <h4>Trouvez votre voiture :</h4>
+              <div id="fondParchemin"></div>
+              <h4>Trouvez votre voiture !</h4>
               <form action="rechVoiture" id="formRechVoiture" onSubmit={envoiRecherche}>
                   <label htmlFor="rechMarque">Marque : </label>
                   <select id="rechMarque" defaultValue='Audi' onChange={(e) => setMarqueChoisie(e.target.value)}>
@@ -243,7 +246,7 @@ const Accueil = () => {
                     <input type="range" id="rechPrix" min="2500" max="30000" value={prixAccueil} onChange={(e) => setPrixAccueil(e.target.value)}/>
                     <p>{prixAccueil}</p>
                   </div>
-                  <label htmlFor="rechKm">Km max</label>
+                  <label htmlFor="rechKm">Km max :</label>
                   <div className="valeurEtDonneeAccueil">
                     <input type="range" id="rechKm" max="500000" value={kmMaxAccueil} onChange={(e) => setKmMaxAccueil(e.target.value)}/>
                     <p>{kmMaxAccueil}</p>
@@ -257,7 +260,7 @@ const Accueil = () => {
           <div id="presentation">
               <div id="presentationContainer">
                   <div id="imgPresentation"></div>
-                  <p id="textePresentation">Réputé à Condé-sur-l'Escaut pour mes services de très bonne qualité et mes prix imbattables, je m'occupe de ce garage depuis de nombreuses années. À la différence des entreprises aux nombreuses agences qui s'étallent pour s'étendre dans un monde capitaliste. Je vérifie moi-même chaque voiture avant de vous les proposer en vente, chacune étant garrantie deux ans. Pour les réparations, tout le matériel et la plupart des pièces de rechange sont d'ores et déjà à disposition. Faites-moi également confiance pour un lavage au top ou une remise à plomb. Le Garage de Steve est là pour vous !</p>
+                  <p id="textePresentation">Réputé à Condé-sur-l'Escaut pour mes services de très bonne qualité et mes prix imbattables, je m'occupe de ce garage depuis de nombreuses années. À la différence des entreprises aux nombreuses agences qui s'étallent sans connaître tous leurs employés. Je vérifie moi-même chaque voiture avant de vous les proposer en vente, chacune étant garrantie deux ans. Pour les réparations, tout le matériel et la plupart des pièces de rechange sont d'ores et déjà à disposition. Faites-moi également confiance pour un lavage au top ou une remise à plomb. Le Garage de Steve est là pour vous !</p>
                   <div id="infosGarage">
                       <div id="infosGauche">
                           <div className="contenuInfos">
@@ -287,34 +290,7 @@ const Accueil = () => {
       </section>
       <section id="fondFinal">
       </section>
-      <footer>
-          <div>
-              <h5>Le garage de Steve</h5>
-              <p id="descFooter"><span>“</span> Venez recevoir de l'aide en toute confiance. Expert depuis 2009, mes avis Google Maps parlent d'eux-même. Ici, chaque bijou est traité avec soin, et oui je parle bien de véhicules. <span>”</span></p>
-              <p id="adresseFooter"><i className="fa-solid fa-location-dot"></i>17 rue du cube, Condé-sur-l'Escaut 59163</p>
-          </div>
-          <div className="interractif">
-              <h6>Besoin d'aide ?</h6>
-              <p>Nous contacter</p>
-              <p>Questions fréquentes</p>
-              <p><i className="fa-solid fa-ear-listen"></i> Assistance malentendants/surdité</p>
-              <p>Signaler un problème</p>
-              <p>Demander un devis</p>
-          </div>
-          <div className="interractif">
-              <h6>En savoir plus</h6>
-              <p>Mentions légales</p>
-              <p>Nos engagements</p>
-              <p>Cookies et vie privée</p>
-              <p>Conditions générales</p>
-              <p>Politique de confidentialité</p>
-              <p>Accessibilité</p>
-          </div>
-          <div id="logosFooter">
-              <h5 className="gris">Nous suivre</h5>
-              <a href="https://www.facebook.com/profile.php?id=61595204774831"><i className="fa-brands fa-facebook-f"></i><i className="fa-brands fa-x-twitter"></i><i className="fa-brands fa-instagram"></i><i className="fa-brands fa-youtube"></i><i className="fa-brands fa-tiktok"></i></a>
-          </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

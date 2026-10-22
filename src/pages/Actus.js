@@ -1,4 +1,5 @@
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 function Actus() {
   return (
@@ -28,6 +29,7 @@ function Actus() {
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
           </div>
         </div> 
+        <Footer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import { useLocation } from 'react-router-dom';
 import voituresOccasion from "../assets/json/voituresOccasion.json";
 
@@ -21,13 +22,26 @@ const NosVoitures = ({ afficherPopUp, setAfficherPopUp }) => {
   //1er et dernier id de voiture affiche par page
   
   const refPage = useRef(noPage);
+  const distanceBasPage = useRef(0); //pour ne pas bouger au changement de page de voitures
   useEffect(() => {
-    /*lorsque la page change, on se retrouve en bas de la page
+      const conserverDonneesScroll = () => {
+        const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
+        distanceBasPage.current = scrollHeight - scrollTop - clientHeight;
+      };
+
+      window.addEventListener('scroll', conserverDonneesScroll);
+      conserverDonneesScroll(); 
+      
+      return () => window.removeEventListener('scroll', distanceBasPage);
+    }, []);
+
+  useEffect(() => {
+    /*lorsque la page change, on se au meme endroit de la page
     afin qu'il soit plus simple de passer plusieurs pages a la suite*/
     if (refPage.current !== noPage) { //pour eviter le cas de l'initialisation
       window.scrollTo({
-          top: document.documentElement.scrollHeight
-      });
+          top: document.documentElement.scrollHeight - window.innerHeight - distanceBasPage.current,
+      });                          //bas de la page - notre taille d'ecran - la distance au bas de la page 
     }
     refPage.current = noPage;
 
@@ -171,7 +185,7 @@ const NosVoitures = ({ afficherPopUp, setAfficherPopUp }) => {
               <p onClick={() => setAfficherPopUp(false)}><i class="fa-solid fa-circle-xmark"></i></p>
               <p>Bienvenue dans la section de vente de nos voitures !</p>
               <p>Ici, vous pouvez voir les véhicules disponibles afin de</p>
-              <p>prendre rendez-vous pour vérifier son état en personne</p>
+              <p>prendre rendez-vous pour vérifier leur état en personne.</p>
               <br/>
               <p>Bonne recherche !</p>
             </div>
@@ -284,6 +298,7 @@ const NosVoitures = ({ afficherPopUp, setAfficherPopUp }) => {
             <li><button onClick={() => avancerPage()}><i className="fa-solid fa-angles-right"></i></button></li>
           </ul>
         </div>
+        <Footer />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 const RDV = () => {
     const [motif, setMotif] = useState('Aucun')
@@ -149,6 +150,7 @@ const RDV = () => {
                     </div>
                 </form>
             </div>
+            <Footer />
         </div>
     )
 }

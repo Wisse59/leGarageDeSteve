@@ -165,13 +165,13 @@ img, i {
   transition: 0.5s ease;
 }
 #bullesRepContainer > :nth-child(1) {
-  background: rgb(253, 104, 20);
+  background: url(../assets/img/reparation.svg) center/cover;
 }
 #bullesRepContainer > :nth-child(2) {
-  background: rgb(98, 145, 175);
+  background: url(../assets/img/lavage.png) center/cover;
 }
 #bullesRepContainer > :nth-child(3) {
-  background: rgb(154, 43, 154);
+  background: url(../assets/img/aplomb.jpg) center/cover;
 }
 #bullesRepContainer:has(> :nth-child(1):hover) {
   grid-template-columns: 50% 25% 25%;
@@ -206,11 +206,15 @@ img, i {
 
 .textePresentation {
   position: absolute;
+  top: 4rem;
 }
 
 .texteApprofondi {
   visibility: hidden;
   position: absolute;
+  background: rgba(92, 220, 237, 0.5);
+  text-align: center;
+  padding: 1rem;
 }
 .texteApprofondi span {
   color: rgb(4, 79, 4);
@@ -226,7 +230,7 @@ img, i {
   cursor: pointer;
 }
 .contenuBulle p:hover {
-  color: rgb(85, 88, 85);
+  color: rgb(29, 40, 185);
 }
 
 .psRep {
@@ -316,15 +320,16 @@ img, i {
 
 #trouverVoitureEtPresentation {
   padding: 0.5rem 0 0 0;
-  height: 31rem;
+  height: 51rem;
+  background: url("../assets/img/fondTrouverVoiture2.jpg") center/cover;
 }
 
 #trouverVoitureContainer {
+  position: relative;
   text-align: center;
-  background: aliceblue;
-  background: rgbc(240, 248, 255, 0.8);
   width: 40%;
-  margin: 4rem 0 0 30%;
+  margin: 11rem 0 4rem 30%;
+  z-index: 0;
 }
 #trouverVoitureContainer h4 {
   color: rgb(15, 15, 15);
@@ -333,6 +338,26 @@ img, i {
 }
 #trouverVoitureContainer input, #trouverVoitureContainer select, #trouverVoitureContainer submit, #trouverVoitureContainer p {
   margin: 0 0 1rem 0;
+}
+#trouverVoitureContainer:hover #fondParchemin {
+  width: 47rem;
+  height: 47rem;
+  background-size: 47rem;
+  top: -12.4rem;
+  left: -6rem;
+}
+
+#fondParchemin {
+  position: absolute;
+  z-index: -1;
+  top: -11.4rem;
+  left: -5rem;
+  width: 45rem;
+  height: 45rem;
+  background: url("../assets/img/parchemin2.png");
+  background-size: 45rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .valeurEtDonneeAccueil {
@@ -450,7 +475,6 @@ img, i {
   background: url("../assets/img/fond7.jpg");
   background-size: cover;
   min-height: 25rem;
-  margin: 11.9rem 0 0 0;
 }
 
 footer {
@@ -503,6 +527,10 @@ h6 {
 #logosFooter i:hover {
   color: aqua;
   cursor: pointer;
+}
+
+.nosVoitures {
+  background: url(../assets/img/fondNosVoitures12.png) fixed top/cover;
 }
 
 #introNosVoituresContainer {
@@ -832,6 +860,7 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 10rem;
 }
 
 #rdv {
@@ -959,6 +988,10 @@ button[type=submit]:hover {
   font-family: Caveat;
   src: url(../assets/fonts/Caveat.ttf);
 }
+.pageActus {
+  background: url("../assets/img/fondActus3.jpg") center/cover;
+}
+
 #postsFacebook {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1003,5 +1036,16 @@ button[type=submit]:hover {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.3333333333%;
           flex: 0 0 33.3333333333%;
+  cursor: pointer;
+}
+
+#rechMarque, #rechModele {
+  border-radius: 15px;
+  outline: none;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+#rechPrix, #rechKm {
   cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
