@@ -506,10 +506,11 @@ footer {
   font-size: 0.9rem;
 }
 
-.interractif p {
+.interractif p, .interractif a {
   font-size: 0.85rem;
+  color: whitesmoke;
 }
-.interractif p:hover {
+.interractif p:hover, .interractif a:hover {
   color: aqua;
   cursor: pointer;
 }
@@ -1005,6 +1006,7 @@ button[type=submit]:hover {
           align-items: center;
   margin: 2rem 0;
   gap: 1rem;
+  min-height: calc(100vh - 16.33rem);
 }
 #postsFacebook p {
   color: whitesmoke;
@@ -1048,4 +1050,56 @@ button[type=submit]:hover {
 
 #rechPrix, #rechKm {
   cursor: pointer;
+}
+
+#footerPageAide {
+  background: url("../assets/img/fondAide3.jpg") center/cover;
+}
+
+#footerPageEnSavoirPlus {
+  background: url("../assets/img/fondSavoirPlus.jpg") fixed center/cover;
+}
+
+#aideContainers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+  gap: 1rem;
+}
+
+.aideContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(30, 30, 30, 0.75);
+  color: rgb(242, 242, 242);
+  border-radius: 15px;
+  padding: 0.5rem;
+  width: 32.7rem;
+  text-align: center;
+}
+.aideContainer h3 {
+  margin: 0 0 1rem 0;
+}
+
+.petitEspace {
+  margin: 0.2rem 0;
 }/*# sourceMappingURL=style.css.map */

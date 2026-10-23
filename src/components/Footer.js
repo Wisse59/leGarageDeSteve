@@ -1,4 +1,4 @@
-import '../styles/style.css';
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
     return (
@@ -10,24 +10,46 @@ const Footer = () => {
           </div>
           <div className="interractif">
               <h6>Besoin d'aide ?</h6>
-              <p>Nous contacter</p>
-              <p>Questions fréquentes</p>
-              <p><i className="fa-solid fa-ear-listen"></i> Assistance malentendants/surdité</p>
-              <p>Signaler un problème</p>
-              <p>Demander un devis</p>
+              <HashLink smooth to="/besoin-aide#nousContacter">
+                <p>Nous contacter</p>
+              </HashLink>
+              <HashLink smooth to="/besoin-aide#questionsFrequentes">
+                <p>Questions fréquentes</p>
+              </HashLink>
+              <HashLink smooth to="/besoin-aide#assistanceMalentendants">
+                <p><i className="fa-solid fa-ear-listen"></i> Assistance malentendants/surdité</p>
+              </HashLink>
+              <HashLink smooth to="/besoin-aide#signalerPblm">
+                <p>Signaler un problème</p>
+              </HashLink>
+              <HashLink smooth to="/besoin-aide#demanderDevis">
+                <p>Demander un devis</p>
+              </HashLink>
           </div>
           <div className="interractif">
               <h6>En savoir plus</h6>
-              <p>Mentions légales</p>
-              <p>Nos engagements</p>
-              <p>Cookies et vie privée</p>
-              <p>Conditions générales</p>
-              <p>Politique de confidentialité</p>
-              <p>Accessibilité</p>
+              <HashLink smooth to="/en-savoir-plus#mentionsLegales">
+                <p>Mentions légales</p>
+              </HashLink>
+              <HashLink smooth to="/en-savoir-plus#nosEngagements">
+                <p>Nos engagements</p>
+              </HashLink>
+              <HashLink smooth to="/en-savoir-plus#cookies">
+                <p>Cookies et vie privée</p>
+              </HashLink>
+              <HashLink smooth to="/en-savoir-plus#conditionsGenerales">
+                <p>Conditions générales</p>
+              </HashLink>
+              <HashLink smooth to="/en-savoir-plus#politiqueConfidentialite">
+                <p>Politique de confidentialité</p>
+              </HashLink>
+              <HashLink smooth to="/en-savoir-plus#accessibilite">
+                <p>Accessibilité</p>
+              </HashLink>
           </div>
           <div id="logosFooter">
               <h5 className="gris">Nous suivre</h5>
-              <a href="https://www.facebook.com/profile.php?id=61595204774831"><i className="fa-brands fa-facebook-f"></i><i className="fa-brands fa-x-twitter"></i><i className="fa-brands fa-instagram"></i><i className="fa-brands fa-youtube"></i><i className="fa-brands fa-tiktok"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61595935433837"><i className="fa-brands fa-facebook-f"></i><i className="fa-brands fa-x-twitter"></i><i className="fa-brands fa-instagram"></i><i className="fa-brands fa-youtube"></i><i className="fa-brands fa-tiktok"></i></a>
           </div>
       </footer>
     );

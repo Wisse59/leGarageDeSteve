@@ -436,8 +436,9 @@ footer {
     font-size: 0.9rem;
 }
 
-.interractif p {
+.interractif p, .interractif a {
     font-size: 0.85rem;
+    color: whitesmoke;
     &:hover {
         color: aqua;
         cursor: pointer;
@@ -766,6 +767,8 @@ button[type="submit"] {
     align-items: center;
     margin: 2rem 0;
     gap: 1rem;
+    min-height: calc(100vh - 16.33rem);
+    //l'ecran moins le footer
     p {
         color: whitesmoke;
         font-size: 1.8rem;
@@ -802,4 +805,37 @@ button[type="submit"] {
 
 #rechPrix, #rechKm {
     cursor: pointer;
+}
+
+#footerPageAide {
+    background: url('../assets/img/fondAide3.jpg') center/cover;
+}
+#footerPageEnSavoirPlus {
+    background: url('../assets/img/fondSavoirPlus.jpg') fixed center/cover;
+}
+#aideContainers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    gap: 1rem;
+}
+.aideContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(30, 30, 30, 0.75);
+    color: rgb(242, 242, 242);
+    border-radius: 15px;
+    padding: 0.5rem;
+    width: 32.7rem;
+    text-align: center;
+    h3 {
+        margin: 0 0 1rem 0;
+    }
+}
+
+.petitEspace {
+    margin: 0.2rem 0;
 }

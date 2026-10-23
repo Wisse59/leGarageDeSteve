@@ -1,35 +1,53 @@
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 function Actus() {
+  const [dataActus, setDataActus] = useState([]);
+
+  useEffect(() => {
+    axios //recuperation de mon API Meta Graph de Facebook dans une fonction dataActus
+      .get(`https://graph.facebook.com/v21.0/1334283546444007/posts?fields=permalink_url&limit=3&access_token=EAAUl0qeBd6gBSzTJaUbk2K73ZB7dXbdRR8spcA8NbQ8OZBnQHQqvsvDztDgJYk4IEce3Wce14x7qpUNH5Sl2H3v0m5N1YkqJvomkiIE7CM5JJb1Eumb3jMdMlXUSidMp7pphpUbfkmmFSsCngajeHnsZCirWeJlg9TclCuZCIKvZCkSSOuZAJroztJvBzdfTrhS2Ewj9p9`)
+      .then((res) => {
+        setDataActus(res.data.data);
+      })
+      .catch((error) => console.error("Erreur API :", error));
+
+      //ajout d'un ratachement html au script de facebook
+      const script = document.createElement("script");
+      script.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v26.0";
+      document.body.appendChild(script);
+  }, []);
+
+  useEffect(() => {
+    if (dataActus.length > 0 && window.FB) { //lorsque les donnees de l'API sont prets et que le script fb est charge
+      window.FB.XFBML.parse();
+      //fb scanne la page pour afficher les posts, ceux-ci ayant la classe "fb-post"
+    }
+  }, [dataActus]);
+
   return (
     <div className="pageActus">
-        <Navigation />       
-        <div id ="postsFacebook">
-          <p>Suivez nos dernières actualités !</p>
-          <div class ="postFacebook">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02fXdyvtMuMPhoX3xUARRDzqP4vmCNwfL6cCEy4WDNk6Fo9DQm2EyVLfvx5YpP1xDXl%26id%3D61595204774831&show_text=true&width=500"
-            width="500"
-            height="610"
-            style={{ border: 'none', overflow:'hidden'}}
-            scrolling="no"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
-          </div>
-          <div class ="postFacebook">
-            <iframe title="Le dernier post Facebook du Garage de Steve"
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02cbNz8vjG2LCqERa6o75TxLKavW76xeoCZ4KP6N7TJYbuitSNtZbMCc5ZJzi1bKgLl%26id%3D61595204774831&show_text=true&width=500"
-            width="500"
-            height="555"
-            style= {{ border:'none', overflow:'hidden'}}
-            scrolling="no"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
-          </div>
-        </div> 
-        <Footer />
+      <Navigation />       
+      <div id="postsFacebook">
+        <p>Suivez nos dernières actualités !</p>
+        {dataActus.length === 0 ? (
+          <p>Chargement des actus...</p>
+        ) : (
+          dataActus.map((post) => (
+            <div className="postFacebook" key={post.id} style={{ marginBottom: '20px' }}>
+              <div 
+                className="fb-post" 
+                data-href={post.permalink_url}
+                data-width="500"
+                data-show-text="true"
+              ></div>
+            </div>
+          ))
+        )}
+      </div> 
+      <Footer />
     </div>
   );
 }
