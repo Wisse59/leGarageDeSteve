@@ -73,6 +73,46 @@ nav ul {
     color: rgb(87, 193, 234);
 }
 
+@media (min-width: 463px) {
+    #sidebarReponsive ul {
+        transform: none !important;
+    }
+}
+@media (max-width: 463px) {
+    #sidebarReponsive ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        transform: translateX(-150px);
+        background: #eca33d;
+        height: 100vh;
+        justify-content: flex-start;
+        z-index: 1;
+        li:hover {
+            background-color: #a36916;
+        }
+    }
+    .toggle-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    }
+    .toggle-btn span {
+    width: 49px;
+    height: 7px;
+    border-radius: 5px;
+    background: #eca33d;
+    display: block;
+    margin-top: 4px;
+    transition: 0.3s ease;
+    }
+}
+
 img, i {
     user-select: none; /*pour enlever la barre de selection de texte sur les images*/
 }
@@ -103,6 +143,7 @@ img, i {
     right: 10px;
     display: flex;
     flex-direction: column;
+    z-index: 1;
     li {
         background-color: rgb(42, 47, 11);
         color: whitesmoke;
@@ -614,6 +655,7 @@ h6 {
     width: 26rem;
     padding: 1rem 0;
     border-radius: 25px;
+    z-index: 0;
 }
 
 .fa-circle-xmark {

@@ -98,6 +98,55 @@ nav ul li {
   color: rgb(87, 193, 234);
 }
 
+@media (min-width: 463px) {
+  #sidebarReponsive ul {
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+}
+@media (max-width: 463px) {
+  #sidebarReponsive ul {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0rem;
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+    background: #eca33d;
+    height: 100vh;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    z-index: 1;
+  }
+  #sidebarReponsive ul li:hover {
+    background-color: #a36916;
+  }
+  .toggle-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+  }
+  .toggle-btn span {
+    width: 49px;
+    height: 7px;
+    border-radius: 5px;
+    background: #eca33d;
+    display: block;
+    margin-top: 4px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+}
 img, i {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -145,6 +194,7 @@ img, i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
 }
 #langues li {
   background-color: rgb(42, 47, 11);
@@ -764,6 +814,7 @@ h6 {
   width: 26rem;
   padding: 1rem 0;
   border-radius: 25px;
+  z-index: 0;
 }
 
 .fa-circle-xmark {
