@@ -23,6 +23,13 @@ a {
 nav {
   position: relative;
 }
+nav a {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+nav a:hover {
+  font-size: 1.05rem;
+}
 
 nav ul {
   color: whitesmoke;
@@ -33,10 +40,58 @@ nav ul {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 0.5rem 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 nav ul li {
   list-style-type: none;
   cursor: pointer;
+}
+@media (max-width: 1011px) {
+  nav ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 5rem;
+  }
+}
+@media (max-width: 931px) {
+  nav ul {
+    gap: 4rem;
+  }
+}
+@media (max-width: 856px) {
+  nav ul {
+    gap: 3rem;
+  }
+}
+@media (max-width: 791px) {
+  nav ul {
+    gap: 2rem;
+  }
+}
+@media (max-width: 731px) {
+  nav ul {
+    gap: 1rem;
+  }
+}
+@media (max-width: 662px) {
+  nav ul #titreDissumulable {
+    display: none;
+  }
+  nav ul {
+    gap: 2rem;
+  }
+}
+@media (max-width: 557px) {
+  nav ul {
+    gap: 1rem;
+  }
+}
+@media (max-width: 499px) {
+  nav ul {
+    gap: 0.5rem;
+  }
 }
 
 .nav-active {
@@ -110,6 +165,16 @@ img, i {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+#languesCachees li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
+}
 
 #langueNavbar:hover ~ #languesCachees,
 #languesCachees:hover {
@@ -160,15 +225,16 @@ img, i {
 
 #bullesRepContainer {
   display: grid;
+  text-align: center;
   grid-template-columns: 33.33% 33.34% 33.33%;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 #bullesRepContainer > :nth-child(1) {
-  background: url(../assets/img/reparation.svg) center/cover;
+  background: url(../assets/img/reparation.jpg) center/cover;
 }
 #bullesRepContainer > :nth-child(2) {
-  background: url(../assets/img/lavage.png) center/cover;
+  background: url(../assets/img/lavage.jpg) center/cover;
 }
 #bullesRepContainer > :nth-child(3) {
   background: url(../assets/img/aplomb.jpg) center/cover;
@@ -219,6 +285,11 @@ img, i {
 .texteApprofondi span {
   color: rgb(4, 79, 4);
 }
+@media (max-width: 711px) {
+  .texteApprofondi {
+    width: 95%;
+  }
+}
 
 .titreBulle {
   margin: 0 0 2rem 0;
@@ -260,7 +331,7 @@ img, i {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: url("../assets/img/acier1.jpg") center/cover;
+  background: url("../assets/img/acier.jpg") center/cover;
   border-radius: 15px;
   width: 87vw;
 }
@@ -282,12 +353,26 @@ img, i {
           justify-content: space-evenly;
   margin: 0.5rem 0;
 }
+@media (max-width: 951px) {
+  .nouvVoitDescr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .cercleFleche {
   border: 1px rgb(112, 24, 24) solid;
   border-radius: 25px;
   padding: 5px;
   cursor: pointer;
+}
+@media (max-width: 951px) {
+  .cercleFleche {
+    font-size: 0.9rem;
+    padding: 1px;
+  }
 }
 
 .vis {
@@ -305,6 +390,10 @@ img, i {
   bottom: 10px;
 }
 
+@font-face {
+  font-family: KaushanScript;
+  src: url("../assets/fonts/GloriaHallelujah-Regular.ttf");
+}
 #formRechVoiture {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,7 +410,17 @@ img, i {
 #trouverVoitureEtPresentation {
   padding: 0.5rem 0 0 0;
   height: 51rem;
-  background: url("../assets/img/fondTrouverVoiture2.jpg") center/cover;
+  background: url("../assets/img/fondTrouverVoiture.jpg") center/cover;
+}
+@media (max-width: 745px) {
+  #trouverVoitureEtPresentation {
+    height: 48rem;
+  }
+}
+@media (max-width: 599px) {
+  #trouverVoitureEtPresentation {
+    height: 45rem;
+  }
 }
 
 #trouverVoitureContainer {
@@ -331,33 +430,50 @@ img, i {
   margin: 11rem 0 4rem 30%;
   z-index: 0;
 }
+#trouverVoitureContainer p, #trouverVoitureContainer label, #trouverVoitureContainer select, #trouverVoitureContainer h4, #trouverVoitureContainer a, #trouverVoitureContainer button {
+  font-family: KaushanScript, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (max-width: 745px) {
+  #trouverVoitureContainer p, #trouverVoitureContainer label, #trouverVoitureContainer select, #trouverVoitureContainer h4, #trouverVoitureContainer a, #trouverVoitureContainer button {
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    padding: 0;
+  }
+}
 #trouverVoitureContainer h4 {
   color: rgb(15, 15, 15);
-  margin: 1rem;
-  padding: 1rem 0 0 0;
-}
-#trouverVoitureContainer input, #trouverVoitureContainer select, #trouverVoitureContainer submit, #trouverVoitureContainer p {
-  margin: 0 0 1rem 0;
+  margin: 0.2rem;
+  padding: 0.3rem 0 0 0;
 }
 #trouverVoitureContainer:hover #fondParchemin {
-  width: 47rem;
-  height: 47rem;
-  background-size: 47rem;
-  top: -12.4rem;
-  left: -6rem;
+  width: 47.5rem;
+  height: 47.5rem;
+}
+@media (max-width: 745px) {
+  #trouverVoitureContainer:hover #fondParchemin {
+    width: 100vw;
+    height: 100vw;
+  }
 }
 
 #fondParchemin {
   position: absolute;
   z-index: -1;
-  top: -11.4rem;
-  left: -5rem;
-  width: 45rem;
-  height: 45rem;
-  background: url("../assets/img/parchemin2.png");
-  background-size: 45rem;
+  top: 44.5%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 46rem;
+  height: 46rem;
+  background: url("../assets/img/parchemin.png");
+  background-size: 100% 100%;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+@media (max-width: 745px) {
+  #fondParchemin {
+    width: 95vw;
+    height: 95vw;
+  }
 }
 
 .valeurEtDonneeAccueil {
@@ -369,6 +485,9 @@ img, i {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0.5rem;
+}
+.valeurEtDonneeAccueil input {
+  width: clamp(60px, 15vw, 150px);
 }
 
 #boutonRechAccueil {
@@ -383,20 +502,25 @@ img, i {
 }
 #boutonRechAccueil:hover {
   color: black;
-  font-size: 0.88rem;
+  font-size: clamp(0.5rem, 2.1vw, 1.1rem);
 }
 
 #plusCriteres {
   margin: 1rem 0 1.5rem 0;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
   cursor: pointer;
 }
 #plusCriteres a {
   color: rgb(42, 47, 11);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
-#plusCriteres:hover {
-  font-size: 1.05rem;
+#plusCriteres:hover a {
+  font-size: clamp(0.5rem, 2.1vw, 1.1rem);
+}
+@media (max-width: 745px) {
+  #plusCriteres {
+    margin: 0 0 1rem 0;
+  }
 }
 
 .imgVoiture {
@@ -422,6 +546,12 @@ img, i {
   position: relative;
   margin: 0 20%;
 }
+@media (max-width: 1126px) {
+  #presentationContainer {
+    font-size: 0.9rem;
+    margin: 0 5%;
+  }
+}
 
 #imgPresentation {
   position: absolute;
@@ -442,6 +572,16 @@ img, i {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+@media (max-width: 1126px) {
+  #infosGarage {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 667px) {
+  #infosGarage {
+    font-size: 0.8rem;
+  }
+}
 
 .contenuInfos {
   border: 1px dashed rgb(16, 11, 69);
@@ -450,6 +590,12 @@ img, i {
   -ms-flex-line-pack: center;
       align-content: center;
   min-height: 15rem;
+}
+@media (max-width: 667px) {
+  .contenuInfos {
+    margin: 5px;
+    min-height: 12rem;
+  }
 }
 
 .fa-calendar-days {
@@ -472,22 +618,67 @@ img, i {
 }
 
 #fondFinal {
-  background: url("../assets/img/fond7.jpg");
-  background-size: cover;
-  min-height: 25rem;
+  background: url("../assets/img/fondFinal.jpg") top/cover no-repeat;
+  background-size: 115%;
+  min-height: 28rem;
+}
+@media (max-width: 707px) {
+  #fondFinal {
+    background-size: 160vh;
+  }
 }
 
 footer {
   display: grid;
-  grid-template-columns: 40% 20% 20% 20%;
+  grid-template-columns: 40% 60%;
   background: rgb(19, 19, 19);
   color: rgb(245, 245, 245);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   min-height: 10rem;
-  justify-items: center;
   text-align: center;
+}
+@media (max-width: 1126px) {
+  footer #footerHautResponsive {
+    display: grid;
+    justify-items: center;
+  }
+  footer {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+    gap: 1rem;
+  }
+}
+
+#footerBasResponsive {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1126px) {
+  #footerBasResponsive {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 7.6rem;
+    gap: 4rem;
+  }
+}
+@media (max-width: 747px) {
+  #footerBasResponsive {
+    grid-auto-flow: row;
+    margin-right: 0;
+    gap: 1rem;
+    padding: 0 0 1rem 0;
+  }
 }
 
 #descFooter {
@@ -500,6 +691,11 @@ footer {
   color: rgb(208, 135, 0);
   line-height: 0;
   vertical-align: middle;
+}
+@media (max-width: 1126px) {
+  #descFooter {
+    width: 90vw;
+  }
 }
 
 #adresseFooter {
@@ -531,7 +727,11 @@ h6 {
 }
 
 .nosVoitures {
-  background: url(../assets/img/fondNosVoitures12.png) fixed top/cover;
+  background: url(../assets/img/fondNosVoitures.png) fixed top/cover;
+}
+
+.contenuNosVoitures {
+  min-height: calc(100vh - 12.33rem);
 }
 
 #introNosVoituresContainer {
@@ -679,6 +879,12 @@ h6 {
   width: 30px;
   height: 30px;
   margin: 0 0.1rem;
+}
+.choixPages li button.button-active {
+  background-color: rgb(239, 123, 81);
+}
+.choixPages li button.flecheGrise {
+  background-color: rgb(150, 150, 150);
 }
 
 .boutonActif {
@@ -849,8 +1055,8 @@ h6 {
 }
 
 .pageRDV {
-  background: url("../assets/img/fondRDV.jpg") center/cover;
-  height: 100vh;
+  background: url("../assets/img/fondRDV.jpg") center 56%/cover;
+  height: 100%;
   width: 100%;
 }
 
@@ -862,6 +1068,7 @@ h6 {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 10rem;
+  min-height: 54.1vh;
 }
 
 #rdv {
@@ -869,8 +1076,6 @@ h6 {
           margin-block-start: 8.9rem;
   background-color: rgba(14, 14, 82, 0.85);
   color: rgb(60, 198, 205);
-  width: 22%;
-  height: 25rem;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -884,6 +1089,12 @@ h6 {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  padding: 0.6rem 0;
+}
+#rdv div {
+  padding: 0.6rem 1rem;
 }
 
 #raisonRDV {
@@ -990,7 +1201,7 @@ button[type=submit]:hover {
   src: url(../assets/fonts/Caveat.ttf);
 }
 .pageActus {
-  background: url("../assets/img/fondActus3.jpg") center/cover;
+  background: url("../assets/img/fondActus.jpg") center/cover;
 }
 
 #postsFacebook {
@@ -1053,7 +1264,7 @@ button[type=submit]:hover {
 }
 
 #footerPageAide {
-  background: url("../assets/img/fondAide3.jpg") center/cover;
+  background: url("../assets/img/fondAide.jpg") center/cover;
 }
 
 #footerPageEnSavoirPlus {

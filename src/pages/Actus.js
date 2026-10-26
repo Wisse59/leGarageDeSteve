@@ -8,7 +8,7 @@ function Actus() {
 
   useEffect(() => {
     axios //recuperation de mon API Meta Graph de Facebook dans une fonction dataActus
-      .get(`https://graph.facebook.com/v21.0/1334283546444007/posts?fields=permalink_url&limit=3&access_token=EAAUl0qeBd6gBSzTJaUbk2K73ZB7dXbdRR8spcA8NbQ8OZBnQHQqvsvDztDgJYk4IEce3Wce14x7qpUNH5Sl2H3v0m5N1YkqJvomkiIE7CM5JJb1Eumb3jMdMlXUSidMp7pphpUbfkmmFSsCngajeHnsZCirWeJlg9TclCuZCIKvZCkSSOuZAJroztJvBzdfTrhS2Ewj9p9`)
+      .get(`https://graph.facebook.com/v21.0/1358813243985908/posts?fields=permalink_url&limit=3&access_token=EAAQrFhv7OioBS5xvIXOfggU7JPq9EJn2M7RfZBk3KRiVzSZA9kXZAuXRWqcSMZAY4g0nKFKczSEUyycUyZCnwTu0h1xc3tokBD3dl9tdmuABPtAYpwXgxImOcxpMNVcyAVMkRJXJZBzQLI1ZBPgqcAYHqLPvUfGQaJNlbC3yzAoN7jpZCfZCeujcbyUyzm3TvCtmHdPsDC3VQ`)
       .then((res) => {
         setDataActus(res.data.data);
       })
@@ -40,7 +40,7 @@ function Actus() {
               <div 
                 className="fb-post" 
                 data-href={post.permalink_url}
-                data-width="500"
+                data-width= {(window.innerWidth<628)? "400" : "500"}
                 data-show-text="true"
               ></div>
             </div>

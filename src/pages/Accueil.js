@@ -5,9 +5,9 @@ import voituresOccasion from "../assets/json/voituresOccasion.json";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Accueil = () => {
+const Accueil = ({ choixLangue, setChoixLangue }) => {
     const [marquesDispo, setMarquesDispo] = useState([]);
-    const [marqueChoisie, setMarqueChoisie] = useState('Audi');
+    const [marqueChoisie, setMarqueChoisie] = useState('Clio');
     const [modelesDispo, setModelesDispo] = useState([]);
     const [modeleChoisi, setModeleChoisi] = useState('');
     const [rechercheAccueil, setRechercheAccueil] = useState([]);
@@ -16,8 +16,8 @@ const Accueil = () => {
     const [kmMaxAccueil, setKmMaxAccueil] = useState(250000);
     const [indexDebutCarousel, setIndexDebutCarousel] = useState(0);
     const [indexFinCarousel, setIndexFinCarousel] = useState(2);
-    const [nbVoitures, setNbVoitures] = useState(voituresOccasion.length);
     //afin de ne pas recalculer la taille à chaque fois que la fleche est pressee
+    const maxNouvVoitures = 20; //on limite les nouveautes a 20 voitures
 
     useEffect(() => {
         setMarquesDispo(
@@ -42,11 +42,24 @@ const Accueil = () => {
     }, [modelesDispo])
 
     useEffect(() => {
+        //les prix de la page "nos voitures" sont par tranche (2500, 3000...)
+        let prixArrondi;
+
+        if (prixAccueil < 3000) {
+            prixArrondi = prixAccueil - (prixAccueil % 500)
+        } else if (prixAccueil < 10000) {
+            prixArrondi = prixAccueil - (prixAccueil % 1000)
+        } else if (prixAccueil < 30000) {
+            prixArrondi = prixAccueil - (prixAccueil % 10000)
+        } else {
+            prixArrondi = 30000
+        }
+        
         setRechercheAccueil(
             voituresOccasion.filter((voiture) => 
                 (voiture.marque === marqueChoisie) &&
                 (voiture.modele === modeleChoisi) &&
-                (voiture.prix <= prixAccueil) &&
+                (voiture.prix <= prixArrondi) &&
                 (voiture.km <= kmMaxAccueil))
                 .map((voiture) => voiture.marque + " " + voiture.modele)
         );
@@ -82,6 +95,18 @@ const Accueil = () => {
         });
     }
 
+    function envoiRDV(motif, service) {
+        const motifAccueil = motif;
+        const serviceAccueil = service;
+
+        naviguer('/prendre-rdv', {
+            state: {
+                motifAccueil,
+                serviceAccueil
+            }
+        });
+    }
+
     useEffect(() => {
         const defilementAuto = setInterval(() => {
             setIndexDebutCarousel((e) => e + 1);
@@ -93,11 +118,11 @@ const Accueil = () => {
     }, [indexDebutCarousel]);
 
     useEffect(() => {
-        if (indexFinCarousel >= nbVoitures) {
+        if (indexFinCarousel >= 20) {
             setIndexDebutCarousel(0);
             setIndexFinCarousel(2); /*Retour de la fin au début*/
         }
-    }, [indexFinCarousel]);
+    }, [indexFinCarousel]);    
 
   return (
     <div className="accueil">
@@ -128,11 +153,11 @@ const Accueil = () => {
                               <p>Prendre RDV pour une réparation</p>
                           </div>
                           <div className="contenuBulle">
-                              <p>Problème de carrosserie</p>
-                              <p>Casse moteur</p>
-                              <p>Voyants défectueux</p>
-                              <p>Embrayage endommagé</p>
-                              <p>Autre..</p>
+                              <p onClick={() => envoiRDV('Reparation', 'Reparation carroserie')}>Problème de carrosserie</p>
+                              <p onClick={() => envoiRDV('Reparation', 'Reparation moteur')}>Casse moteur</p>
+                              <p onClick={() => envoiRDV('Reparation', 'Reparation voyants')}>Voyants défectueux</p>
+                              <p onClick={() => envoiRDV('Reparation', 'Reparation embrayage')}>Embrayage endommagé</p>
+                              <p onClick={() => envoiRDV('Reparation', 'Autre')}>Autre..</p>
                           </div>
                           <div className="psRep">
                               <p>Le prix dépend de la gravité des dégâts</p>
@@ -148,13 +173,10 @@ const Accueil = () => {
                               <p>Choisissez une formule de lavage.</p>
                           </div>
                           <div className="contenuBulle">
-                              <p>Service minimum <span>2€</span></p>
-                              <p>Service intermédiaire <span>8€</span></p>
-                              <p>Service total <span>20€</span></p>
-                              <p>Service intérieur + extérieur <span>35€</span></p>
-                          </div>
-                          <div className="psRep">
-                              <p>(Ps : Faudra que je mette entre parenthèses ça + vitres + ça)</p>
+                              <p onClick={() => envoiRDV('Lavage', 'Lavage minimum')}>Service minimum <span>2€</span></p>
+                              <p onClick={() => envoiRDV('Lavage', 'Lavage intermediaire')}>Service intermédiaire <span>8€</span></p>
+                              <p onClick={() => envoiRDV('Lavage', 'Lavage total')}>Service total <span>20€</span></p>
+                              <p onClick={() => envoiRDV('Lavage', 'Lavage interieur et exterieur')}>Service intérieur + extérieur <span>35€</span></p>
                           </div>
                       </div>
                   </div>
@@ -167,10 +189,11 @@ const Accueil = () => {
                               <p>Venez remettre d'aplomb votre voiture !</p>
                           </div>
                           <div className="contenuBulle">
-                              <p>Remise d'huile</p>
-                              <p>Recharge de batterie</p>
-                              <p>Remise de produit à essuie-glace</p>
-                              <p>La totale</p>
+                              <p onClick={() => envoiRDV("Remise d'aplomb", "Remise d'huile")}>Remise d'huile</p>
+                              <p onClick={() => envoiRDV("Remise d'aplomb", "Recharge de la batterie")}>Recharge de batterie</p>
+                              <p onClick={() => envoiRDV("Remise d'aplomb", "Remise de produit a essuie-glace")}>Remise de produit à essuie-glace</p>
+                              <p onClick={() => envoiRDV("Remise d'aplomb", "Remise de produit liquide de frein")}>Remise de liquide de frein</p>
+                              <p onClick={() => envoiRDV("Remise d'aplomb", "Remise d'aplomb totale")}>La totale</p>
                           </div>
                           <div className="psRep">
                               <p>Le prix dépend de la quantité à ajouter,</p>
@@ -188,7 +211,7 @@ const Accueil = () => {
                 if (indexDebutCarousel > 0) {
                     setIndexDebutCarousel(indexDebutCarousel-1); setIndexFinCarousel(indexFinCarousel-1)
                 } else {
-                    setIndexDebutCarousel(nbVoitures-3); setIndexFinCarousel(nbVoitures-1)
+                    setIndexDebutCarousel(maxNouvVoitures-3); setIndexFinCarousel(maxNouvVoitures-1)
                 }
               }} className="cercleFleche"><i className="fa-solid fa-arrow-left"></i></p>
 
@@ -197,7 +220,7 @@ const Accueil = () => {
                 <div id="railCarousel" style={{ transform: `translateX(-${indexDebutCarousel * (100/3)}%)` }}>
                 {/*On defile d'un tiers à chaque fois que le no est incremente*/}
                     {voituresOccasion.map((voiture) => 
-                        <div onClick={() => envoiCarousel(voiture.id)} className="nouvVoiture">
+                        <div key={voiture.id} onClick={() => envoiCarousel(voiture.id)} className="nouvVoiture">
                             <p className="nouvVoitTitre">{voiture.marque} {voiture.modele}</p>
                             <img src={voiture.lienImg} alt={`voiture ${voiture.marque} ${voiture.modele}`} className="imgVoiture" />
                             <div className="nouvVoitDescr">
@@ -212,7 +235,7 @@ const Accueil = () => {
               </div>
 
               <p onClick={() => {
-                if (indexFinCarousel < nbVoitures) {
+                if (indexFinCarousel < maxNouvVoitures) {
                     setIndexDebutCarousel(indexDebutCarousel+1); setIndexFinCarousel(indexFinCarousel+1)
                 }
               }} className="cercleFleche"><i className="fa-solid fa-arrow-right"></i></p>
@@ -229,7 +252,7 @@ const Accueil = () => {
                   <select id="rechMarque" defaultValue='Audi' onChange={(e) => setMarqueChoisie(e.target.value)}>
                     {
                         marquesDispo.map((marque) => (
-                            <option value={marque}>{marque}</option>
+                            <option key={marque} value={marque}>{marque}</option>
                         ))
                     }
                   </select>
@@ -237,7 +260,7 @@ const Accueil = () => {
                   <select id="rechModele" onChange={(e) => setModeleChoisi(e.target.value)}>
                     {
                         modelesDispo.map((modele) => (
-                            <option value={modele}>{modele}</option>
+                            <option key={modele} value={modele}>{modele}</option>
                         ))
                     }
                   </select>
@@ -260,7 +283,7 @@ const Accueil = () => {
           <div id="presentation">
               <div id="presentationContainer">
                   <div id="imgPresentation"></div>
-                  <p id="textePresentation">Réputé à Condé-sur-l'Escaut pour mes services de très bonne qualité et mes prix imbattables, je m'occupe de ce garage depuis de nombreuses années. À la différence des entreprises aux nombreuses agences qui s'étallent sans connaître tous leurs employés. Je vérifie moi-même chaque voiture avant de vous les proposer en vente, chacune étant garrantie deux ans. Pour les réparations, tout le matériel et la plupart des pièces de rechange sont d'ores et déjà à disposition. Faites-moi également confiance pour un lavage au top ou une remise à plomb. Le Garage de Steve est là pour vous !</p>
+                  <p id="textePresentation">Réputé à Condé-sur-l'Escaut pour mes services de très bonne qualité et mes prix abordables, je m'occupe de ce garage depuis de nombreuses années. À la différence des entreprises aux nombreuses agences qui s'étallent sans connaître tous leurs employés, je vérifie moi-même chaque voiture avant de vous les proposer en vente, chacune étant garrantie deux ans. Pour les réparations, tout le matériel et la plupart des pièces de rechange sont d'ores et déjà à disposition. Faites-moi également confiance pour un lavage au top ou une remise à plomb. Le Garage de Steve est là pour vous !</p>
                   <div id="infosGarage">
                       <div id="infosGauche">
                           <div className="contenuInfos">

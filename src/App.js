@@ -10,11 +10,12 @@ import EnSavoirPlusFooter from "./components/EnSavoirPlus";
 function App() {
   //variable globale, pour ne l'afficher qu'une fois peu importe la page
   const [afficherPopUp, setAfficherPopUp] = useState(true);
+  const [choixLangue, setChoixLangue] = useState('FR');
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Accueil />} />
+          <Route path="/" element={<Accueil choixLangue={choixLangue} setChoixLangue={setChoixLangue} />} />
           <Route path="/nos-voitures" element={<NosVoitures afficherPopUp={afficherPopUp} setAfficherPopUp={setAfficherPopUp} />} />
           <Route path="/prendre-rdv" element={<RDV />} />
           <Route path="/actus" element={<Actus />} />

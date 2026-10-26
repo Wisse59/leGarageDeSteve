@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
 const RDV = () => {
-    const [motif, setMotif] = useState('Aucun')
-    const [service, setService] = useState('Aucun')
+    const recevoir = useLocation();
+    const { 
+        motifAccueil,
+        serviceAccueil
+    } = recevoir.state || {};
+    
+    const [motif, setMotif] = useState(motifAccueil? motifAccueil : 'Aucun')
+    const [service, setService] = useState(serviceAccueil? serviceAccueil : 'Aucun')
     const [jourChoisi, setJourChoisi] = useState(new Date().getDay())
     const [horaireChoisie, setHoraireChoisie] = useState([8, 0])
     const [selectionOK, setSelectionOk] = useState(false);
@@ -20,7 +27,7 @@ const RDV = () => {
         ((jourChoisi === 3) && (horaireChoisie[0] > 11)))) && 
         !((((horaireChoisie[0] === 17) && (horaireChoisie[1] > 10)) ||
         ((horaireChoisie[0] === 12) && (horaireChoisie[1] > 10)) ||
-        ((horaireChoisie[0] === 11) && (horaireChoisie[1] > 40)))))
+        ((jourChoisi === 3) && (horaireChoisie[0] === 11) && (horaireChoisie[1] > 40)))))
         {
             setSelectionOk(true); //la selection est valide
         } else {
@@ -60,7 +67,7 @@ const RDV = () => {
                         <div id="raisonRDV">
                             <div id="motifContainer1">
                                 <p>Pour quel motif désirez-vous venir ?</p>
-                                <select defaultValue='Aucun' name='motifForm' onChange={(e) => setMotif(e.target.value)}>
+                                <select defaultValue={motif} name='motifForm' onChange={(e) => setMotif(e.target.value)}>
                                     <option value='Aucun'>Choississez un motif</option>
                                     <option value='Reparation'>Réparer un véhicule</option>
                                     <option value='Lavage'>Faire un lavage</option>
@@ -72,7 +79,7 @@ const RDV = () => {
                                 <div id="motifContainer2">
                                     <p>Choississez un type de service</p>
                                     {motif === 'Reparation' && (
-                                        <select defaultValue='Aucun' name="reparationForm" onChange={(e) => setService(e.target.value)}> {/*cas de reparation*/}
+                                        <select defaultValue={service} name="reparationForm" onChange={(e) => setService(e.target.value)}> {/*cas de reparation*/}
                                             <option value='Aucun'>Choississez une réparation</option>
                                             <option value='Reparation carroserie'>Problème de carrosserie</option>
                                             <option value='Reparation moteur'>Casse moteur</option>
@@ -82,16 +89,16 @@ const RDV = () => {
                                         </select>
                                     )}
                                     {motif === 'Lavage' && (
-                                    <select defaultValue='Aucun' name="lavageForm" onChange={(e) => setService(e.target.value)}> {/*cas de lavage*/}
+                                    <select defaultValue={service} name="lavageForm" onChange={(e) => setService(e.target.value)}> {/*cas de lavage*/}
                                         <option value='Aucun'>Choississez un lavage</option>
-                                        <option value='Lavage minimul'>Service minimum - Rinçage (2€)</option>
+                                        <option value='Lavage minimum'>Service minimum - Rinçage (2€)</option>
                                         <option value='Lavage intermediaire'>Service intermédiaire (8€)</option>
                                         <option value='Lavage total'>Service total (20€)</option>
                                         <option value='Lavage interieur et exterieur'>Service intérieur + extérieur (35€)</option>
                                     </select>
                                     )}
                                     {motif === "Remise d'aplomb" && (
-                                    <select defaultValue='Aucun' name="aplombForm" onChange={(e) => setService(e.target.value)}> {/*cas de remise d'aplomb*/}
+                                    <select defaultValue={service} name="aplombForm" onChange={(e) => setService(e.target.value)}> {/*cas de remise d'aplomb*/}
                                         <option value='Aucun'>Choississez un élément</option>
                                         <option value="Remise d'huile">Remise d'huile</option>
                                         <option value="Recharge de la batterie">Recharge de batterie</option>
@@ -101,7 +108,7 @@ const RDV = () => {
                                     </select>
                                     )}
                                     {motif === 'Achat ou vente' && (
-                                    <select defaultValue='Aucun' name="achat-venteForm" onChange={(e) => setService(e.target.value)}> {/*cas d'achat*/}
+                                    <select defaultValue={service} name="achat-venteForm" onChange={(e) => setService(e.target.value)}> {/*cas d'achat*/}
                                         <option value='Aucun'>Choississez un motif</option>
                                         <option value='Achat'>Un véhicule m'intéresse</option>
                                         <option value='Vente'>Je souhaite vendre mon véhicule</option>
@@ -138,7 +145,7 @@ const RDV = () => {
                         )}
                         {((((horaireChoisie[0] === 17) && (horaireChoisie[1] > 10)) || //20min avant la fermeture
                         ((horaireChoisie[0] === 12) && ((horaireChoisie[1] > 10) && (horaireChoisie[1] < 31))) || //20min avant la pause de midi
-                        ((horaireChoisie[0] === 11) && (horaireChoisie[1] > 40))) && //20min avant la fermeture du mercredi
+                        ((jourChoisi === 3) && (horaireChoisie[0] === 11) && (horaireChoisie[1] > 40))) && //20min avant la fermeture du mercredi
                         (jourChoisi !== 0) //le cas du dimanche est separe
                         ) && (
                             <div className="msgErreurForm">
