@@ -217,7 +217,7 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
 
               <div id="fenetreCarousel">
                 {/*toutes les voitures sont affichees mais l'excedent est cache (avec overflow: hidden)*/}
-                <div id="railCarousel" style={{ transform: `translateX(-${indexDebutCarousel * (100/3)}%)` }}>
+                <div id="railCarousel" style={{ transform: `translateX(-${indexDebutCarousel * (100/2)}%)` }}>
                 {/*On defile d'un tiers à chaque fois que le no est incremente*/}
                     {voituresOccasion.map((voiture) => 
                         <div key={voiture.id} onClick={() => envoiCarousel(voiture.id)} className="nouvVoiture">

@@ -32,7 +32,23 @@ function Actus() {
       <Navigation />       
       <div id="postsFacebook">
         <p>Suivez nos dernières actualités !</p>
-        {dataActus.length === 0 ? (
+        <div className="postFacebook">
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02An7b7AzL9qrThWrfgLF7K6p9aXERte5qRehr335KhZD27VvXSxdVfSyWJHAhxpuDl%26id%3D61595868208890&show_text=true&width=500" width="500" height="233"
+          style={{'border':'none', 'overflow':'hidden'}}
+          scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        <div className="postFacebook">
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02REQoWrLNKLc3VWzdBqiY89kemZmtj1AKQm3yaARiiv7R7YcKrcvVJRXRgHsj5sinl%26id%3D61595868208890&show_text=true" width="500" height="610"
+          style={{'border':'none', 'overflow':'hidden'}}
+          scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        <div className="postFacebook">
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0AKo5tKMi1He5TdMP1pUmqTEESb7njiTumVz9PoDbVh3jrMG3iLSkJVDmSxXeQ1MHl%26id%3D61595868208890&show_text=true" width="500" height="555"
+          style= {{ 'border':'none', 'overflow':'hidden'}}
+          scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        {/* mis en pause le temps de recuperer mon compte meta
+        dataActus.length === 0 ? (
           <p>Chargement des actus...</p>
         ) : (
           dataActus.map((post) => (
@@ -46,6 +62,7 @@ function Actus() {
             </div>
           ))
         )}
+        */}
       </div> 
       <Footer />
     </div>

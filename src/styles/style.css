@@ -174,6 +174,7 @@ img, i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 #titreNav {
@@ -369,6 +370,12 @@ img, i {
   color: rgb(81, 54, 19);
   font-weight: bold;
 }
+@media (max-width: 432px) {
+  #nouveautes {
+    justify-items: center;
+    padding: 0 0 40px 0;
+  }
+}
 
 #nouvVoitures {
   position: relative;
@@ -383,11 +390,32 @@ img, i {
   text-align: center;
   background: url("../assets/img/acier.jpg") center/cover;
   border-radius: 15px;
-  width: 87vw;
+  width: 90vw;
 }
 #nouvVoitures p {
   color: rgb(94, 7, 7);
   text-shadow: whitesmoke 0px 0px 10px;
+}
+@media (max-width: 432px) {
+  #nouvVoitures {
+    width: 86vw;
+    justify-items: center;
+  }
+}
+@media (max-width: 318px) {
+  #nouvVoitures {
+    width: 89vw;
+  }
+}
+@media (max-width: 308px) {
+  #nouvVoitures {
+    width: 92vw;
+  }
+}
+@media (max-width: 297px) {
+  #nouvVoitures {
+    font-size: 0.9rem;
+  }
 }
 
 .nouvVoitTitre {
@@ -472,6 +500,21 @@ img, i {
     height: 45rem;
   }
 }
+@media (max-width: 510px) {
+  #trouverVoitureEtPresentation {
+    height: 42rem;
+  }
+}
+@media (max-width: 490px) {
+  #trouverVoitureEtPresentation {
+    height: 38rem;
+  }
+}
+@media (max-width: 384px) {
+  #trouverVoitureEtPresentation {
+    height: 34rem;
+  }
+}
 
 #trouverVoitureContainer {
   position: relative;
@@ -504,6 +547,16 @@ img, i {
     height: 100vw;
   }
 }
+@media (max-width: 490px) {
+  #trouverVoitureContainer {
+    margin: 8rem 0 4rem 30%;
+  }
+}
+@media (max-width: 384px) {
+  #trouverVoitureContainer {
+    margin: 5rem 0 4rem 30%;
+  }
+}
 
 #fondParchemin {
   position: absolute;
@@ -523,6 +576,21 @@ img, i {
   #fondParchemin {
     width: 95vw;
     height: 95vw;
+  }
+}
+@media (max-width: 470px) {
+  #fondParchemin {
+    height: 110vw;
+  }
+}
+@media (max-width: 375px) {
+  #fondParchemin {
+    height: 130vw;
+  }
+}
+@media (max-width: 303px) {
+  #fondParchemin {
+    height: 170vw;
   }
 }
 
@@ -589,6 +657,11 @@ img, i {
   padding: 6rem 0 0 0;
   min-height: 300px;
 }
+@media (max-width: 490px) {
+  #presentation {
+    margin: 3rem 0 0 0;
+  }
+}
 
 #presentationContainer {
   margin: 2rem 0 0 0;
@@ -606,16 +679,35 @@ img, i {
 #imgPresentation {
   position: absolute;
   bottom: 93%;
-  left: 50%;
+  left: 47%;
   background: url("../assets/img/photoSteve.jpg") center/cover;
   width: 3.6rem;
   height: 3.6rem;
   border-radius: 100%;
 }
+@media (max-width: 452px) {
+  #imgPresentation {
+    bottom: 95%;
+    left: 43%;
+  }
+}
+@media (max-width: 405px) {
+  #imgPresentation {
+    width: 3rem;
+    height: 3rem;
+    bottom: 96%;
+    left: 43.5%;
+  }
+}
 
 #textePresentation {
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem 0.5rem 0.5rem 0.5rem;
   text-align: center;
+}
+@media (max-width: 406px) {
+  #textePresentation {
+    font-size: 0.8rem;
+  }
 }
 
 #infosGarage {
@@ -630,6 +722,11 @@ img, i {
 @media (max-width: 667px) {
   #infosGarage {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 279px) {
+  #infosGarage {
+    font-size: 0.7rem;
   }
 }
 
@@ -674,7 +771,27 @@ img, i {
 }
 @media (max-width: 707px) {
   #fondFinal {
-    background-size: 160vh;
+    background-size: 160vw;
+  }
+}
+@media (max-width: 499px) {
+  #fondFinal {
+    background-size: 272vw;
+  }
+}
+@media (max-width: 363px) {
+  #fondFinal {
+    background-size: 332vw;
+  }
+}
+@media (max-width: 351px) {
+  #fondFinal {
+    min-height: 33rem;
+  }
+}
+@media (max-width: 291px) {
+  #fondFinal {
+    background-size: 392vw;
   }
 }
 
@@ -1301,6 +1418,13 @@ button[type=submit]:hover {
       -ms-flex: 0 0 33.3333333333%;
           flex: 0 0 33.3333333333%;
   cursor: pointer;
+}
+@media (max-width: 432px) {
+  .nouvVoiture {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
 }
 
 #rechMarque, #rechModele {
