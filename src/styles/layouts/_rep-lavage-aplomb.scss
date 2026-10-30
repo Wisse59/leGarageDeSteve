@@ -1,0 +1,94 @@
+#reparation {
+    padding: 1rem;
+}
+#repContainer {
+    background: rgba(22 22 24,);
+    color: white;
+}
+
+#introRepContainer {
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
+    margin: 0 0 0 1rem;
+    justify-content: center;
+}
+
+#bullesRepContainer {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 33.33% 33.34% 33.33%;
+    transition: 0.5s ease;
+    & > :nth-child(1) {
+        background: url(../assets/img/reparation.jpg) center/cover;
+        //background: rgb(253 104 20);
+    }
+    & > :nth-child(2) {
+        background: url(../assets/img/lavage.jpg) center/cover;
+        //background: rgb(98 145 175);
+    }
+    & > :nth-child(3) {
+        background: url(../assets/img/aplomb.jpg) center/cover;
+        //background: rgb(154, 43, 154);
+    }
+    &:has(> :nth-child(1):hover) {
+        grid-template-columns: 50% 25% 25%;
+    } //au survol de l'enfant, on agit sur le parent
+    &:has(> :nth-child(2):hover) {
+        grid-template-columns: 25% 50% 25%;
+    }
+    &:has(> :nth-child(3):hover) {
+        grid-template-columns: 25% 25% 50%
+    }
+}
+
+.bulleRep {
+    min-height: 29.6rem;
+    color: rgb(22 22 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &:hover {
+        .textePresentation {
+            visibility: hidden;
+        }
+        .texteApprofondi {
+            visibility: visible;
+        }
+    }
+}
+
+.textePresentation {
+    position: absolute;
+    top: 4rem;
+}
+.texteApprofondi {
+    visibility: hidden;
+    position: absolute;
+    background: rgba(92, 220, 237, 0.5);
+    text-align: center;
+    padding: 1rem;
+    & span {
+        color: rgb(4, 79, 4);
+    }
+    @media (max-width: 711px) {
+        width: 95%;
+    }
+}
+
+.titreBulle {
+    margin: 0 0 2rem 0;
+}
+.contenuBulle {
+    p {
+        transition: color 0.2s ease;
+        cursor: pointer;
+    }
+    p:hover {
+        color: rgb(29, 40, 185);
+    }
+}
+.psRep {
+    margin: 1rem 0 0 0;
+}

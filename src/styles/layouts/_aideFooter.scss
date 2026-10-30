@@ -1,0 +1,42 @@
+#footerPageAide {
+    background: url('../assets/img/fondAide.jpg') center/cover;
+}
+#footerPageEnSavoirPlus {
+    background: url('../assets/img/fondSavoirPlus.jpg') fixed center/cover;
+}
+#aideContainers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    gap: 1rem;
+    @media (max-width: 463px) {
+        margin-block-start: 0;
+        padding-top: 3rem;
+    }
+}
+.aideContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(30, 30, 30, 0.75);
+    color: rgb(242, 242, 242);
+    border-radius: 15px;
+    padding: 0.5rem;
+    width: 32.7rem;
+    text-align: center;
+    h3 {
+        margin: 0 0 1rem 0;
+    }
+    @media (max-width: 549px) {
+        width: 95vw;
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.petitEspace {
+    margin: 0.2rem 0;
+}

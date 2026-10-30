@@ -1,0 +1,150 @@
+nav {
+    position: relative; //pour le logo des langues
+    a {
+        transition: 0.5s ease;
+        &:hover {
+            font-size: 1.05rem;
+        }
+    }
+}
+
+nav ul {
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+    transition: 0.5s ease;
+    li {
+        list-style-type: none;
+        cursor: pointer;
+    }
+    @media (max-width: 1011px) {
+        justify-content:center;
+        gap: 5rem;
+    }
+    @media (max-width: 931px) {
+        gap: 4rem;
+    }
+    @media (max-width: 856px) {
+        gap: 3rem;
+    }
+    @media (max-width: 791px) {
+        gap: 2rem;
+    }
+    @media (max-width: 731px) {
+        gap: 1rem;
+    }
+    @media (max-width: 662px) {
+        #titreDissumulable {
+            display: none;
+        }
+        gap: 2rem;
+    }
+    @media (max-width: 557px) {
+        gap: 1rem;
+    }
+    @media (max-width: 499px) {
+        gap: 0.5rem;
+    }
+}
+
+.nav-active {
+    color: rgb(87, 193, 234);
+}
+
+@media (min-width: 463px) {
+    #sidebarReponsive ul {
+        transform: none !important;
+    }
+}
+@media (max-width: 463px) {
+    #sidebarReponsive ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        transform: translateX(-150px);
+        background: #eca33d;
+        height: 100vh;
+        justify-content: flex-start;
+        z-index: 1;
+        li:hover {
+            background-color: #a36916;
+        }
+    }
+    .toggle-btn {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        z-index: 1;
+    }
+    .toggle-btn span {
+        width: 49px;
+        height: 7px;
+        border-radius: 5px;
+        background: #eca33d;
+        display: block;
+        margin-top: 4px;
+        transition: 0.3s ease;
+        user-select: none; /*pour enlever la barre de selection de texte sur les images*/
+    }
+}
+
+#titreNav {
+    color: orangered;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#langues {
+    color: whitesmoke;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    li {
+        background-color: rgb(42, 47, 11);
+        color: whitesmoke;
+        padding: 0.3rem;
+        &:hover {
+            background: rgb(141, 93, 4);
+        }
+    }
+    &:hover {
+        z-index: 2;
+    }
+}
+
+#languesCachees {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: none;
+    li {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+}
+
+#langueNavbar:hover ~ #languesCachees,
+#languesCachees:hover {
+    visibility: visible;
+}
+
+#langueNavbar {
+    background: rgb(141, 93, 4);
+    border-radius: 10px;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+}
+
+#langueNavbar {
+    text-align: center
+}

@@ -1,0 +1,83 @@
+footer {
+    display:grid;
+    grid-template-columns: 40% 60%;
+    background: rgb(19, 19, 19);
+    color: rgb(245, 245, 245);
+    align-items: center;
+    min-height: 10rem;
+    text-align: center;
+    @media (max-width: 1126px) {
+        #footerHautResponsive {
+            display: grid;
+            justify-items: center;
+        }
+        grid-template-columns: none;
+        grid-auto-flow: row;
+        gap: 1rem;
+    }
+}
+
+#footerBasResponsive {
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    @media (max-width: 1126px) {
+        grid-template-columns: none;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 7.6rem;
+        gap: 4rem;
+    }
+    @media (max-width: 747px) {
+        grid-auto-flow: row;
+        margin-right: 0;
+        gap: 1rem;
+        padding: 0 0 1rem 0;
+    }
+}
+
+#descFooter {
+    color: rgb(245, 145, 109);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    span {
+        font-size: 1.6rem;
+        color: rgb(208, 135, 0);
+        line-height: 0; //le guillemet ne cree pas d'espace inutile
+        vertical-align: middle; //il est abaissé pour qu'on puisse lire le texte
+    }
+    @media (max-width: 1126px) {
+        width: 90vw;
+    }
+}
+
+#adresseFooter {
+    font-size: 0.9rem;
+}
+
+.interractif p, .interractif a {
+    font-size: 0.85rem;
+    color: whitesmoke;
+    &:hover {
+        color: aqua;
+        cursor: pointer;
+    }
+}
+
+h6 {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+#logosFooter {
+    h5 {
+        color: rgb(171, 171, 171);
+        font-size: 0.95rem;
+        margin: 0 0 0.5rem 0 ;
+    }
+    i:hover {
+        color: aqua;
+        cursor: pointer;
+    }
+}

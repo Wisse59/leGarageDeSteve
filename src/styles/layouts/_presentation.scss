@@ -1,0 +1,110 @@
+#presentation {
+    display: flex;
+    align-items: center;
+    padding: 6rem 0 0 0;
+    min-height: 300px;
+    @media (max-width: 490px) {
+        margin: 3rem 0 0 0;
+    }
+}
+
+#presentationContainer {
+    margin: 2rem 0 0 0;
+    background: rgb(198, 224, 234);
+    position: relative;
+    margin: 0 20%;
+    @media (max-width: 1126px) {
+        font-size: 0.9rem;
+        margin: 0 5%;
+    }
+}
+
+#imgPresentation {
+    position: absolute;
+    bottom: 93%;
+    left: 47%;
+    background: url("../assets/img/photoSteve.jpg") center/cover;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 100%;
+    @media (max-width: 452px) {
+        bottom: 95%;
+        left: 43%;
+    }
+    @media (max-width: 405px) {
+        width: 3rem;
+        height: 3rem;
+        bottom: 96%;
+        left: 43.5%;
+    }
+}
+
+#textePresent {
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    text-align: center;
+    @media (max-width: 406px) {
+        font-size: 0.8rem;
+    }
+}
+
+#infosGarage {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    @media (max-width: 1126px) {
+        font-size: 0.9rem;
+    }
+    @media (max-width: 667px) {
+        font-size: 0.8rem;
+    }
+    @media (max-width: 279px) {
+        font-size: 0.7rem;
+    }
+}
+
+.contenuInfos {
+    border: 1px dashed rgb(16, 11, 69);
+    margin: 10px;
+    justify-items: center;
+    align-content: center;
+    min-height: 15rem;
+    @media (max-width: 667px) {
+        margin: 5px;
+        min-height: 12rem;
+    }
+}
+
+.fa-calendar-days {
+    margin: 0 0 0.5rem 0;
+}
+
+#heures {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+}
+
+#ferme {
+    color: rgb(183, 3, 3);
+}
+
+#fondFinal {
+    background: url("../assets/img/fondFinal.jpg") top/cover no-repeat;
+    background-size: 115%;
+    //l'image est zoomee pour mieux voir la voiture
+    min-height: 28rem;
+    @media (max-width: 707px) {
+        background-size: 160vw;
+    }
+    @media (max-width: 499px) {
+        background-size: 272vw;
+    }
+    @media (max-width: 363px) {
+        background-size: 332vw;
+    }
+    @media (max-width: 351px) {
+        min-height: 33rem;
+    }
+    @media (max-width: 291px) {
+        background-size: 392vw;
+    }
+}

@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(42, 47, 11);
+}
+
+h4 {
+    font-weight: normal;
+    color: whitesmoke;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+img, i {
+    user-select: none; /*pour enlever la barre de selection de texte sur les images*/
+}
+
+@font-face {
+    font-family : KaushanScript;
+    src: url('../assets/fonts/GloriaHallelujah-Regular.ttf');
+}
+
+@font-face {
+    font-family : Caveat;
+    src: url('../assets/fonts/Caveat.ttf');
+}

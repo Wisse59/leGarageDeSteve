@@ -1,0 +1,118 @@
+#nouveautes {
+    background: url("../assets/img/boisDecor.jpg") center/cover;
+    text-align: center;
+    padding: 0 0 40px 4vw;
+    h4 {
+        padding: 15px 0;
+        margin-right: 2vw;
+        color: rgb(81, 54, 19);
+        font-weight: bold;
+    }
+    @media (max-width: 432px) {
+        justify-items: center;
+        padding: 0 0 40px 0;
+    }
+}
+
+#nouvVoitures {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: url("../assets/img/acier.jpg") center/cover;
+    //background: rgb(193, 180, 180);
+    border-radius: 15px;
+    width: 90vw;
+    p {
+        color: rgb(94, 7, 7);
+        text-shadow: whitesmoke 0px 0px 10px;
+    }
+    @media (max-width: 432px) {
+        width: 86vw;
+        justify-items: center;
+    }
+    @media (max-width: 318px) {
+        width: 89vw;
+    }
+    @media (max-width: 308px) {
+        width: 92vw;
+    }
+    @media (max-width: 297px) {
+        font-size: 0.9rem;
+    }
+}
+
+.nouvVoiture {
+    flex: 0 0 calc(100%/3);
+    cursor: pointer;
+    @media (max-width: 432px) {
+        flex: 0 0 calc(100%/2);
+    }
+}
+
+.nouvVoitTitre {
+    margin: 0.5rem 0;
+}
+
+.nouvVoitDescr {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.5rem 0;
+    @media (max-width: 951px) {
+        flex-direction: column;
+    }
+}
+
+.cercleFleche {
+    border: 1px rgb(112, 24, 24) solid;
+    border-radius: 25px;
+    padding: 5px;
+    cursor: pointer;
+    @media (max-width: 951px) {
+        font-size: 0.9rem;
+        padding: 1px;
+    }
+}
+
+.vis {
+    position: absolute;
+    height: 23px;
+}
+
+#vis1 {
+    right: 0.9vw;
+    top: 10px;
+}
+
+#vis2 {
+    left: 0.9vw;
+    bottom: 10px;
+}
+
+.imgVoiture {
+    height: 18vw;
+    width: 26vw;
+    border-radius: 15px;
+}
+
+#fenetreCarousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+#railCarousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+#rechMarque, #rechModele {
+    border-radius: 15px;
+    outline: none;
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+#rechPrix, #rechKm {
+    cursor: pointer;
+}

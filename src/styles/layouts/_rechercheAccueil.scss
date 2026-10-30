@@ -1,0 +1,146 @@
+#formRechVoiture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#trouverVoitureEtPresentation {
+    padding: 0.5rem 0 0 0;
+    height: 51rem;
+    background: url('../assets/img/fondTrouverVoiture.jpg') center/cover;
+    @media (max-width: 745px) {
+        height: 48rem;
+    }
+    @media (max-width: 599px) {
+        height: 45rem;
+    }
+    @media (max-width: 510px) {
+        height: 42rem;
+    }    
+    @media (max-width: 490px) {
+        height: 38rem;
+    }
+    @media (max-width: 384px) {
+        height: 34rem;
+    }
+}
+
+#trouverVoitureContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    width: 40%;
+    margin: 11rem 0 4rem 30%;
+    z-index: 0;
+    p, label, select, h4, a, button {
+        font-family: KaushanScript, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        @media (max-width: 745px) {
+            font-size: clamp(0.5rem, 2vw, 1rem);
+            padding: 0;
+        }
+    }
+    h4 {
+        width: 100%;
+        color: rgb(15, 15, 15);
+        margin: 0.2rem;
+        padding: 0.3rem 0 0 0;
+        @media (max-width: 384px) {
+            margin-top: 4rem;
+        }
+    }
+    &:hover {
+        #fondParchemin {
+            width: 47.5rem;
+            height: 47.5rem;
+            @media (max-width: 745px) {
+                width: 100vw;
+                height: 100vw;
+            }
+            @media (max-width: 470px) {
+                height: 115vw;
+            }
+            @media (max-width: 375px) {
+                height: 135vw;
+            }
+            @media (max-width: 303px) {
+                height: 175vw;
+            }
+        }
+    }
+    
+    @media (max-width: 490px) {
+        margin: 8rem 0 4rem 30%;
+    }
+    @media (max-width: 384px) {
+        margin: 5rem 0 4rem 30%;
+    }
+}
+
+#fondParchemin {
+    position: absolute;
+    z-index:-1;
+    top: 44.5%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 46rem;
+    height: 46rem;
+    background: url('../assets/img/parchemin.png');
+    background-size: 100% 100%;
+    transition: 0.5s ease;
+    @media (max-width: 745px) {
+        width: 95vw;
+        height: 95vw;
+    }
+    @media (max-width: 470px) {
+        height: 110vw;
+    }
+    @media (max-width: 384px) {
+        margin-top: 2rem;
+    }
+    @media (max-width: 375px) {
+        height: 130vw;
+    }
+    @media (max-width: 303px) {
+        height: 170vw;
+    }
+}
+
+.valeurEtDonneeAccueil {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    input {
+        width: clamp(60px, 15vw, 150px);
+    }
+}
+
+#boutonRechAccueil {
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none; //pour retirer le contour gris
+    background: rgb(245, 145, 109);
+    margin: 0.2rem 0;
+    transition: 0.5s ease;
+    //font-size: 0.83rem;
+    &:hover {
+        color: black;
+        font-size: clamp(0.5rem, 2.1vw, 1.1rem);
+    }
+}
+
+#plusCriteres {
+    margin: 1rem 0 1.5rem 0;
+    cursor: pointer;
+    a {
+        color: rgb(42, 47, 11);
+        transition: 0.5s ease;
+    }
+    &:hover a {
+        font-size: clamp(0.5rem, 2.1vw, 1.1rem);
+    }
+    @media (max-width: 745px) {
+        margin: 0 0 1rem 0;
+    }
+}

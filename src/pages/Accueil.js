@@ -300,7 +300,7 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
           <div id="presentation">
               <div id="presentationContainer">
                   <div id="imgPresentation"></div>
-                  <p id="textePresentation">Réputé à Condé-sur-l'Escaut pour mes services de très bonne qualité et mes prix abordables, je m'occupe de ce garage depuis de nombreuses années. À la différence des entreprises aux nombreuses agences qui s'étallent sans connaître tous leurs employés, je vérifie moi-même chaque voiture avant de vous les proposer en vente, chacune étant garrantie deux ans. Pour les réparations, tout le matériel et la plupart des pièces de rechange sont d'ores et déjà à disposition. Faites-moi également confiance pour un lavage au top ou une remise à plomb. Le Garage de Steve est là pour vous !</p>
+                  <p id="textePresent">Réputé à Condé-sur-l'Escaut pour mes services de très bonne qualité et mes prix abordables, je m'occupe de ce garage depuis de nombreuses années. À la différence des entreprises aux nombreuses agences qui s'étallent sans connaître tous leurs employés, je vérifie moi-même chaque voiture avant de vous les proposer en vente, chacune étant garrantie deux ans. Pour les réparations, tout le matériel et la plupart des pièces de rechange sont d'ores et déjà à disposition. Faites-moi également confiance pour un lavage au top ou une remise à plomb. Le Garage de Steve est là pour vous !</p>
                   <div id="infosGarage">
                       <div id="infosGauche">
                           <div className="contenuInfos">
