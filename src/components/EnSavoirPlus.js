@@ -12,6 +12,7 @@ const EnSavoirPlusFooter = () => {
                     <h3 className="sousTitrePageAide" id="mentionsLegales">Mentions légales</h3>
                     <p>Éditeur du site : Le Garage de Steve</p>
                     <p>Adresse : 17 rue du cube, Condé-sur-l'Escaut 59163</p>
+                    <p>Mail : legaragedesteve@gmail.com</p>
                     <p>Téléphone : 07 54 05 77 66</p>
                     <p>Numéro de SIRET : 000 000 000 00000</p>
                     <p>Concepteur du site : Wissem H.</p>

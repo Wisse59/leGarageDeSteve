@@ -144,7 +144,7 @@ img, i {
     right: 10px;
     display: flex;
     flex-direction: column;
-    z-index: 1;
+    z-index: 0;
     li {
         background-color: rgb(42, 47, 11);
         color: whitesmoke;
@@ -153,12 +153,17 @@ img, i {
             background: rgb(141, 93, 4);
         }
     }
+    &:hover {
+        z-index: 2;
+    }
 }
 
 #languesCachees {
     visibility: hidden;
     display: flex;
     flex-direction: column;
+    gap: 0;
+    transition: none;
     li {
         display: flex;
         flex-direction: row;
@@ -169,10 +174,6 @@ img, i {
 #langueNavbar:hover ~ #languesCachees,
 #languesCachees:hover {
     visibility: visible;
-}
-
-#languesCachees {
-    visibility: hidden;
 }
 
 #langueNavbar {
@@ -402,6 +403,8 @@ img, i {
 }
 
 #trouverVoitureContainer {
+    display: flex;
+    flex-direction: column;
     position: relative;
     text-align: center;
     width: 40%;
@@ -415,9 +418,13 @@ img, i {
         }
     }
     h4 {
+        width: 100%;
         color: rgb(15, 15, 15);
         margin: 0.2rem;
         padding: 0.3rem 0 0 0;
+        @media (max-width: 384px) {
+            margin-top: 4rem;
+        }
     }
     &:hover {
         #fondParchemin {
@@ -426,6 +433,15 @@ img, i {
             @media (max-width: 745px) {
                 width: 100vw;
                 height: 100vw;
+            }
+            @media (max-width: 470px) {
+                height: 115vw;
+            }
+            @media (max-width: 375px) {
+                height: 135vw;
+            }
+            @media (max-width: 303px) {
+                height: 175vw;
             }
         }
     }
@@ -455,6 +471,9 @@ img, i {
     }
     @media (max-width: 470px) {
         height: 110vw;
+    }
+    @media (max-width: 384px) {
+        margin-top: 2rem;
     }
     @media (max-width: 375px) {
         height: 130vw;
@@ -711,6 +730,10 @@ h6 {
 .contenuNosVoitures {
     min-height: calc(100vh - 12.33rem);
               //l'ecran moins le footer
+    
+    @media (max-width: 462px) {
+        padding-top: 2.8rem;
+    }
 }
 
 #introNosVoituresContainer {
@@ -729,10 +752,15 @@ h6 {
     width: 26rem;
     padding: 1rem 0;
     border-radius: 25px;
-    z-index: 0;
+    text-align: center;
+    @media (max-width: 462px) {
+        width: 98vw;
+        font-size: 0.8rem;
+    }
 }
 
 .fa-circle-xmark {
+    z-index: 1;
     color: rgb(214, 86, 86);
     position: absolute;
     font-size: 1.2rem;
@@ -779,6 +807,13 @@ h6 {
     }
     @media (max-width: 828px) {
         flex: 0 0 100%; /*1 case pour la derniere ligne*/
+    }
+    @media (max-width: 462px) {
+        width: 95vw;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 .boutonVoir {
@@ -855,6 +890,9 @@ h6 {
     }
     width: 19.8rem;
     height: 2.2rem;
+    @media (max-width: 462px) {
+        width: 68vw;
+    }
 }
 
 .choixAdditionnels {
@@ -876,6 +914,9 @@ h6 {
     align-items: flex-end;
     gap: 0.1rem;
     margin-block-start: 0.4rem;
+    @media (max-width: 462px) {
+        width: 98vw;
+    }
 }
 
 .unPrix {
@@ -884,6 +925,12 @@ h6 {
     align-items: center;
     cursor: pointer;
     user-select: none;
+    width: 37px;
+    @media (max-width: 462px) {
+        p {
+            font-size: 2.5vw;
+        }
+    }
 }
 
 .txtSelectionPrix {
@@ -1023,19 +1070,75 @@ button[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0;
+    padding: 2rem 0;
     gap: 1rem;
     min-height: calc(100vh - 16.33rem);
+    text-align: center;
     //l'ecran moins le footer
     p {
         color: whitesmoke;
         font-size: 1.8rem;
         font-family: Caveat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0 0 1.5rem 0;
+        @media (max-width: 329px) {
+            font-size: 1.7rem;
+        }
+        @media (max-width: 310px) {
+            font-size: 1.6rem;
+        }
+    }
+    @media (max-width: 468px) {
+        padding: 4rem 0;
     }
 }
 .postFacebook {
     background-color: aliceblue;
+    width: 500px;
+    &:first-of-type {
+        height: 230px;
+    }
+    &:nth-of-type(2) {
+        height: 607px;
+    }
+    &:nth-of-type(3) {
+        height: 552px;
+    }
+    @media (max-width: 530px) {
+        width: 400px;
+        &:first-of-type {
+            height: 270px;
+        }
+        &:nth-of-type(2) {
+            height: 570px;
+        }
+        &:nth-of-type(3) {
+            height: 536px;
+        }
+    }
+    @media (max-width: 414px) {
+        width: 300px;
+        &:first-of-type {
+            height: 289px;
+        }
+        &:nth-of-type(2) {
+            height: 548px;
+        }
+        &:nth-of-type(3) {
+            height: 500px;
+        }
+    }
+    @media (max-width: 310px) {
+        width: 250px;
+        &:first-of-type {
+            height: 344px;
+        }
+        &:nth-of-type(2) {
+            height: 583px;
+        }
+        &:nth-of-type(3) {
+            height: 517px;
+        }
+    }
 }
 
 #fenetreCarousel {
@@ -1080,6 +1183,10 @@ button[type="submit"] {
     margin-block-start: 1rem;
     margin-block-end: 1rem;
     gap: 1rem;
+    @media (max-width: 463px) {
+        margin-block-start: 0;
+        padding-top: 3rem;
+    }
 }
 .aideContainer {
     display: flex;
@@ -1093,6 +1200,12 @@ button[type="submit"] {
     text-align: center;
     h3 {
         margin: 0 0 1rem 0;
+    }
+    @media (max-width: 549px) {
+        width: 95vw;
+        p {
+            font-size: 0.8rem;
+        }
     }
 }
 

@@ -2,7 +2,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import visDecor from "../assets/img/visDecor.png";
 import voituresOccasion from "../assets/json/voituresOccasion.json";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Accueil = ({ choixLangue, setChoixLangue }) => {
@@ -18,6 +18,8 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
     const [indexFinCarousel, setIndexFinCarousel] = useState(2);
     //afin de ne pas recalculer la taille à chaque fois que la fleche est pressee
     const maxNouvVoitures = 20; //on limite les nouveautes a 20 voitures
+    const [trioActif, setTrioActif] = useState(0);
+    const refTrioActif = useRef(trioActif);
 
     useEffect(() => {
         setMarquesDispo(
@@ -124,6 +126,21 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
         }
     }, [indexFinCarousel]);    
 
+    const [empecherClicTrio, setEmpecherClicTrio] = useState(true);
+
+    useEffect(() => {
+        if (trioActif === 0) {
+            setEmpecherClicTrio(true);
+        } //pas de clic si texteAppronfondi n'est pas selectionne
+        if (refTrioActif.current !== trioActif) {
+            setEmpecherClicTrio(true); //pas de clic tant que ça deroule
+            setTimeout(() => {
+                setEmpecherClicTrio(false);
+                console.log('le truc est changé !!', trioActif);
+            }, 500)
+        }
+    }, [trioActif])
+
   return (
     <div className="accueil">
       <header>
@@ -144,7 +161,7 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
                   </div>
               </div>
               <div id="bullesRepContainer">
-                  <div className="bulleRep">
+                  <div className="bulleRep" onClick={() => setTrioActif(1)} onMouseEnter={() => setTrioActif(1)} onMouseLeave={() => setTrioActif(0)}>
                       <div className="textePresentation">
                           <p>Une réparation ?</p>
                       </div>
@@ -153,18 +170,18 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
                               <p>Prendre RDV pour une réparation</p>
                           </div>
                           <div className="contenuBulle">
-                              <p onClick={() => envoiRDV('Reparation', 'Reparation carroserie')}>Problème de carrosserie</p>
-                              <p onClick={() => envoiRDV('Reparation', 'Reparation moteur')}>Casse moteur</p>
-                              <p onClick={() => envoiRDV('Reparation', 'Reparation voyants')}>Voyants défectueux</p>
-                              <p onClick={() => envoiRDV('Reparation', 'Reparation embrayage')}>Embrayage endommagé</p>
-                              <p onClick={() => envoiRDV('Reparation', 'Autre')}>Autre..</p>
+                            <p onClick={() => ((trioActif === 1) && !empecherClicTrio) && envoiRDV('Reparation', 'Reparation carroserie')}>Problème de carrosserie</p>
+                            <p onClick={() => ((trioActif === 1) && !empecherClicTrio) && envoiRDV('Reparation', 'Reparation moteur')}>Casse moteur</p>
+                            <p onClick={() => ((trioActif === 1) && !empecherClicTrio) && envoiRDV('Reparation', 'Reparation voyants')}>Voyants défectueux</p>
+                            <p onClick={() => ((trioActif === 1) && !empecherClicTrio) && envoiRDV('Reparation', 'Reparation embrayage')}>Embrayage endommagé</p>
+                            <p onClick={() => ((trioActif === 1) && !empecherClicTrio) && envoiRDV('Reparation', 'Autre')}>Autre..</p>
                           </div>
                           <div className="psRep">
                               <p>Le prix dépend de la gravité des dégâts</p>
                           </div>
                       </div>
                   </div>
-                  <div className="bulleRep">
+                  <div className="bulleRep" onClick={() => setTrioActif(2)} onMouseEnter={() => setTrioActif(2)} onMouseLeave={() => setTrioActif(0)}>
                       <div className="textePresentation">
                           <p>Un lavage ?</p>
                       </div>
@@ -173,14 +190,14 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
                               <p>Choisissez une formule de lavage.</p>
                           </div>
                           <div className="contenuBulle">
-                              <p onClick={() => envoiRDV('Lavage', 'Lavage minimum')}>Service minimum <span>2€</span></p>
-                              <p onClick={() => envoiRDV('Lavage', 'Lavage intermediaire')}>Service intermédiaire <span>8€</span></p>
-                              <p onClick={() => envoiRDV('Lavage', 'Lavage total')}>Service total <span>20€</span></p>
-                              <p onClick={() => envoiRDV('Lavage', 'Lavage interieur et exterieur')}>Service intérieur + extérieur <span>35€</span></p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV('Lavage', 'Lavage minimum')}>Service minimum <span>2€</span></p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV('Lavage', 'Lavage intermediaire')}>Service intermédiaire <span>8€</span></p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV('Lavage', 'Lavage total')}>Service total <span>20€</span></p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV('Lavage', 'Lavage interieur et exterieur')}>Service intérieur + extérieur <span>35€</span></p>
                           </div>
                       </div>
                   </div>
-                  <div className="bulleRep">
+                  <div className="bulleRep" onClick={() => setTrioActif(3)} onMouseEnter={() => setTrioActif(3)} onMouseLeave={() => setTrioActif(0)}>
                       <div className="textePresentation">
                           <p>Une remise d'aplomb ?</p>
                       </div>
@@ -189,11 +206,11 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
                               <p>Venez remettre d'aplomb votre voiture !</p>
                           </div>
                           <div className="contenuBulle">
-                              <p onClick={() => envoiRDV("Remise d'aplomb", "Remise d'huile")}>Remise d'huile</p>
-                              <p onClick={() => envoiRDV("Remise d'aplomb", "Recharge de la batterie")}>Recharge de batterie</p>
-                              <p onClick={() => envoiRDV("Remise d'aplomb", "Remise de produit a essuie-glace")}>Remise de produit à essuie-glace</p>
-                              <p onClick={() => envoiRDV("Remise d'aplomb", "Remise de produit liquide de frein")}>Remise de liquide de frein</p>
-                              <p onClick={() => envoiRDV("Remise d'aplomb", "Remise d'aplomb totale")}>La totale</p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV("Remise d'aplomb", "Remise d'huile")}>Remise d'huile</p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV("Remise d'aplomb", "Recharge de la batterie")}>Recharge de batterie</p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV("Remise d'aplomb", "Remise de produit a essuie-glace")}>Remise de produit à essuie-glace</p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV("Remise d'aplomb", "Remise de produit liquide de frein")}>Remise de liquide de frein</p>
+                            <p onClick={() => ((trioActif === 2) && !empecherClicTrio) && envoiRDV("Remise d'aplomb", "Remise d'aplomb totale")}>La totale</p>
                           </div>
                           <div className="psRep">
                               <p>Le prix dépend de la quantité à ajouter,</p>

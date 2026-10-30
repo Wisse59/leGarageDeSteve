@@ -219,9 +219,9 @@ const NosVoitures = ({ afficherPopUp, setAfficherPopUp }) => {
                   {
                     mesPrix.map((valeur, i) =>
                       <div key ={i} className="unPrix" onClick={() => setPrix(valeur)}>
-                        <svg width="37" height={mesValeurs[i]}>
+                        <svg width="100%" height={mesValeurs[i]}>
                           <rect
-                          width="37" height={mesValeurs[i]} fill={prix === mesPrix[i]? 'rgb(237, 98, 80)' : 'rgb(60, 198, 205)'} />
+                          width="100%" height={mesValeurs[i]} fill={prix === mesPrix[i]? 'rgb(237, 98, 80)' : 'rgb(60, 198, 205)'} />
                         </svg>
                         <p className="txtSelectionPrix">{valeur}€</p>
                       </div>

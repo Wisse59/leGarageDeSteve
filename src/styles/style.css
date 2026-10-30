@@ -195,7 +195,7 @@ img, i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 1;
+  z-index: 0;
 }
 #langues li {
   background-color: rgb(42, 47, 11);
@@ -204,6 +204,9 @@ img, i {
 }
 #langues li:hover {
   background: rgb(141, 93, 4);
+}
+#langues:hover {
+  z-index: 2;
 }
 
 #languesCachees {
@@ -215,6 +218,9 @@ img, i {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0;
+  -webkit-transition: none;
+  transition: none;
 }
 #languesCachees li {
   display: -webkit-box;
@@ -230,10 +236,6 @@ img, i {
 #langueNavbar:hover ~ #languesCachees,
 #languesCachees:hover {
   visibility: visible;
-}
-
-#languesCachees {
-  visibility: hidden;
 }
 
 #langueNavbar {
@@ -517,6 +519,13 @@ img, i {
 }
 
 #trouverVoitureContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   text-align: center;
   width: 40%;
@@ -533,9 +542,15 @@ img, i {
   }
 }
 #trouverVoitureContainer h4 {
+  width: 100%;
   color: rgb(15, 15, 15);
   margin: 0.2rem;
   padding: 0.3rem 0 0 0;
+}
+@media (max-width: 384px) {
+  #trouverVoitureContainer h4 {
+    margin-top: 4rem;
+  }
 }
 #trouverVoitureContainer:hover #fondParchemin {
   width: 47.5rem;
@@ -545,6 +560,21 @@ img, i {
   #trouverVoitureContainer:hover #fondParchemin {
     width: 100vw;
     height: 100vw;
+  }
+}
+@media (max-width: 470px) {
+  #trouverVoitureContainer:hover #fondParchemin {
+    height: 115vw;
+  }
+}
+@media (max-width: 375px) {
+  #trouverVoitureContainer:hover #fondParchemin {
+    height: 135vw;
+  }
+}
+@media (max-width: 303px) {
+  #trouverVoitureContainer:hover #fondParchemin {
+    height: 175vw;
   }
 }
 @media (max-width: 490px) {
@@ -581,6 +611,11 @@ img, i {
 @media (max-width: 470px) {
   #fondParchemin {
     height: 110vw;
+  }
+}
+@media (max-width: 384px) {
+  #fondParchemin {
+    margin-top: 2rem;
   }
 }
 @media (max-width: 375px) {
@@ -900,6 +935,11 @@ h6 {
 .contenuNosVoitures {
   min-height: calc(100vh - 12.33rem);
 }
+@media (max-width: 462px) {
+  .contenuNosVoitures {
+    padding-top: 2.8rem;
+  }
+}
 
 #introNosVoituresContainer {
   display: -webkit-box;
@@ -931,10 +971,17 @@ h6 {
   width: 26rem;
   padding: 1rem 0;
   border-radius: 25px;
-  z-index: 0;
+  text-align: center;
+}
+@media (max-width: 462px) {
+  #introNosVoitures {
+    width: 98vw;
+    font-size: 0.8rem;
+  }
 }
 
 .fa-circle-xmark {
+  z-index: 1;
   color: rgb(214, 86, 86);
   position: absolute;
   font-size: 1.2rem;
@@ -1007,6 +1054,15 @@ h6 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%; /*1 case pour la derniere ligne*/
+  }
+}
+@media (max-width: 462px) {
+  .voiture {
+    width: 95vw;
+  }
+  .voiture img {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1120,6 +1176,11 @@ h6 {
   width: 19.8rem;
   height: 2.2rem;
 }
+@media (max-width: 462px) {
+  #rechercheTxt {
+    width: 68vw;
+  }
+}
 
 .choixAdditionnels {
   background: rgb(60, 198, 205);
@@ -1151,6 +1212,11 @@ h6 {
   -webkit-margin-before: 0.4rem;
           margin-block-start: 0.4rem;
 }
+@media (max-width: 462px) {
+  #selectionPrix {
+    width: 98vw;
+  }
+}
 
 .unPrix {
   display: -webkit-box;
@@ -1168,6 +1234,12 @@ h6 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  width: 37px;
+}
+@media (max-width: 462px) {
+  .unPrix p {
+    font-size: 2.5vw;
+  }
 }
 
 .txtSelectionPrix {
@@ -1383,9 +1455,10 @@ button[type=submit]:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2rem 0;
+  padding: 2rem 0;
   gap: 1rem;
   min-height: calc(100vh - 16.33rem);
+  text-align: center;
 }
 #postsFacebook p {
   color: whitesmoke;
@@ -1393,9 +1466,76 @@ button[type=submit]:hover {
   font-family: Caveat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 0 1.5rem 0;
 }
+@media (max-width: 329px) {
+  #postsFacebook p {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 310px) {
+  #postsFacebook p {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 468px) {
+  #postsFacebook {
+    padding: 4rem 0;
+  }
+}
 
 .postFacebook {
   background-color: aliceblue;
+  width: 500px;
+}
+.postFacebook:first-of-type {
+  height: 230px;
+}
+.postFacebook:nth-of-type(2) {
+  height: 607px;
+}
+.postFacebook:nth-of-type(3) {
+  height: 552px;
+}
+@media (max-width: 530px) {
+  .postFacebook {
+    width: 400px;
+  }
+  .postFacebook:first-of-type {
+    height: 270px;
+  }
+  .postFacebook:nth-of-type(2) {
+    height: 570px;
+  }
+  .postFacebook:nth-of-type(3) {
+    height: 536px;
+  }
+}
+@media (max-width: 414px) {
+  .postFacebook {
+    width: 300px;
+  }
+  .postFacebook:first-of-type {
+    height: 289px;
+  }
+  .postFacebook:nth-of-type(2) {
+    height: 548px;
+  }
+  .postFacebook:nth-of-type(3) {
+    height: 500px;
+  }
+}
+@media (max-width: 310px) {
+  .postFacebook {
+    width: 250px;
+  }
+  .postFacebook:first-of-type {
+    height: 344px;
+  }
+  .postFacebook:nth-of-type(2) {
+    height: 583px;
+  }
+  .postFacebook:nth-of-type(3) {
+    height: 517px;
+  }
 }
 
 #fenetreCarousel {
@@ -1463,6 +1603,13 @@ button[type=submit]:hover {
           margin-block-end: 1rem;
   gap: 1rem;
 }
+@media (max-width: 463px) {
+  #aideContainers {
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    padding-top: 3rem;
+  }
+}
 
 .aideContainer {
   display: -webkit-box;
@@ -1484,6 +1631,14 @@ button[type=submit]:hover {
 }
 .aideContainer h3 {
   margin: 0 0 1rem 0;
+}
+@media (max-width: 549px) {
+  .aideContainer {
+    width: 95vw;
+  }
+  .aideContainer p {
+    font-size: 0.8rem;
+  }
 }
 
 .petitEspace {
