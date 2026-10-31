@@ -5,7 +5,7 @@ import voituresOccasion from "../assets/json/voituresOccasion.json";
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Accueil = ({ choixLangue, setChoixLangue }) => {
+const Accueil = ({ choixLangue, setChoixLangue, languesDispo }) => {    
     const [marquesDispo, setMarquesDispo] = useState([]);
     const [marqueChoisie, setMarqueChoisie] = useState('Clio');
     const [modelesDispo, setModelesDispo] = useState([]);
@@ -136,7 +136,6 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
             setEmpecherClicTrio(true); //pas de clic tant que ça deroule
             setTimeout(() => {
                 setEmpecherClicTrio(false);
-                console.log('le truc est changé !!', trioActif);
             }, 500)
         }
     }, [trioActif])
@@ -145,7 +144,7 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
     <div className="accueil">
       <header>
           <div id="bgTitreAccueil">
-              <Navigation />
+              <Navigation choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
               <div id="titreHeader">
                   <h1>Le Garage de Steve</h1>
                   <p><i className="fa-solid fa-car"></i></p>
@@ -234,7 +233,9 @@ const Accueil = ({ choixLangue, setChoixLangue }) => {
 
               <div id="fenetreCarousel">
                 {/*toutes les voitures sont affichees mais l'excedent est cache (avec overflow: hidden)*/}
-                <div id="railCarousel" style={{ transform: `translateX(-${indexDebutCarousel * (100/2)}%)` }}>
+                <div id="railCarousel" 
+                style={{ transform: (window.innerWidth < 433) ? `translateX(-${indexDebutCarousel * (100/2)}%)` : `translateX(-${indexDebutCarousel * (100/3)}%)` }}
+                >
                 {/*On defile d'un tiers à chaque fois que le no est incremente*/}
                     {voituresOccasion.map((voiture) => 
                         <div key={voiture.id} onClick={() => envoiCarousel(voiture.id)} className="nouvVoiture">

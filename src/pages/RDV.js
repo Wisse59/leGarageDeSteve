@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
-const RDV = () => {
+const RDV = ({ choixLangue, setChoixLangue, languesDispo }) => {
     const recevoir = useLocation();
     const { 
         motifAccueil,
@@ -48,7 +48,7 @@ const RDV = () => {
 
     return(
         <div className="pageRDV">
-            <Navigation />
+            <Navigation choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
             <div id="rdvContainer">
                 <form onSubmit={(e) => {
                     e.preventDefault();

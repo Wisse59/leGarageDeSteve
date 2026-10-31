@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { useLocation } from 'react-router-dom';
 import voituresOccasion from "../assets/json/voituresOccasion.json";
 
-const NosVoitures = ({ afficherPopUp, setAfficherPopUp }) => {  
+const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPopUp, languesDispo }) => {  
   const recevoir = useLocation();
   const { 
     marqueChoisie, 
@@ -194,7 +194,7 @@ const NosVoitures = ({ afficherPopUp, setAfficherPopUp }) => {
 
   return (
     <div className="nosVoitures">
-        <Navigation />
+        <Navigation choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
         <div className='contenuNosVoitures'>
           <div id='introNosVoituresContainer'>
             {

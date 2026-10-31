@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import axios from "axios";
 
-function Actus() {
+function Actus({ choixLangue, setChoixLangue, languesDispo }) {
   const [dataActus, setDataActus] = useState([]);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function Actus() {
 
   return (
     <div className="pageActus">
-      <Navigation />       
+      <Navigation choixLangue={choixLangue} setChoixLangue={setChoixLangue} />      
       <div id="postsFacebook">
         <p>Suivez nos dernières actualités !</p>
         <div className="postFacebook">

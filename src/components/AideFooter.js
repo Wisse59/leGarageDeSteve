@@ -1,11 +1,11 @@
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 
-const AideFooter = () => {
+const AideFooter = ({ choixLangue, setChoixLangue, languesDispo }) => {
 
     return (
         <div id="footerPageAide">
-            <Navigation />
+            <Navigation choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
             <div id="aideContainers">
                 <h2 id="titrePageAide">Besoin d'aide ?</h2>
 

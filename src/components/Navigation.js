@@ -1,16 +1,7 @@
 import { NavLink } from "react-router-dom";
-import txtFR from "../assets/langages/txtFR.json";
-import txtANG from "../assets/langages/txtANG.json";
 import { useEffect, useState } from "react";
 
-const Navigation = () => {
-    const choixLangue = 'FR';
-
-    const languesDispo = {
-        FR: txtFR,
-        ANG: txtANG
-    };
-
+const Navigation = ({ choixLangue, setChoixLangue, languesDispo }) => {
     const [sidebarOuverte, setSidebarOuverte] = useState(false);
 
     return (
@@ -43,8 +34,8 @@ const Navigation = () => {
             <div id="langues">
                 <p id="langueNavbar"><i className="fa-solid fa-language"></i></p>
                 <ul id="languesCachees">
-                    <li>Français</li>
-                    <li>English</li>
+                    <li onClick={() => setChoixLangue('FR')}>Français</li>
+                    <li onClick={() => setChoixLangue('ANG')}>English</li>
                     <li>Deutsch</li>
                     <li>Español</li>
                     <li>Italiano</li>
