@@ -57,62 +57,62 @@ const RDV = ({ choixLangue, setChoixLangue, languesDispo }) => {
                     }
                 }} id="rdv">
                     <div className="sectionRDV">
-                        <p id="introRDV">Prenez un rendez-vous !</p>
+                        <p id="introRDV">{languesDispo[choixLangue][91].text}</p>
                     </div>
                     <div className="sectionRDV">
-                        <p>Choississez une date</p>
+                        <p>{languesDispo[choixLangue][92].text}</p>
                         <input id="jourRDV" type="date" name="jourForm" onChange={(e) => setJourChoisi(new Date(e.target.value).getDay())} defaultValue = {ajd} min = {ajd} required />
                     </div>
                     <div className="sectionRDV">
                         <div id="raisonRDV">
                             <div id="motifContainer1">
-                                <p>Pour quel motif désirez-vous venir ?</p>
+                                <p>{languesDispo[choixLangue][93].text}</p>
                                 <select defaultValue={motif} name='motifForm' onChange={(e) => setMotif(e.target.value)}>
-                                    <option value='Aucun'>Choississez un motif</option>
-                                    <option value='Reparation'>Réparer un véhicule</option>
-                                    <option value='Lavage'>Faire un lavage</option>
-                                    <option value="Remise d'aplomb">Remettre d'aplomb ma voiture</option>
-                                    <option value='Achat ou vente'>Achat/Vente de voiture</option>
+                                    <option value='Aucun'>{languesDispo[choixLangue][94].text}</option>
+                                    <option value='Reparation'>{languesDispo[choixLangue][95].text}</option>
+                                    <option value='Lavage'>{languesDispo[choixLangue][96].text}</option>
+                                    <option value="Remise d'aplomb">{languesDispo[choixLangue][97].text}</option>
+                                    <option value='Achat ou vente'>{languesDispo[choixLangue][98].text}</option>
                                 </select>
                             </div>
                             {motif !== 'Aucun' &&
                                 <div id="motifContainer2">
-                                    <p>Choississez un type de service</p>
+                                    <p>{languesDispo[choixLangue][99].text}</p>
                                     {motif === 'Reparation' && (
                                         <select defaultValue={service} name="reparationForm" onChange={(e) => setService(e.target.value)}> {/*cas de reparation*/}
-                                            <option value='Aucun'>Choississez une réparation</option>
-                                            <option value='Reparation carroserie'>Problème de carrosserie</option>
-                                            <option value='Reparation moteur'>Casse moteur</option>
-                                            <option value='Reparation voyants'>Voyants défectueux</option>
-                                            <option value='Reparation embrayage'>Embrayage endommagé</option>
-                                            <option value='Autre'>Autre..</option>
+                                            <option value='Aucun'>{languesDispo[choixLangue][100].text}</option>
+                                            <option value='Reparation carroserie'>{languesDispo[choixLangue][101].text}</option>
+                                            <option value='Reparation moteur'>{languesDispo[choixLangue][102].text}</option>
+                                            <option value='Reparation voyants'>{languesDispo[choixLangue][103].text}</option>
+                                            <option value='Reparation embrayage'>{languesDispo[choixLangue][104].text}</option>
+                                            <option value='Autre'>{languesDispo[choixLangue][105].text}</option>
                                         </select>
                                     )}
                                     {motif === 'Lavage' && (
                                     <select defaultValue={service} name="lavageForm" onChange={(e) => setService(e.target.value)}> {/*cas de lavage*/}
-                                        <option value='Aucun'>Choississez un lavage</option>
-                                        <option value='Lavage minimum'>Service minimum - Rinçage (2€)</option>
-                                        <option value='Lavage intermediaire'>Service intermédiaire (8€)</option>
-                                        <option value='Lavage total'>Service total (20€)</option>
-                                        <option value='Lavage interieur et exterieur'>Service intérieur + extérieur (35€)</option>
+                                        <option value='Aucun'>{languesDispo[choixLangue][106].text}</option>
+                                        <option value='Lavage minimum'>{languesDispo[choixLangue][107].text}</option>
+                                        <option value='Lavage intermediaire'>{languesDispo[choixLangue][108].text}</option>
+                                        <option value='Lavage total'>{languesDispo[choixLangue][109].text}</option>
+                                        <option value='Lavage interieur et exterieur'>{languesDispo[choixLangue][110].text}</option>
                                     </select>
                                     )}
                                     {motif === "Remise d'aplomb" && (
                                     <select defaultValue={service} name="aplombForm" onChange={(e) => setService(e.target.value)}> {/*cas de remise d'aplomb*/}
-                                        <option value='Aucun'>Choississez un élément</option>
-                                        <option value="Remise d'huile">Remise d'huile</option>
-                                        <option value="Recharge de la batterie">Recharge de batterie</option>
-                                        <option value='Remise de produit a essuie-glace'>Remise de produit à essuie-glace</option>
-                                        <option value='Remise de produit liquide de frein'>Remise de liquide de frein</option>
-                                        <option value="Remise d'aplomb totale">La totale</option>
+                                        <option value='Aucun'>{languesDispo[choixLangue][111].text}</option>
+                                        <option value="Remise d'huile">{languesDispo[choixLangue][112].text}</option>
+                                        <option value="Recharge de la batterie">{languesDispo[choixLangue][113].text}</option>
+                                        <option value='Remise de produit a essuie-glace'>{languesDispo[choixLangue][114].text}</option>
+                                        <option value='Remise de produit liquide de frein'>{languesDispo[choixLangue][115].text}</option>
+                                        <option value="Remise d'aplomb totale">{languesDispo[choixLangue][116].text}</option>
                                     </select>
                                     )}
                                     {motif === 'Achat ou vente' && (
                                     <select defaultValue={service} name="achat-venteForm" onChange={(e) => setService(e.target.value)}> {/*cas d'achat*/}
-                                        <option value='Aucun'>Choississez un motif</option>
-                                        <option value='Achat'>Un véhicule m'intéresse</option>
-                                        <option value='Vente'>Je souhaite vendre mon véhicule</option>
-                                        <option value='Autre'>Autre..</option>
+                                        <option value='Aucun'>{languesDispo[choixLangue][117].text}</option>
+                                        <option value='Achat'>{languesDispo[choixLangue][118].text}</option>
+                                        <option value='Vente'>{languesDispo[choixLangue][119].text}</option>
+                                        <option value='Autre'>{languesDispo[choixLangue][105].text}</option>
                                     </select>
                                     )}
                                 </div>
@@ -120,15 +120,15 @@ const RDV = ({ choixLangue, setChoixLangue, languesDispo }) => {
                         </div>
                     </div>
                     <div className="sectionRDV">
-                        <p>Choississez une horaire</p>
+                        <p>{languesDispo[choixLangue][120].text}</p>
                         <input id="heureRDV" name="heureForm" type="time" defaultValue="08:00" onChange={(e) => setHoraireChoisie(e.target.value.split(":").map(Number))} required />
 
                     </div>
                     <div className="sectionRDV">
                         {(jourChoisi === 0) && (
                             <div className="msgErreurForm">
-                                <p>Nous sommes fermé le dimanche,</p>
-                                <p>Merci de choisir une autre date !</p>
+                                <p>{languesDispo[choixLangue][121].text}</p>
+                                <p>{languesDispo[choixLangue][122].text}</p>
                             </div>
                         )}
                         {(((horaireChoisie[0] < 8) || //avant 8h
@@ -139,8 +139,8 @@ const RDV = ({ choixLangue, setChoixLangue, languesDispo }) => {
                         (jourChoisi !== 0) //le cas du dimanche est separe
                         ) && (
                             <div className="msgErreurForm">
-                                <p>Nous sommes fermé à cette heure de la journée,</p>
-                                <p>nos horaires sont disponibles à l'accueil !</p>
+                                <p>{languesDispo[choixLangue][123].text}</p>
+                                <p>{languesDispo[choixLangue][124].text}</p>
                             </div>
                         )}
                         {((((horaireChoisie[0] === 17) && (horaireChoisie[1] > 10)) || //20min avant la fermeture
@@ -149,15 +149,15 @@ const RDV = ({ choixLangue, setChoixLangue, languesDispo }) => {
                         (jourChoisi !== 0) //le cas du dimanche est separe
                         ) && (
                             <div className="msgErreurForm">
-                                <p>Vous avez choisi une heure à 20min de la fermeture,</p>
-                                <p>merci de prendre rendez-vous plus tôt !</p>
+                                <p>{languesDispo[choixLangue][125].text}</p>
+                                <p>{languesDispo[choixLangue][126].text}</p>
                             </div>
                         )}
-                        <button type="submit">Valider</button>
+                        <button type="submit">{languesDispo[choixLangue][127].text}</button>
                     </div>
                 </form>
             </div>
-            <Footer />
+            <Footer choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
         </div>
     )
 }

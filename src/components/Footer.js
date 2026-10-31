@@ -1,55 +1,55 @@
 import { HashLink } from "react-router-hash-link";
 
-const Footer = () => {
+const Footer = ({ choixLangue, languesDispo }) => {
     return (
       <footer>
           <div id="footerHautResponsive">
-              <h5>Le garage de Steve</h5>
-              <p id="descFooter"><span>“</span> Venez recevoir de l'aide en toute confiance. Expert depuis 2009, mes avis Google Maps parlent d'eux-même. Ici, chaque bijou est traité avec soin, et oui je parle bien de véhicules. <span>”</span></p>
-              <p id="adresseFooter"><i className="fa-solid fa-location-dot"></i>17 rue du cube, Condé-sur-l'Escaut 59163</p>
+              <h5>{languesDispo[choixLangue][3].text}</h5>
+              <p id="descFooter"><span>“</span> {languesDispo[choixLangue][172].text} <span>”</span></p>
+              <p id="adresseFooter"><i className="fa-solid fa-location-dot"></i>{languesDispo[choixLangue][173].text}</p>
           </div>
           <div id="footerBasResponsive">
             <div className="interractif">
-                <h6>Besoin d'aide ?</h6>
+                <h6>{languesDispo[choixLangue][174].text}</h6>
                 <HashLink smooth to="/besoin-aide#nousContacter">
-                  <p>Nous contacter</p>
+                  <p>{languesDispo[choixLangue][175].text}</p>
                 </HashLink>
                 <HashLink smooth to="/besoin-aide#questionsFrequentes">
-                  <p>Questions fréquentes</p>
+                  <p>{languesDispo[choixLangue][176].text}</p>
                 </HashLink>
                 <HashLink smooth to="/besoin-aide#assistanceMalentendants">
-                  <p><i className="fa-solid fa-ear-listen"></i> Assistance malentendants/surdité</p>
+                  <p><i className="fa-solid fa-ear-listen"></i>{languesDispo[choixLangue][177].text}</p>
                 </HashLink>
                 <HashLink smooth to="/besoin-aide#signalerPblm">
-                  <p>Signaler un problème</p>
+                  <p>{languesDispo[choixLangue][178].text}</p>
                 </HashLink>
                 <HashLink smooth to="/besoin-aide#demanderDevis">
-                  <p>Demander un devis</p>
+                  <p>{languesDispo[choixLangue][179].text}</p>
                 </HashLink>
             </div>
             <div className="interractif">
-                <h6>En savoir plus</h6>
+                <h6>{languesDispo[choixLangue][180].text}</h6>
                 <HashLink smooth to="/en-savoir-plus#mentionsLegales">
-                  <p>Mentions légales</p>
+                  <p>{languesDispo[choixLangue][181].text}</p>
                 </HashLink>
                 <HashLink smooth to="/en-savoir-plus#nosEngagements">
-                  <p>Nos engagements</p>
+                  <p>{languesDispo[choixLangue][182].text}</p>
                 </HashLink>
                 <HashLink smooth to="/en-savoir-plus#cookies">
-                  <p>Cookies et vie privée</p>
+                  <p>{languesDispo[choixLangue][183].text}</p>
                 </HashLink>
                 <HashLink smooth to="/en-savoir-plus#conditionsGenerales">
-                  <p>Conditions générales</p>
+                  <p>{languesDispo[choixLangue][184].text}</p>
                 </HashLink>
                 <HashLink smooth to="/en-savoir-plus#politiqueConfidentialite">
-                  <p>Politique de confidentialité</p>
+                  <p>{languesDispo[choixLangue][185].text}</p>
                 </HashLink>
                 <HashLink smooth to="/en-savoir-plus#accessibilite">
-                  <p>Accessibilité</p>
+                  <p>{languesDispo[choixLangue][186].text}</p>
                 </HashLink>
             </div>
             <div id="logosFooter">
-                <h5 className="gris">Nous suivre</h5>
+                <h5 className="gris">{languesDispo[choixLangue][187].text}</h5>
                 <a href="https://www.facebook.com/profile.php?id=61595868208890"><i className="fa-brands fa-facebook-f"></i></a>
                 <a href="https://x.com"><i className="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com"><i className="fa-brands fa-instagram"></i></a>

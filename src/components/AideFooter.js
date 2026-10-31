@@ -7,45 +7,45 @@ const AideFooter = ({ choixLangue, setChoixLangue, languesDispo }) => {
         <div id="footerPageAide">
             <Navigation choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
             <div id="aideContainers">
-                <h2 id="titrePageAide">Besoin d'aide ?</h2>
+                <h2 id="titrePageAide">{languesDispo[choixLangue][129].text}</h2>
 
                 <div className="aideContainer">
-                    <h3 className="sousTitrePageAide" id="nousContacter">Nous contacter</h3>
-                    <p>Nous sommes joignables aux coordonnées suivantes :</p>
+                    <h3 className="sousTitrePageAide" id="nousContacter">{languesDispo[choixLangue][130].text}</h3>
+                    <p>{languesDispo[choixLangue][131].text}</p>
                     <div className="petitEspace" />
-                    <p>legaragedesteve@gmail.com</p>
-                    <p>07 54 05 77 66</p>
+                    <p>{languesDispo[choixLangue][132].text}</p>
+                    <p>{languesDispo[choixLangue][133].text}</p>
                 </div>
 
                 <div className="aideContainer">
-                    <h3 className="sousTitrePageAide" id="questionsFrequentes">Questions fréquentes</h3>
-                    <p>➢ Les voitures possèdent-elles une garantie ?</p>
-                    <p>Tous nos véhicules sont garantis deux ans à l'achat.</p>
+                    <h3 className="sousTitrePageAide" id="questionsFrequentes">{languesDispo[choixLangue][134].text}</h3>
+                    <p>➢ {languesDispo[choixLangue][135].text}</p>
+                    <p>{languesDispo[choixLangue][136].text}</p>
                     <div className="petitEspace" />
-                    <p>➢ Quels moyens de paiement sont acceptés ?</p>
-                    <p>Nous acceptons les paiements par liquide et par carte bancaire.</p>
-                    <p>Les chèques sont refusés suite à des problèmes rencontrés par le passé.</p>
+                    <p>➢ {languesDispo[choixLangue][137].text}</p>
+                    <p>{languesDispo[choixLangue][138].text}</p>
+                    <p>{languesDispo[choixLangue][139].text}</p>
                     <div className="petitEspace" />
-                    <p>➢ Comment peut-on être prévenus des horaires imprévues ?</p>
-                    <p>En cas de problème, une annonce est faite sur notre page Facebook.</p>
+                    <p>➢ {languesDispo[choixLangue][140].text}</p>
+                    <p>{languesDispo[choixLangue][141].text}</p>
                 </div>
 
                 <div className="aideContainer">
-                    <h3 className="sousTitrePageAide" id="assistanceMalentendants"><i className="fa-solid fa-ear-listen"></i> Assistance malentendants et surdité</h3>
-                    <p>Je maitrise la langue des signes françaises (LSF), ma fille étant malentendante depuis la naissance. Vous pouvez donc venir sans soucis ni interprète au garage, tout le monde est bienvenue, on communiquera très bien ensemble !</p>
+                    <h3 className="sousTitrePageAide" id="assistanceMalentendants"><i className="fa-solid fa-ear-listen"></i>{languesDispo[choixLangue][142].text}</h3>
+                    <p>{languesDispo[choixLangue][143].text}</p>
                 </div>
 
                 <div className="aideContainer">
-                    <h3 className="sousTitrePageAide" id="signalerPblm">Signaler un problème</h3>
-                    <p>Vous pouvez me contacter par mail aux <a href="#nousContacter">coordonnées suivantes.</a></p>
+                    <h3 className="sousTitrePageAide" id="signalerPblm">{languesDispo[choixLangue][144].text}</h3>
+                    <p>{languesDispo[choixLangue][145].text}<a href="#nousContacter">{languesDispo[choixLangue][146].text}</a></p>
                 </div>
 
                 <div className="aideContainer">
-                    <h3 className="sousTitrePageAide" id="demanderDevis">Demander un devis</h3>
-                    <p>Les devis sont envoyés automatiquement par mail à chaque prise de rendez-vous sur notre site et sont également imprimés et donnés en main propre avant chaque reparation ou achat de véhicule. En cas de perte, consultez simplement vos mail !</p>
+                    <h3 className="sousTitrePageAide" id="demanderDevis">{languesDispo[choixLangue][147].text}</h3>
+                    <p>{languesDispo[choixLangue][148].text}</p>
                 </div>
             </div>
-            <Footer />
+            <Footer choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
         </div>
     )
 }

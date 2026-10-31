@@ -29,9 +29,9 @@ function Actus({ choixLangue, setChoixLangue, languesDispo }) {
 
   return (
     <div className="pageActus">
-      <Navigation choixLangue={choixLangue} setChoixLangue={setChoixLangue} />      
+      <Navigation choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />      
       <div id="postsFacebook">
-        <p>Suivez nos dernières actualités !</p>
+        <p>{languesDispo[choixLangue][128].text}</p>
         <div className="postFacebook">
           <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02An7b7AzL9qrThWrfgLF7K6p9aXERte5qRehr335KhZD27VvXSxdVfSyWJHAhxpuDl%26id%3D61595868208890&show_text=true" width="100%" height="100%"
           style={{'border':'none', 'overflow':'hidden'}}
@@ -64,7 +64,7 @@ function Actus({ choixLangue, setChoixLangue, languesDispo }) {
         )}
         */}
       </div> 
-      <Footer />
+      <Footer choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
     </div>
   );
 }

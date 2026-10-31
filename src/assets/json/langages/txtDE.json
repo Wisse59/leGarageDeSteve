@@ -1,17 +1,576 @@
 [
     {
-        "text":"Accueil"
+        "text": "Startseite"
     },
     {
-        "text":"Nos Voitures"
+        "text": "Unsere Fahrzeuge"
     },
     {
-        "text":"Le Garage de Steve"
+        "text": "Steves Garage"
     },
     {
-        "text":"Prendre RDV"
+        "text": "Termin vereinbaren"
     },
     {
-        "text":"Actus"
+        "text": "Neuigkeiten"
+    },
+
+    {
+        "text": "Steves Garage"
+    },
+    {
+        "text": "Für erstklassigen Service!"
+    },
+    {
+        "text": "Brauchen Sie einen kleinen Reifen-Schubs?"
+    },
+    {
+        "text": "Eine Reparatur?"
+    },
+    {
+        "text": "Einen Reparaturtermin vereinbaren"
+    },
+    {
+        "text": "Karosserieschaden"
+    },
+    {
+        "text": "Motorschaden"
+    },
+    {
+        "text": "Defekte Kontrollleuchten"
+    },
+    {
+        "text": "Beschädigte Kupplung"
+    },
+    {
+        "text": "Andere.."
+    },
+    {
+        "text": "Der Preis hängt vom Ausmaß des Schadens ab"
+    },
+    {
+        "text": "Eine Autowäsche?"
+    },
+    {
+        "text": "Wählen Sie ein Waschpaket aus."
+    },
+    {
+        "text": "Basis-Service "
+    },
+    {
+        "text": "2€"
+    },
+    {
+        "text": "Mittelklasse-Service "
+    },
+    {
+        "text": "8€"
+    },
+    {
+        "text": "Komplett-Service "
+    },
+    {
+        "text": "20€"
+    },
+    {
+        "text": "Innen- und Außenreinigung "
+    },
+    {
+        "text": "35€"
+    },
+    {
+        "text": "Möchten Sie Ihr Auto wieder fit machen?"
+    },
+    {
+        "text": "Kommen Sie vorbei und machen Sie Ihr Auto wieder fit!"
+    },
+    {
+        "text": "Öl nachfüllen"
+    },
+    {
+        "text": "Batterie aufladen"
+    },
+    {
+        "text": "Scheibenwaschflüssigkeit nachfüllen"
+    },
+    {
+        "text": "Bremsflüssigkeit nachfüllen"
+    },
+    {
+        "text": "Das Komplettpaket"
+    },
+    {
+        "text": "Der Preis hängt von der nachzufüllenden Menge ab,"
+    },
+    {
+        "text": "die Überprüfung ist kostenlos."
+    },
+    {
+        "text": "Unsere neuesten Fahrzeuge"
+    },
+    {
+        "text": "Zustand: "
+    },
+    {
+        "text": "€"
+    },
+    {
+        "text": "Finden Sie Ihr Auto!"
+    },
+    {
+        "text": "Marke: "
+    },
+    {
+        "text": "Modell: "
+    },
+    {
+        "text": "Preis: "
+    },
+    {
+        "text": "Max. km:"
+    },
+    {
+        "text": "Suchen ("
+    },
+    {
+        "text": " Ergebnisse)"
+    },
+    {
+        "text": "Weitere Suchkriterien finden Sie hier."
+    },
+    {
+        "text": "In Condé-sur-l’Escaut bin ich für meinen hochwertigen Service und meine günstigen Preise bekannt und kümmere mich seit vielen Jahren um diese Werkstatt. Anders als große Unternehmen mit zahlreichen Niederlassungen, in denen man nicht alle Mitarbeitenden kennt, überprüfe ich jedes Auto persönlich, bevor ich es zum Verkauf anbiete. Jedes Fahrzeug hat eine zweijährige Garantie. Für Reparaturen stehen bereits alle Geräte und die meisten Ersatzteile zur Verfügung. Vertrauen Sie mir auch, wenn es um eine erstklassige Autowäsche oder das Auffüllen von Flüssigkeiten geht. Steves Garage ist für Sie da!"
+    },
+    {
+        "text": "17 Rue du cube"
+    },
+    {
+        "text": "Condé-sur-l’Escaut (59163)"
+    },
+    {
+        "text": "Öffnungszeiten:"
+    },
+    {
+        "text": "Montag: 8:00–12:30 14:00–17:30"
+    },
+    {
+        "text": "Dienstag: 8:00–12:30 14:00–17:30"
+    },
+    {
+        "text": "Mittwoch: 8:00–12:00"
+    },
+    {
+        "text": "Donnerstag: 8:00–12:30 14:00–17:30"
+    },
+    {
+        "text": "Freitag: 8:00–12:30 14:00–17:30"
+    },
+    {
+        "text": "Samstag: 8:00–12:30 14:00–17:30"
+    },
+    {
+        "text": "Sonntags geschlossen"
+    },
+
+    {
+        "text": "Willkommen im Verkaufsbereich unserer Fahrzeuge!"
+    },
+    {
+        "text": "Hier können Sie sich die verfügbaren Fahrzeuge ansehen, um"
+    },
+    {
+        "text": "einen Termin zu vereinbaren und ihren Zustand persönlich zu überprüfen."
+    },
+    {
+        "text": "Viel Erfolg bei der Suche!"
+    },
+    {
+        "text": "Höchstpreis"
+    },
+    {
+        "text": "Max. Kilometerstand"
+    },
+    {
+        "text": " km"
+    },
+    {
+        "text": "Kraftstoffart:"
+    },
+    {
+        "text": "Alle"
+    },
+    {
+        "text": "Benzin"
+    },
+    {
+        "text": "Diesel"
+    },
+    {
+        "text": "Elektrisch"
+    },
+    {
+        "text": "Getriebe:"
+    },
+    {
+        "text": "Alle"
+    },
+    {
+        "text": "Schaltgetriebe"
+    },
+    {
+        "text": "Automatik"
+    },
+    {
+        "text": "Farbe:"
+    },
+    {
+        "text": "Schwarz"
+    },
+    {
+        "text": "Weiß"
+    },
+    {
+        "text": "Grau"
+    },
+    {
+        "text": "Rot"
+    },
+    {
+        "text": "Blau"
+    },
+    {
+        "text": "Gelb"
+    },
+    {
+        "text": "Es wurden keine Ergebnisse gefunden!"
+    },
+    {
+        "text": "Bitte passen Sie Ihre Suchkriterien an."
+    },
+    {
+        "text": "Mehr anzeigen"
+    },
+    {
+        "text": " Sitzplätze"
+    },
+    {
+        "text": " Türen"
+    },
+    {
+        "text": "Steuer-PS: "
+    },
+    {
+        "text": " PS"
+    },
+    {
+        "text": "DIN-Leistung: "
+    },
+    {
+        "text": " PS"
+    },
+    {
+        "text": "Farbe: "
+    },
+    {
+        "text": "Weniger anzeigen"
+    },
+
+    {
+        "text": "Vereinbaren Sie einen Termin!"
+    },
+    {
+        "text": "Wählen Sie ein Datum aus"
+    },
+    {
+        "text": "Aus welchem Grund möchten Sie zu uns kommen?"
+    },
+    {
+        "text": "Wählen Sie einen Grund aus"
+    },
+    {
+        "text": "Ein Fahrzeug reparieren lassen"
+    },
+    {
+        "text": "Eine Autowäsche durchführen lassen"
+    },
+    {
+        "text": "Mein Auto wieder fit machen lassen"
+    },
+    {
+        "text": "Autokauf/-verkauf"
+    },
+    {
+        "text": "Wählen Sie eine Serviceart aus"
+    },
+    {
+        "text": "Wählen Sie eine Reparatur aus"
+    },
+    {
+        "text": "Karosserieschaden"
+    },
+    {
+        "text": "Motorschaden"
+    },
+    {
+        "text": "Defekte Kontrollleuchten"
+    },
+    {
+        "text": "Beschädigte Kupplung"
+    },
+    {
+        "text": "Andere.."
+    },
+    {
+        "text": "Wählen Sie eine Autowäsche aus"
+    },
+    {
+        "text": "Basis-Service – Spülen (2€)"
+    },
+    {
+        "text": "Mittelklasse-Service (8€)"
+    },
+    {
+        "text": "Komplett-Service (20€)"
+    },
+    {
+        "text": "Innen- und Außenreinigung (35€)"
+    },
+    {
+        "text": "Wählen Sie einen Punkt aus"
+    },
+    {
+        "text": "Öl nachfüllen"
+    },
+    {
+        "text": "Batterie aufladen"
+    },
+    {
+        "text": "Scheibenwaschflüssigkeit nachfüllen"
+    },
+    {
+        "text": "Bremsflüssigkeit nachfüllen"
+    },
+    {
+        "text": "Das Komplettpaket"
+    },
+    {
+        "text": "Wählen Sie einen Grund aus"
+    },
+    {
+        "text": "Ich interessiere mich für ein Fahrzeug"
+    },
+    {
+        "text": "Ich möchte mein Fahrzeug verkaufen"
+    },
+    {
+        "text": "Wählen Sie eine Uhrzeit aus"
+    },
+    {
+        "text": "Sonntags haben wir geschlossen,"
+    },
+    {
+        "text": "bitte wählen Sie ein anderes Datum!"
+    },
+    {
+        "text": "Zu dieser Tageszeit haben wir geschlossen,"
+    },
+    {
+        "text": "unsere Öffnungszeiten finden Sie auf der Startseite!"
+    },
+    {
+        "text": "Sie haben eine Uhrzeit gewählt, die nur 20 Minuten vor Ladenschluss liegt,"
+    },
+    {
+        "text": "bitte vereinbaren Sie einen früheren Termin!"
+    },
+    {
+        "text": "Bestätigen"
+    },
+
+    {
+        "text": "Folgen Sie unseren neuesten Nachrichten!"
+    },
+
+    {
+        "text": "Benötigen Sie Hilfe?"
+    },
+    {
+        "text": "Kontakt"
+    },
+    {
+        "text": "Sie erreichen uns unter folgenden Kontaktdaten:"
+    },
+    {
+        "text": "legaragedesteve@gmail.com"
+    },
+    {
+        "text": "07 54 05 77 66"
+    },
+    {
+        "text": "Häufig gestellte Fragen"
+    },
+    {
+        "text": "Haben die Fahrzeuge eine Garantie?"
+    },
+    {
+        "text": "Alle unsere Fahrzeuge haben beim Kauf eine zweijährige Garantie."
+    },
+    {
+        "text": "Welche Zahlungsmethoden werden akzeptiert?"
+    },
+    {
+        "text": "Wir akzeptieren Barzahlung und Kartenzahlung."
+    },
+    {
+        "text": "Aufgrund früherer Probleme nehmen wir keine Schecks an."
+    },
+    {
+        "text": "Wie werden wir über außerplanmäßige Änderungen der Öffnungszeiten informiert?"
+    },
+    {
+        "text": "Im Problemfall veröffentlichen wir eine Mitteilung auf unserer Facebook-Seite."
+    },
+    {
+        "text": " Unterstützung für Hörgeschädigte und Gehörlose"
+    },
+    {
+        "text": "Ich beherrsche die Französische Gebärdensprache (LSF), da meine Tochter seit ihrer Geburt schwerhörig ist. Sie können also problemlos und ohne Dolmetscher in die Werkstatt kommen. Jeder ist willkommen – wir können uns problemlos verständigen!"
+    },
+    {
+        "text": "Ein Problem melden"
+    },
+    {
+        "text": "Sie können mich per E-Mail unter den "
+    },
+    {
+        "text": "folgenden Kontaktdaten erreichen."
+    },
+    {
+        "text": "Einen Kostenvoranschlag anfordern"
+    },
+    {
+        "text": "Die Kostenvoranschläge werden bei jeder Terminbuchung auf unserer Website automatisch per E-Mail versendet. Außerdem werden sie vor jeder Reparatur oder jedem Fahrzeugkauf ausgedruckt und persönlich übergeben. Sollten Sie Ihre E-Mail verlieren, schauen Sie einfach in Ihrem Postfach nach!"
+    },
+
+    {
+        "text": "Mehr erfahren"
+    },
+    {
+        "text": "Impressum"
+    },
+    {
+        "text": "Website-Betreiber: Steves Garage"
+    },
+    {
+        "text": "Adresse: 17 rue du cube, Condé-sur-l’Escaut 59163"
+    },
+    {
+        "text": "E-Mail: legaragedesteve@gmail.com"
+    },
+    {
+        "text": "Telefon: 07 54 05 77 66"
+    },
+    {
+        "text": "SIRET-Nummer: 000 000 000 00000"
+    },
+    {
+        "text": "Website-Entwickler: Wissem H."
+    },
+    {
+        "text": "Hosting-Anbieter: Netlify"
+    },
+    {
+        "text": "Unsere Verpflichtungen"
+    },
+    {
+        "text": "In Steves Garage sind Qualität und Vertrauen die Grundpfeiler meiner Werte. Ich verpflichte mich dazu:"
+    },
+    {
+        "text": "Niemals ohne vorherige Zustimmung zusätzliche Kosten zu verursachen."
+    },
+    {
+        "text": "Qualitativ hochwertige und garantierte Ersatzteile zu verwenden."
+    },
+    {
+        "text": "Die bei der Abgabe Ihres Fahrzeugs vereinbarten Fristen einzuhalten."
+    },
+    {
+        "text": "Altöl und defekte Teile so umweltgerecht wie möglich zu recyceln."
+    },
+    {
+        "text": "Cookies und Datenschutz"
+    },
+    {
+        "text": "Diese Website verwendet nur das Nötigste. Die einzigen Cookies, die wir setzen, dienen dem ordnungsgemäßen Betrieb der Website, insbesondere dem Online-Terminbuchungssystem. Es gibt keine Werbung und somit auch kein Werbetracking: Sie sind hier wegen Ihres Autos und nicht, um überwacht zu werden!"
+    },
+    {
+        "text": "Allgemeine Geschäftsbedingungen"
+    },
+    {
+        "text": "Unsere Kostenvoranschläge sind kostenlos und ab Ausstellungsdatum 30 Tage lang gültig. Jede Reparatur setzt die vorherige Unterzeichnung des Kostenvoranschlags voraus. Für die Bestellung bestimmter Ersatzteile kann eine Anzahlung verlangt werden. Fahrzeuge, die nicht innerhalb von 15 Tagen nach Abschluss der Arbeiten abgeholt werden, können Standgebühren verursachen."
+    },
+    {
+        "text": "Datenschutzerklärung"
+    },
+    {
+        "text": "Die Informationen, die Sie uns anvertrauen, werden ausschließlich zur Verwaltung Ihrer Termine, zum Versand Ihrer Kostenvoranschläge und zur Rechnungsstellung verwendet. Sie bleiben streng vertraulich zwischen Ihnen und Steves Garage und werden niemals weiterverkauft oder an Dritte weitergegeben."
+    },
+    {
+        "text": "Barrierefreiheit"
+    },
+    {
+        "text": "Die Werkstatt wurde so eingerichtet, dass alle Menschen unter bestmöglichen Bedingungen empfangen werden können. Eingang, Empfangsbereich und Büro sind ebenerdig und somit vollständig für Menschen mit eingeschränkter Mobilität und Rollstuhlfahrer zugänglich. Außerdem beherrsche ich, wie im Hilfebereich erwähnt, fließend die Französische Gebärdensprache. Menschen mit Hörbehinderung sind daher selbstverständlich herzlich willkommen."
+    },
+
+    {
+        "text": "Kommen Sie und lassen Sie sich in aller Ruhe helfen. Seit 2009 bin ich Experte – meine Google-Maps-Bewertungen sprechen für sich. Hier wird jedes Schmuckstück mit Sorgfalt behandelt, und ja, ich spreche von Fahrzeugen."
+    },
+    {
+        "text": "17 rue du cube, Condé-sur-l’Escaut 59163"
+    },
+    {
+        "text": "Benötigen Sie Hilfe?"
+    },
+    {
+        "text": "Kontakt"
+    },
+    {
+        "text": "Häufig gestellte Fragen"
+    },
+    {
+        "text": " Unterstützung für Hörgeschädigte/Gehörlose"
+    },
+    {
+        "text": "Ein Problem melden"
+    },
+    {
+        "text": "Einen Kostenvoranschlag anfordern"
+    },
+    {
+        "text": "Mehr erfahren"
+    },
+    {
+        "text": "Impressum"
+    },
+    {
+        "text": "Unsere Verpflichtungen"
+    },
+    {
+        "text": "Cookies und Datenschutz"
+    },
+    {
+        "text": "Allgemeine Geschäftsbedingungen"
+    },
+    {
+        "text": "Datenschutzerklärung"
+    },
+    {
+        "text": "Barrierefreiheit"
+    },
+    {
+        "text": "Folgen Sie uns"
+    },
+    {
+        "text":"Modell suchen"
     }
 ]

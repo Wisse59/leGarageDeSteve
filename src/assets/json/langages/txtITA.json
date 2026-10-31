@@ -1,17 +1,576 @@
 [
     {
-        "text":"Accueil"
+        "text": "Home"
     },
     {
-        "text":"Nos Voitures"
+        "text": "Le nostre auto"
     },
     {
-        "text":"Le Garage de Steve"
+        "text": "Il Garage di Steve"
     },
     {
-        "text":"Prendre RDV"
+        "text": "Prenota un appuntamento"
     },
     {
-        "text":"Actus"
+        "text": "Novità"
+    },
+
+    {
+        "text": "Il Garage di Steve"
+    },
+    {
+        "text": "Servizi di qualità!"
+    },
+    {
+        "text": "Hai bisogno di una mano con la tua auto?"
+    },
+    {
+        "text": "Una riparazione?"
+    },
+    {
+        "text": "Prenota un appuntamento per una riparazione"
+    },
+    {
+        "text": "Problemi alla carrozzeria"
+    },
+    {
+        "text": "Guasto al motore"
+    },
+    {
+        "text": "Spie difettose"
+    },
+    {
+        "text": "Frizione danneggiata"
+    },
+    {
+        "text": "Altro.."
+    },
+    {
+        "text": "Il prezzo dipende dalla gravità dei danni"
+    },
+    {
+        "text": "Un lavaggio?"
+    },
+    {
+        "text": "Scegli un pacchetto di lavaggio."
+    },
+    {
+        "text": "Servizio base "
+    },
+    {
+        "text": "2€"
+    },
+    {
+        "text": "Servizio intermedio "
+    },
+    {
+        "text": "8€"
+    },
+    {
+        "text": "Servizio completo "
+    },
+    {
+        "text": "20€"
+    },
+    {
+        "text": "Servizio interno + esterno "
+    },
+    {
+        "text": "35€"
+    },
+    {
+        "text": "Una messa a punto?"
+    },
+    {
+        "text": "Vieni a rimettere a punto la tua auto!"
+    },
+    {
+        "text": "Rabbocco dell’olio"
+    },
+    {
+        "text": "Ricarica della batteria"
+    },
+    {
+        "text": "Rabbocco del liquido lavavetri"
+    },
+    {
+        "text": "Rabbocco del liquido dei freni"
+    },
+    {
+        "text": "Tutto quanto"
+    },
+    {
+        "text": "Il prezzo dipende dalla quantità da aggiungere,"
+    },
+    {
+        "text": "il controllo è gratuito."
+    },
+    {
+        "text": "I nostri ultimi acquisti"
+    },
+    {
+        "text": "Stato: "
+    },
+    {
+        "text": "€"
+    },
+    {
+        "text": "Trova la tua auto!"
+    },
+    {
+        "text": "Marca: "
+    },
+    {
+        "text": "Modello: "
+    },
+    {
+        "text": "Prezzo: "
+    },
+    {
+        "text": "Km max:"
+    },
+    {
+        "text": "Cerca ("
+    },
+    {
+        "text": " risultati)"
+    },
+    {
+        "text": "Altri criteri disponibili qui."
+    },
+    {
+        "text": "Sono conosciuto a Condé-sur-l’Escaut per la qualità dei miei servizi e i miei prezzi accessibili. Mi occupo di questa officina da molti anni. A differenza delle aziende con numerose filiali, dove non si conoscono nemmeno tutti i dipendenti, controllo personalmente ogni auto prima di proporla in vendita: ciascuna è garantita per due anni. Per le riparazioni, tutta l’attrezzatura e la maggior parte dei pezzi di ricambio sono già disponibili. Affidati a me anche per un lavaggio impeccabile o per una messa a punto. Il Garage di Steve è qui per te!"
+    },
+    {
+        "text": "17 Rue du cube"
+    },
+    {
+        "text": "Condé-sur-l’Escaut (59163)"
+    },
+    {
+        "text": "Orari:"
+    },
+    {
+        "text": "Lunedì: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Martedì: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Mercoledì: 8:00-12:00"
+    },
+    {
+        "text": "Giovedì: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Venerdì: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Sabato: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Chiuso la domenica"
+    },
+
+    {
+        "text": "Benvenuto nella sezione dedicata alla vendita delle nostre auto!"
+    },
+    {
+        "text": "Qui puoi vedere i veicoli disponibili per"
+    },
+    {
+        "text": "prenotare un appuntamento e verificarne di persona le condizioni."
+    },
+    {
+        "text": "Buona ricerca!"
+    },
+    {
+        "text": "Prezzo max"
+    },
+    {
+        "text": "Km max"
+    },
+    {
+        "text": " km"
+    },
+    {
+        "text": "Tipo di carburante:"
+    },
+    {
+        "text": "Tutti"
+    },
+    {
+        "text": "Benzina"
+    },
+    {
+        "text": "Diesel"
+    },
+    {
+        "text": "Elettrica"
+    },
+    {
+        "text": "Cambio:"
+    },
+    {
+        "text": "Tutti"
+    },
+    {
+        "text": "Manuale"
+    },
+    {
+        "text": "Automatico"
+    },
+    {
+        "text": "Colore:"
+    },
+    {
+        "text": "Nera"
+    },
+    {
+        "text": "Bianca"
+    },
+    {
+        "text": "Grigia"
+    },
+    {
+        "text": "Rossa"
+    },
+    {
+        "text": "Blu"
+    },
+    {
+        "text": "Gialla"
+    },
+    {
+        "text": "Non è stato trovato alcun risultato!"
+    },
+    {
+        "text": "Modifica i criteri di ricerca."
+    },
+    {
+        "text": "Mostra altro"
+    },
+    {
+        "text": " posti"
+    },
+    {
+        "text": " porte"
+    },
+    {
+        "text": "Potenza fiscale: "
+    },
+    {
+        "text": " CV"
+    },
+    {
+        "text": "Potenza DIN: "
+    },
+    {
+        "text": " CV"
+    },
+    {
+        "text": "Colore: "
+    },
+    {
+        "text": "Mostra meno"
+    },
+
+    {
+        "text": "Prenota un appuntamento!"
+    },
+    {
+        "text": "Scegli una data"
+    },
+    {
+        "text": "Per quale motivo desideri venire?"
+    },
+    {
+        "text": "Scegli un motivo"
+    },
+    {
+        "text": "Riparare un veicolo"
+    },
+    {
+        "text": "Lavare un’auto"
+    },
+    {
+        "text": "Rimettere a punto la mia auto"
+    },
+    {
+        "text": "Acquisto/Vendita di un’auto"
+    },
+    {
+        "text": "Scegli un tipo di servizio"
+    },
+    {
+        "text": "Scegli una riparazione"
+    },
+    {
+        "text": "Problemi alla carrozzeria"
+    },
+    {
+        "text": "Guasto al motore"
+    },
+    {
+        "text": "Spie difettose"
+    },
+    {
+        "text": "Frizione danneggiata"
+    },
+    {
+        "text": "Altro.."
+    },
+    {
+        "text": "Scegli un tipo di lavaggio"
+    },
+    {
+        "text": "Servizio base - Risciacquo (2€)"
+    },
+    {
+        "text": "Servizio intermedio (8€)"
+    },
+    {
+        "text": "Servizio completo (20€)"
+    },
+    {
+        "text": "Servizio interno + esterno (35€)"
+    },
+    {
+        "text": "Scegli un elemento"
+    },
+    {
+        "text": "Rabbocco dell’olio"
+    },
+    {
+        "text": "Ricarica della batteria"
+    },
+    {
+        "text": "Rabbocco del liquido lavavetri"
+    },
+    {
+        "text": "Rabbocco del liquido dei freni"
+    },
+    {
+        "text": "Tutto quanto"
+    },
+    {
+        "text": "Scegli un motivo"
+    },
+    {
+        "text": "Sono interessato a un veicolo"
+    },
+    {
+        "text": "Desidero vendere il mio veicolo"
+    },
+    {
+        "text": "Scegli un orario"
+    },
+    {
+        "text": "Siamo chiusi la domenica,"
+    },
+    {
+        "text": "ti preghiamo di scegliere un’altra data!"
+    },
+    {
+        "text": "Siamo chiusi a quest’ora del giorno,"
+    },
+    {
+        "text": "i nostri orari sono disponibili nella pagina iniziale!"
+    },
+    {
+        "text": "Hai scelto un orario a 20 min dalla chiusura,"
+    },
+    {
+        "text": "ti preghiamo di prenotare prima!"
+    },
+    {
+        "text": "Conferma"
+    },
+
+    {
+        "text": "Segui le nostre ultime novità!"
+    },
+
+    {
+        "text": "Hai bisogno di aiuto?"
+    },
+    {
+        "text": "Contattaci"
+    },
+    {
+        "text": "Puoi contattarci ai seguenti recapiti:"
+    },
+    {
+        "text": "legaragedesteve@gmail.com"
+    },
+    {
+        "text": "07 54 05 77 66"
+    },
+    {
+        "text": "Domande frequenti"
+    },
+    {
+        "text": "Le auto sono coperte da garanzia?"
+    },
+    {
+        "text": "Tutti i nostri veicoli sono garantiti per due anni al momento dell’acquisto."
+    },
+    {
+        "text": "Quali metodi di pagamento sono accettati?"
+    },
+    {
+        "text": "Accettiamo pagamenti in contanti e con carta bancaria."
+    },
+    {
+        "text": "Gli assegni non sono accettati a causa di problemi riscontrati in passato."
+    },
+    {
+        "text": "Come si può essere informati di eventuali variazioni impreviste degli orari?"
+    },
+    {
+        "text": "In caso di problemi, pubblichiamo un avviso sulla nostra pagina Facebook."
+    },
+    {
+        "text": " Assistenza per persone ipoacusiche e sorde"
+    },
+    {
+        "text": "Conosco la lingua dei segni francese (LSF), poiché mia figlia è ipoudente dalla nascita. Puoi quindi venire in officina senza problemi e senza interprete: tutti sono i benvenuti e riusciremo a comunicare molto bene insieme!"
+    },
+    {
+        "text": "Segnala un problema"
+    },
+    {
+        "text": "Puoi contattarmi via e-mail ai seguenti "
+    },
+    {
+        "text": "recapiti."
+    },
+    {
+        "text": "Richiedi un preventivo"
+    },
+    {
+        "text": "I preventivi vengono inviati automaticamente via e-mail a ogni prenotazione effettuata sul nostro sito. Inoltre, vengono stampati e consegnati a mano prima di ogni riparazione o acquisto di un veicolo. In caso di smarrimento, ti basta controllare la tua e-mail!"
+    },
+
+    {
+        "text": "Scopri di più"
+    },
+    {
+        "text": "Note legali"
+    },
+    {
+        "text": "Titolare del sito: Il Garage di Steve"
+    },
+    {
+        "text": "Indirizzo: 17 rue du cube, Condé-sur-l’Escaut 59163"
+    },
+    {
+        "text": "E-mail: legaragedesteve@gmail.com"
+    },
+    {
+        "text": "Telefono: 07 54 05 77 66"
+    },
+    {
+        "text": "Numero SIRET: 000 000 000 00000"
+    },
+    {
+        "text": "Ideatore del sito: Wissem H."
+    },
+    {
+        "text": "Hosting del sito: Netlify"
+    },
+    {
+        "text": "I nostri impegni"
+    },
+    {
+        "text": "Al Garage di Steve, qualità e fiducia sono i pilastri dei miei valori. Mi impegno a:"
+    },
+    {
+        "text": "Non addebitare mai costi aggiuntivi senza aver ottenuto prima il tuo consenso."
+    },
+    {
+        "text": "Utilizzare pezzi di ricambio di qualità e garantiti."
+    },
+    {
+        "text": "Rispettare i tempi comunicati al momento della consegna del veicolo."
+    },
+    {
+        "text": "Riciclare, per quanto possibile, l’olio esausto e i pezzi difettosi nel rispetto dell’ambiente."
+    },
+    {
+        "text": "Cookie e privacy"
+    },
+    {
+        "text": "Questo sito utilizza solo lo stretto necessario. Gli unici cookie che installiamo servono al corretto funzionamento del sito, in particolare del sistema di prenotazione online. Non ci sono pubblicità e quindi nemmeno tracciamento pubblicitario: sei qui per la tua auto, non per essere sorvegliato!"
+    },
+    {
+        "text": "Termini e condizioni"
+    },
+    {
+        "text": "I nostri preventivi sono gratuiti e validi per 30 giorni dalla data di emissione. Ogni riparazione richiede la firma preventiva del preventivo. Potrebbe esserti richiesto un acconto per ordinare pezzi specifici. Per i veicoli non ritirati entro 15 giorni dalla fine dei lavori potranno essere applicate spese di custodia."
+    },
+    {
+        "text": "Informativa sulla privacy"
+    },
+    {
+        "text": "Le informazioni che ci fornisci vengono utilizzate esclusivamente per la gestione dei tuoi appuntamenti, l’invio dei preventivi e la fatturazione. Restano strettamente riservate tra te e il Garage di Steve e non saranno mai rivendute né cedute a terzi."
+    },
+    {
+        "text": "Accessibilità"
+    },
+    {
+        "text": "L’officina è stata attrezzata per accogliere tutti nelle migliori condizioni. L’ingresso, la reception e l’ufficio sono privi di gradini, per essere completamente accessibili alle persone con mobilità ridotta e a chi utilizza una sedia a rotelle. Inoltre, come indicato nella sezione di assistenza, comunico correntemente nella lingua dei segni francese; le persone con problemi di udito sono quindi, naturalmente, le benvenute."
+    },
+
+    {
+        "text": "Vieni a ricevere assistenza in tutta tranquillità. Esperto dal 2009, le mie recensioni su Google Maps parlano da sole. Qui ogni gioiello viene trattato con cura e sì, mi riferisco proprio ai veicoli."
+    },
+    {
+        "text": "17 rue du cube, Condé-sur-l’Escaut 59163"
+    },
+    {
+        "text": "Hai bisogno di aiuto?"
+    },
+    {
+        "text": "Contattaci"
+    },
+    {
+        "text": "Domande frequenti"
+    },
+    {
+        "text": " Assistenza per persone ipoacusiche/sorde"
+    },
+    {
+        "text": "Segnala un problema"
+    },
+    {
+        "text": "Richiedi un preventivo"
+    },
+    {
+        "text": "Scopri di più"
+    },
+    {
+        "text": "Note legali"
+    },
+    {
+        "text": "I nostri impegni"
+    },
+    {
+        "text": "Cookie e privacy"
+    },
+    {
+        "text": "Termini e condizioni"
+    },
+    {
+        "text": "Informativa sulla privacy"
+    },
+    {
+        "text": "Accessibilità"
+    },
+    {
+        "text": "Seguici"
+    },
+    {
+        "text":"Cerca un modello"
     }
 ]

@@ -1,17 +1,576 @@
 [
     {
-        "text":"Home"
+        "text": "Home"
     },
     {
-        "text":"Our Cars"
+        "text": "Our Cars"
     },
     {
-        "text":"Steve's Garage"
+        "text": "Steve's Garage"
     },
     {
-        "text":"Appointments"
+        "text": "Appointments"
     },
     {
-        "text":"News"
+        "text": "News"
+    },
+
+    {
+        "text": "Steve's Garage"
+    },
+    {
+        "text": "Quality service!"
+    },
+    {
+        "text": "Need a helping tyre?"
+    },
+    {
+        "text": "A repair?"
+    },
+    {
+        "text": "Book a repair appointment"
+    },
+    {
+        "text": "Bodywork damage"
+    },
+    {
+        "text": "Engine failure"
+    },
+    {
+        "text": "Faulty dashboard warning lights"
+    },
+    {
+        "text": "Damaged clutch"
+    },
+    {
+        "text": "Other.."
+    },
+    {
+        "text": "The price depends on the severity of the damage"
+    },
+    {
+        "text": "A fluid top-up?"
+    },
+    {
+        "text": "Choose a car wash package."
+    },
+    {
+        "text": "Basic wash "
+    },
+    {
+        "text": "2€"
+    },
+    {
+        "text": "Intermediate wash "
+    },
+    {
+        "text": "8€"
+    },
+    {
+        "text": "Full wash "
+    },
+    {
+        "text": "20€"
+    },
+    {
+        "text": "Interior + exterior wash "
+    },
+    {
+        "text": "35€"
+    },
+    {
+        "text": "Need to top up your car’s fluids?"
+    },
+    {
+        "text": "Come and get your car’s fluid levels topped up!"
+    },
+    {
+        "text": "Oil top-up"
+    },
+    {
+        "text": "Battery charging"
+    },
+    {
+        "text": "Windscreen washer fluid top-up"
+    },
+    {
+        "text": "Brake fluid top-up"
+    },
+    {
+        "text": "All of the above"
+    },
+    {
+        "text": "The price depends on the amount needed,"
+    },
+    {
+        "text": "the check is free of charge."
+    },
+    {
+        "text": "Our latest acquisitions"
+    },
+    {
+        "text": "Condition: "
+    },
+    {
+        "text": "€"
+    },
+    {
+        "text": "Find your car!"
+    },
+    {
+        "text": "Make: "
+    },
+    {
+        "text": "Model: "
+    },
+    {
+        "text": "Price: "
+    },
+    {
+        "text": "Max. mileage:"
+    },
+    {
+        "text": "Search ("
+    },
+    {
+        "text": " results)"
+    },
+    {
+        "text": "More filters are available here."
+    },
+    {
+        "text": "Well-known in Condé-sur-l'Escaut for the high quality of my services and affordable prices, I have been running this garage for many years. Unlike large chains, where management cannot know every employee, I personally inspect every car before offering it for sale, and each vehicle comes with a two-year warranty. For repairs, all the necessary equipment and most spare parts are already available. You can also count on me for a top-notch car wash or a fluid top-up. Steve's Garage is here for you!"
+    },
+    {
+        "text": "17 Rue du cube"
+    },
+    {
+        "text": "Condé-sur-l'Escaut (59163)"
+    },
+    {
+        "text": "Opening hours:"
+    },
+    {
+        "text": "Monday: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Tuesday: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Wednesday: 8:00-12:00"
+    },
+    {
+        "text": "Thursday: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Friday: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Saturday: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Closed on Sundays"
+    },
+
+    {
+        "text": "Welcome to our car sales section!"
+    },
+    {
+        "text": "Here, you can browse the vehicles currently available and"
+    },
+    {
+        "text": "book an appointment to inspect them in person."
+    },
+    {
+        "text": "Happy browsing!"
+    },
+    {
+        "text": "Max. price"
+    },
+    {
+        "text": "Max. mileage"
+    },
+    {
+        "text": " km"
+    },
+    {
+        "text": "Fuel type:"
+    },
+    {
+        "text": "All"
+    },
+    {
+        "text": "Petrol"
+    },
+    {
+        "text": "Diesel"
+    },
+    {
+        "text": "Electric"
+    },
+    {
+        "text": "Transmission type:"
+    },
+    {
+        "text": "All"
+    },
+    {
+        "text": "Manual"
+    },
+    {
+        "text": "Automatic"
+    },
+    {
+        "text": "Colour:"
+    },
+    {
+        "text": "Black"
+    },
+    {
+        "text": "White"
+    },
+    {
+        "text": "Grey"
+    },
+    {
+        "text": "Red"
+    },
+    {
+        "text": "Blue"
+    },
+    {
+        "text": "Yellow"
+    },
+    {
+        "text": "No results were found!"
+    },
+    {
+        "text": "Please adjust your search criteria."
+    },
+    {
+        "text": "Show more"
+    },
+    {
+        "text": " seats"
+    },
+    {
+        "text": " doors"
+    },
+    {
+        "text": "Tax horsepower: "
+    },
+    {
+        "text": " hp"
+    },
+    {
+        "text": "DIN horsepower: "
+    },
+    {
+        "text": " hp"
+    },
+    {
+        "text": "Colour: "
+    },
+    {
+        "text": "Show less"
+    },
+    
+    {
+        "text": "Book an appointment!"
+    },
+    {
+        "text": "Choose a date"
+    },
+    {
+        "text": "What brings you in?"
+    },
+    {
+        "text": "Choose a reason"
+    },
+    {
+        "text": "Repair a vehicle"
+    },
+    {
+        "text": "Have a car wash"
+    },
+    {
+        "text": "Top up my car’s fluids"
+    },
+    {
+        "text": "Buying/Selling a car"
+    },
+    {
+        "text": "Choose a service type"
+    },
+    {
+        "text": "Choose a repair"
+    },
+    {
+        "text": "Bodywork damage"
+    },
+    {
+        "text": "Engine failure"
+    },
+    {
+        "text": "Faulty dashboard warning lights"
+    },
+    {
+        "text": "Damaged clutch"
+    },
+    {
+        "text": "Other.."
+    },
+    {
+        "text": "Choose a car wash package"
+    },
+    {
+        "text": "Basic wash - Rinse (2€)"
+    },
+    {
+        "text": "Intermediate wash (8€)"
+    },
+    {
+        "text": "Full wash (20€)"
+    },
+    {
+        "text": "Interior + exterior wash (35€)"
+    },
+    {
+        "text": "Choose an item"
+    },
+    {
+        "text": "Oil top-up"
+    },
+    {
+        "text": "Battery charging"
+    },
+    {
+        "text": "Windscreen washer fluid top-up"
+    },
+    {
+        "text": "Brake fluid top-up"
+    },
+    {
+        "text": "All of the above"
+    },
+    {
+        "text": "Choose a reason"
+    },
+    {
+        "text": "I am interested in a vehicle"
+    },
+    {
+        "text": "I would like to sell my vehicle"
+    },
+    {
+        "text": "Choose a time"
+    },
+    {
+        "text": "We are closed on Sundays,"
+    },
+    {
+        "text": "please choose another date!"
+    },
+    {
+        "text": "We are closed at this time of day,"
+    },
+    {
+        "text": "our opening hours are available on the homepage!"
+    },
+    {
+        "text": "You have selected a time less than 20 minutes before closing,"
+    },
+    {
+        "text": "please book an earlier appointment!"
+    },
+    {
+        "text": "Confirm"
+    },
+
+    {
+        "text": "Follow our latest updates!"
+    },
+
+    {
+        "text": "Need help?"
+    },
+    {
+        "text": "Contact us"
+    },
+    {
+        "text": "You can reach us using the following contact details:"
+    },
+    {
+        "text": "legaragedesteve@gmail.com"
+    },
+    {
+        "text": "07 54 05 77 66"
+    },
+    {
+        "text": "Frequently asked questions"
+    },
+    {
+        "text": "Do the cars come with a warranty?"
+    },
+    {
+        "text": "All our vehicles come with a two-year warranty from the date of purchase."
+    },
+    {
+        "text": "Which payment methods do you accept?"
+    },
+    {
+        "text": "We accept cash and card payments."
+    },
+    {
+        "text": "Cheques are not accepted due to problems we have experienced in the past."
+    },
+    {
+        "text": "How can we be notified of unexpected changes to opening hours?"
+    },
+    {
+        "text": "In the event of a problem, an announcement will be posted on our Facebook page."
+    },
+    {
+        "text": " Support for deaf and hard-of-hearing visitors"
+    },
+    {
+        "text": "I am fluent in French Sign Language (LSF), as my daughter has been hard of hearing since birth. You can therefore visit the garage without any worries and without an interpreter. Everyone is welcome, and we will be able to communicate easily!"
+    },
+    {
+        "text": "Report a problem"
+    },
+    {
+        "text": "You can contact me by email using the following "
+    },
+    {
+        "text": "contact details."
+    },
+    {
+        "text": "Request a quote"
+    },
+    {
+        "text": "Quotes are automatically sent by email whenever you book an appointment on our website. They are also printed and handed to you in person before any repair or vehicle purchase. If you lose yours, simply check your emails!"
+    },
+
+    {
+        "text": "Learn more"
+    },
+    {
+        "text": "Legal notice"
+    },
+    {
+        "text": "Website publisher: Steve’s Garage"
+    },
+    {
+        "text": "Address: 17 rue du cube, Condé-sur-l'Escaut 59163"
+    },
+    {
+        "text": "Email: legaragedesteve@gmail.com"
+    },
+    {
+        "text": "Phone: 07 54 05 77 66"
+    },
+    {
+        "text": "SIRET number: 000 000 000 00000"
+    },
+    {
+        "text": "Website designer: Wissem H."
+    },
+    {
+        "text": "Website hosting: Netlify"
+    },
+    {
+        "text": "Our commitments"
+    },
+    {
+        "text": "At Steve's Garage, quality and trust are the cornerstones of my values. I commit to:"
+    },
+    {
+        "text": "Never charging any additional fees without prior approval."
+    },
+    {
+        "text": "Using high-quality replacement parts that come with a warranty."
+    },
+    {
+        "text": "Meeting the deadlines agreed upon when you drop off your vehicle."
+    },
+    {
+        "text": "Recycling used oil and defective parts in an environmentally friendly way, whenever possible."
+    },
+    {
+        "text": "Cookies and privacy"
+    },
+    {
+        "text": "This website uses as few cookies as possible. The only cookies we use are essential to the proper functioning of the site, particularly the online appointment booking system. There are no ads, and therefore no advertising tracking: you're here for your car, not to be tracked!"
+    },
+    {
+        "text": "Terms and conditions"
+    },
+    {
+        "text": "Our quotes are free and valid for 30 days from the date they are issued. All repairs require the quote to be signed in advance. A deposit may be requested when ordering specific parts. Vehicles not collected within 15 days of the work being completed may incur storage fees."
+    },
+    {
+        "text": "Privacy policy"
+    },
+    {
+        "text": "The information you provide is used solely to manage your appointments, send your quotes and handle billing. It remains strictly between you and Steve's Garage and will never be resold or shared with third parties."
+    },
+    {
+        "text": "Accessibility"
+    },
+    {
+        "text": "The garage has been fitted out to welcome everyone in the best possible conditions. The entrance, reception area and office are all on one level, making them fully accessible to people with reduced mobility and wheelchair users. Also, as mentioned in the help section, I am fluent in French Sign Language, so visitors who are hard of hearing are, of course, very welcome."
+    },
+
+    {
+        "text": "Come and get help with complete peace of mind. An expert since 2009, I let my Google Maps reviews speak for themselves. Every beauty gets special care here – and yes, I am talking about cars."
+    },
+    {
+        "text": "17 rue du cube, Condé-sur-l'Escaut 59163"
+    },
+    {
+        "text": "Need help?"
+    },
+    {
+        "text": "Contact us"
+    },
+    {
+        "text": "Frequently asked questions"
+    },
+    {
+        "text": " Support for deaf and hard-of-hearing visitors"
+    },
+    {
+        "text": "Report a problem"
+    },
+    {
+        "text": "Request a quote"
+    },
+    {
+        "text": "Learn more"
+    },
+    {
+        "text": "Legal notice"
+    },
+    {
+        "text": "Our commitments"
+    },
+    {
+        "text": "Cookies and privacy"
+    },
+    {
+        "text": "Terms and conditions"
+    },
+    {
+        "text": "Privacy policy"
+    },
+    {
+        "text": "Accessibility"
+    },
+    {
+        "text": "Follow us"
+    },
+    {
+        "text":"Search for a model"
     }
 ]

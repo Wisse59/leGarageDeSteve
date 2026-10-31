@@ -1,17 +1,576 @@
 [
     {
-        "text":"Accueil"
+        "text": "Inicio"
     },
     {
-        "text":"Nos Voitures"
+        "text": "Nuestros coches"
     },
     {
-        "text":"Le Garage de Steve"
+        "text": "El Taller de Steve"
     },
     {
-        "text":"Prendre RDV"
+        "text": "Pedir cita"
     },
     {
-        "text":"Actus"
+        "text": "Noticias"
+    },
+
+    {
+        "text": "El Taller de Steve"
+    },
+    {
+        "text": "¡Servicios de calidad!"
+    },
+    {
+        "text": "¿Necesitas un empujoncito?"
+    },
+    {
+        "text": "¿Una reparación?"
+    },
+    {
+        "text": "Pedir cita para una reparación"
+    },
+    {
+        "text": "Problema de carrocería"
+    },
+    {
+        "text": "Avería del motor"
+    },
+    {
+        "text": "Testigos del salpicadero defectuosos"
+    },
+    {
+        "text": "Embrague dañado"
+    },
+    {
+        "text": "Otro.."
+    },
+    {
+        "text": "El precio depende de la gravedad de los daños"
+    },
+    {
+        "text": "¿Un lavado?"
+    },
+    {
+        "text": "Elige un paquete de lavado."
+    },
+    {
+        "text": "Servicio básico "
+    },
+    {
+        "text": "2€"
+    },
+    {
+        "text": "Servicio intermedio "
+    },
+    {
+        "text": "8€"
+    },
+    {
+        "text": "Servicio completo "
+    },
+    {
+        "text": "20€"
+    },
+    {
+        "text": "Servicio interior + exterior "
+    },
+    {
+        "text": "35€"
+    },
+    {
+        "text": "¿Poner tu coche a punto?"
+    },
+    {
+        "text": "¡Ven a poner tu coche a punto!"
+    },
+    {
+        "text": "Rellenado de aceite"
+    },
+    {
+        "text": "Recarga de batería"
+    },
+    {
+        "text": "Rellenado del líquido limpiaparabrisas"
+    },
+    {
+        "text": "Rellenado del líquido de frenos"
+    },
+    {
+        "text": "El servicio completo"
+    },
+    {
+        "text": "El precio depende de la cantidad que haya que añadir,"
+    },
+    {
+        "text": "la revisión es gratuita."
+    },
+    {
+        "text": "Nuestras últimas incorporaciones"
+    },
+    {
+        "text": "Estado: "
+    },
+    {
+        "text": "€"
+    },
+    {
+        "text": "¡Encuentra tu coche!"
+    },
+    {
+        "text": "Marca: "
+    },
+    {
+        "text": "Modelo: "
+    },
+    {
+        "text": "Precio: "
+    },
+    {
+        "text": "Km máx.:"
+    },
+    {
+        "text": "Buscar ("
+    },
+    {
+        "text": " resultados)"
+    },
+    {
+        "text": "Más criterios disponibles aquí."
+    },
+    {
+        "text": "Conocido en Condé-sur-l’Escaut por la gran calidad de mis servicios y mis precios asequibles, llevo muchos años al frente de este taller. A diferencia de las empresas con numerosas sucursales que se expanden sin conocer a todos sus empleados, yo mismo reviso cada coche antes de ponerlo a la venta, y todos cuentan con una garantía de dos años. Para las reparaciones, ya dispongo de todo el equipo y de la mayoría de las piezas de repuesto. También puedes confiar en mí para un lavado impecable o para poner tu coche a punto. ¡El Taller de Steve está a tu servicio!"
+    },
+    {
+        "text": "17 Rue du cube"
+    },
+    {
+        "text": "Condé-sur-l’Escaut (59163)"
+    },
+    {
+        "text": "Horario:"
+    },
+    {
+        "text": "Lunes: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Martes: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Miércoles: 8:00-12:00"
+    },
+    {
+        "text": "Jueves: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Viernes: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Sábado: 8:00-12:30 14:00-17:30"
+    },
+    {
+        "text": "Cerrado los domingos"
+    },
+
+    {
+        "text": "¡Te damos la bienvenida a la sección de venta de nuestros coches!"
+    },
+    {
+        "text": "Aquí puedes ver los vehículos disponibles para"
+    },
+    {
+        "text": "pedir cita y comprobar su estado en persona."
+    },
+    {
+        "text": "¡Buena búsqueda!"
+    },
+    {
+        "text": "Precio máx."
+    },
+    {
+        "text": "Km máx."
+    },
+    {
+        "text": " km"
+    },
+    {
+        "text": "Tipo de combustible:"
+    },
+    {
+        "text": "Todos"
+    },
+    {
+        "text": "Gasolina"
+    },
+    {
+        "text": "Diésel"
+    },
+    {
+        "text": "Eléctrico"
+    },
+    {
+        "text": "Caja de cambios:"
+    },
+    {
+        "text": "Todas"
+    },
+    {
+        "text": "Manual"
+    },
+    {
+        "text": "Automática"
+    },
+    {
+        "text": "Color:"
+    },
+    {
+        "text": "Negro"
+    },
+    {
+        "text": "Blanco"
+    },
+    {
+        "text": "Gris"
+    },
+    {
+        "text": "Rojo"
+    },
+    {
+        "text": "Azul"
+    },
+    {
+        "text": "Amarillo"
+    },
+    {
+        "text": "¡No se ha encontrado ningún resultado!"
+    },
+    {
+        "text": "Revisa los criterios de búsqueda."
+    },
+    {
+        "text": "Ver más"
+    },
+    {
+        "text": " plazas"
+    },
+    {
+        "text": " puertas"
+    },
+    {
+        "text": "Potencia fiscal: "
+    },
+    {
+        "text": " CV"
+    },
+    {
+        "text": "Potencia DIN: "
+    },
+    {
+        "text": " CV"
+    },
+    {
+        "text": "Color: "
+    },
+    {
+        "text": "Ver menos"
+    },
+
+    {
+        "text": "¡Pide cita!"
+    },
+    {
+        "text": "Elige una fecha"
+    },
+    {
+        "text": "¿Cuál es el motivo de tu visita?"
+    },
+    {
+        "text": "Elige un motivo"
+    },
+    {
+        "text": "Reparar un vehículo"
+    },
+    {
+        "text": "Lavar el coche"
+    },
+    {
+        "text": "Poner mi coche a punto"
+    },
+    {
+        "text": "Compra/Venta de coches"
+    },
+    {
+        "text": "Elige un tipo de servicio"
+    },
+    {
+        "text": "Elige una reparación"
+    },
+    {
+        "text": "Problema de carrocería"
+    },
+    {
+        "text": "Avería del motor"
+    },
+    {
+        "text": "Testigos del salpicadero defectuosos"
+    },
+    {
+        "text": "Embrague dañado"
+    },
+    {
+        "text": "Otro.."
+    },
+    {
+        "text": "Elige un lavado"
+    },
+    {
+        "text": "Servicio básico - Aclarado (2€)"
+    },
+    {
+        "text": "Servicio intermedio (8€)"
+    },
+    {
+        "text": "Servicio completo (20€)"
+    },
+    {
+        "text": "Servicio interior + exterior (35€)"
+    },
+    {
+        "text": "Elige un elemento"
+    },
+    {
+        "text": "Rellenado de aceite"
+    },
+    {
+        "text": "Recarga de batería"
+    },
+    {
+        "text": "Rellenado del líquido limpiaparabrisas"
+    },
+    {
+        "text": "Rellenado del líquido de frenos"
+    },
+    {
+        "text": "El servicio completo"
+    },
+    {
+        "text": "Elige un motivo"
+    },
+    {
+        "text": "Me interesa un vehículo"
+    },
+    {
+        "text": "Quiero vender mi vehículo"
+    },
+    {
+        "text": "Elige una hora"
+    },
+    {
+        "text": "Cerramos los domingos,"
+    },
+    {
+        "text": "¡Gracias por elegir otra fecha!"
+    },
+    {
+        "text": "Estamos cerrados a esa hora del día,"
+    },
+    {
+        "text": "¡puedes consultar nuestro horario en la página de inicio!"
+    },
+    {
+        "text": "Has elegido una hora situada a 20 minutos del cierre,"
+    },
+    {
+        "text": "¡te rogamos que pidas cita más temprano!"
+    },
+    {
+        "text": "Confirmar"
+    },
+
+    {
+        "text": "¡Sigue nuestras últimas novedades!"
+    },
+
+    {
+        "text": "¿Necesitas ayuda?"
+    },
+    {
+        "text": "Contactar con nosotros"
+    },
+    {
+        "text": "Puedes contactar con nosotros a través de los siguientes datos:"
+    },
+    {
+        "text": "legaragedesteve@gmail.com"
+    },
+    {
+        "text": "07 54 05 77 66"
+    },
+    {
+        "text": "Preguntas frecuentes"
+    },
+    {
+        "text": "¿Tienen garantía los coches?"
+    },
+    {
+        "text": "Todos nuestros vehículos tienen una garantía de dos años desde la compra."
+    },
+    {
+        "text": "¿Qué métodos de pago se aceptan?"
+    },
+    {
+        "text": "Aceptamos pagos en efectivo y con tarjeta bancaria."
+    },
+    {
+        "text": "No aceptamos cheques debido a problemas que hemos tenido en el pasado."
+    },
+    {
+        "text": "¿Cómo podemos estar al tanto de los cambios imprevistos en el horario?"
+    },
+    {
+        "text": "En caso de algún imprevisto, publicamos un aviso en nuestra página de Facebook."
+    },
+    {
+        "text": " Asistencia para personas con discapacidad auditiva y sordera"
+    },
+    {
+        "text": "Domino la lengua de signos francesa (LSF), ya que mi hija tiene discapacidad auditiva desde su nacimiento. Por eso, puedes venir al taller sin ningún problema y sin necesidad de intérprete. ¡Todo el mundo es bienvenido y podremos comunicarnos perfectamente!"
+    },
+    {
+        "text": "Informar de un problema"
+    },
+    {
+        "text": "Puedes ponerte en contacto conmigo por correo electrónico a través de los "
+    },
+    {
+        "text": "siguientes datos."
+    },
+    {
+        "text": "Solicitar un presupuesto"
+    },
+    {
+        "text": "Los presupuestos se envían automáticamente por correo electrónico cada vez que se pide cita en nuestra página web. También se imprimen y se entregan en mano antes de cada reparación o compra de un vehículo. Si lo pierdes, ¡solo tienes que consultar tu correo electrónico!"
+    },
+
+    {
+        "text": "Más información"
+    },
+    {
+        "text": "Aviso legal"
+    },
+    {
+        "text": "Responsable del sitio web: El Taller de Steve"
+    },
+    {
+        "text": "Dirección: 17 rue du cube, Condé-sur-l’Escaut 59163"
+    },
+    {
+        "text": "Correo electrónico: legaragedesteve@gmail.com"
+    },
+    {
+        "text": "Teléfono: 07 54 05 77 66"
+    },
+    {
+        "text": "Número SIRET: 000 000 000 00000"
+    },
+    {
+        "text": "Diseñador del sitio web: Wissem H."
+    },
+    {
+        "text": "Alojamiento web: Netlify"
+    },
+    {
+        "text": "Nuestros compromisos"
+    },
+    {
+        "text": "En el Taller de Steve, la calidad y la confianza son los pilares de mis valores. Me comprometo a:"
+    },
+    {
+        "text": "No realizar nunca gastos adicionales sin autorización previa."
+    },
+    {
+        "text": "Utilizar piezas de repuesto de calidad y con garantía."
+    },
+    {
+        "text": "Respetar los plazos indicados cuando dejes tu vehículo en el taller."
+    },
+    {
+        "text": "Reciclar el aceite usado y las piezas defectuosas respetando el medioambiente, siempre que sea posible."
+    },
+    {
+        "text": "Cookies y privacidad"
+    },
+    {
+        "text": "Este sitio utiliza lo estrictamente necesario. Las únicas cookies que instalamos sirven para el correcto funcionamiento de la página, especialmente para el sistema de reserva de citas en línea. No hay anuncios ni, por tanto, seguimiento publicitario: ¡estás aquí por tu coche, no para que te rastreen!"
+    },
+    {
+        "text": "Condiciones generales"
+    },
+    {
+        "text": "Nuestros presupuestos son gratuitos y tienen una validez de 30 días a partir de la fecha de emisión. Toda reparación requiere la firma previa del presupuesto. Es posible que te pidamos un anticipo para encargar piezas específicas. Los vehículos que no se recojan en los 15 días posteriores a la finalización de los trabajos podrán estar sujetos a gastos de depósito."
+    },
+    {
+        "text": "Política de privacidad"
+    },
+    {
+        "text": "La información que nos facilitas se utiliza únicamente para gestionar tus citas, enviar tus presupuestos y realizar la facturación. Se mantiene estrictamente entre tú y el Taller de Steve y nunca se venderá ni se cederá a terceros."
+    },
+    {
+        "text": "Accesibilidad"
+    },
+    {
+        "text": "El taller se ha acondicionado para recibir a todo el mundo en las mejores condiciones. La entrada, la recepción y la oficina son totalmente llanas para garantizar el acceso a las personas con movilidad reducida y a quienes utilizan sillas de ruedas. Además, como se indica en la sección de ayuda, me comunico con soltura en lengua de signos francesa, por lo que las personas con discapacidad auditiva también son, por supuesto, bienvenidas."
+    },
+
+    {
+        "text": "Ven a recibir ayuda con total confianza. Experto desde 2009, mis reseñas en Google Maps hablan por sí solas. Aquí, cada joya se trata con mimo, y sí, me refiero a los vehículos."
+    },
+    {
+        "text": "17 rue du cube, Condé-sur-l’Escaut 59163"
+    },
+    {
+        "text": "¿Necesitas ayuda?"
+    },
+    {
+        "text": "Contactar con nosotros"
+    },
+    {
+        "text": "Preguntas frecuentes"
+    },
+    {
+        "text": " Asistencia para personas con discapacidad auditiva/sordera"
+    },
+    {
+        "text": "Informar de un problema"
+    },
+    {
+        "text": "Solicitar un presupuesto"
+    },
+    {
+        "text": "Más información"
+    },
+    {
+        "text": "Aviso legal"
+    },
+    {
+        "text": "Nuestros compromisos"
+    },
+    {
+        "text": "Cookies y privacidad"
+    },
+    {
+        "text": "Condiciones generales"
+    },
+    {
+        "text": "Política de privacidad"
+    },
+    {
+        "text": "Accesibilidad"
+    },
+    {
+        "text": "Síguenos"
+    },
+    {
+        "text":"Buscar un modelo"
     }
 ]

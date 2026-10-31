@@ -16,6 +16,561 @@
     },
 
     {
-        "text":"a"
+        "text":"Le Garage de Steve"
+    },
+    {
+        "text":"Pour des services de qualité !"
+    },
+    {
+        "text":"Besoin d'un coup d'pneu ?"
+    },
+    {
+        "text":"Une réparation ?"
+    },
+    {
+        "text":"Prendre RDV pour une réparation"
+    },
+    {
+        "text":"Problème de carrosserie"
+    },
+    {
+        "text":"Casse moteur"
+    },
+    {
+        "text":"Voyants défectueux"
+    },
+    {
+        "text":"Embrayage endommagé"
+    },
+    {
+        "text":"Autre.."
+    },
+    {
+        "text":"Le prix dépend de la gravité des dégâts"
+    },
+    {
+        "text":"Un lavage ?"
+    },
+    {
+        "text":"Choisissez une formule de lavage."
+    },
+    {
+        "text":"Service minimum "
+    },
+    {
+        "text":"2€"
+    },
+    {
+        "text":"Service intermédiaire "
+    },
+    {
+        "text":"8€"
+    },
+    {
+        "text":"Service total "
+    },
+    {
+        "text":"20€"
+    },
+    {
+        "text":"Service intérieur + extérieur "
+    },
+    {
+        "text":"35€"
+    },
+    {
+        "text":"Une remise d'aplomb ?"
+    },
+    {
+        "text":"Venez remettre d'aplomb votre voiture !"
+    },
+    {
+        "text":"Remise d'huile"
+    },
+    {
+        "text":"Recharge de batterie"
+    },
+    {
+        "text":"Remise de produit à essuie-glace"
+    },
+    {
+        "text":"Remise de liquide de frein"
+    },
+    {
+        "text":"La totale"
+    },
+    {
+        "text":"Le prix dépend de la quantité à ajouter,"
+    },
+    {
+        "text":"la vérification est gratuite."
+    },
+    {
+        "text":"Nos dernières acquisitions"
+    },
+    {
+        "text":"État : "
+    },
+    {
+        "text":"€"
+    },
+    {
+        "text":"Trouvez votre voiture !"
+    },
+    {
+        "text":"Marque : "
+    },
+    {
+        "text":"Modèle : "
+    },
+    {
+        "text":"Prix : "
+    },
+    {
+        "text":"Km max :"
+    },
+    {
+        "text":"Rechercher ("
+    },
+    {
+        "text":" résultats)"
+    },
+    {
+        "text":"Plus de critères disponibles ici."
+    },
+    {
+        "text":"Réputé à Condé-sur-l'Escaut pour mes services de très bonne qualité et mes prix abordables, je m'occupe de ce garage depuis de nombreuses années. À la différence des entreprises aux nombreuses agences qui s'étalent sans connaître tous leurs employés, je vérifie moi-même chaque voiture avant de vous les proposer à la vente, chacune étant garantie deux ans. Pour les réparations, tout le matériel et la plupart des pièces de rechange sont d'ores et déjà à disposition. Faites-moi également confiance pour un lavage au top ou une remise à plomb. Le Garage de Steve est là pour vous !"
+    },
+    {
+        "text":"17 Rue du cube"
+    },
+    {
+        "text":"Condé-sur-l'Escaut (59163)"
+    },
+    {
+        "text":"Horaires :"
+    },
+    {
+        "text":"Lundi : 8h00-12h30 14h00-17h30"
+    },
+    {
+        "text":"Mardi : 8h00-12h30 14h00-17h30"
+    },
+    {
+        "text":"Mercredi : 8h00-12h"
+    },
+    {
+        "text":"Jeudi : 8h00-12h30 14h00-17h30"
+    },
+    {
+        "text":"Vendredi : 8h00-12h30 14h00-17h30"
+    },
+    {
+        "text":"Samedi : 8h00-12h30 14h00-17h30"
+    },
+    {
+        "text":"Fermé le dimanche"
+    },
+
+    {
+        "text":"Bienvenue dans la section de vente de nos voitures !"
+    },
+    {
+        "text":"Ici, vous pouvez voir les véhicules disponibles afin de"
+    },
+    {
+        "text":"prendre rendez-vous pour vérifier leur état en personne."
+    },
+    {
+        "text":"Bonne recherche !"
+    },
+    {
+        "text":"Prix max"
+    },
+    {
+        "text":"Km max"
+    },
+    {
+        "text":" km"
+    },
+    {
+        "text":"Type de carburant :"
+    },
+    {
+        "text":"Tous"
+    },
+    {
+        "text":"Essence"
+    },
+    {
+        "text":"Diesel"
+    },
+    {
+        "text":"Électrique"
+    },
+    {
+        "text":"Boite à vitesse :"
+    },
+    {
+        "text":"Toutes"
+    },
+    {
+        "text":"Manuelle"
+    },
+    {
+        "text":"Automatique"
+    },
+    {
+        "text":"Couleur :"
+    },
+    {
+        "text":"Noire"
+    },
+    {
+        "text":"Blanche"
+    },
+    {
+        "text":"Grise"
+    },
+    {
+        "text":"Rouge"
+    },
+    {
+        "text":"Bleue"
+    },
+    {
+        "text":"Jaune"
+    },
+    {
+        "text":"Aucun résultat n'a été trouvé !"
+    },
+    {
+        "text":"Veuillez revoir les critères."
+    },
+    {
+        "text":"Voir plus"
+    },
+    {
+        "text":" places"
+    },
+    {
+        "text":" portes"
+    },
+    {
+        "text":"Puissance fiscale : "
+    },
+    {
+        "text":" CV"
+    },
+    {
+        "text":"Puissance DIN : "
+    },
+    {
+        "text":" CH"
+    },
+    {
+        "text":"Couleur : "
+    },
+    {
+        "text":"Voir moins"
+    },
+
+    {
+        "text":"Prenez un rendez-vous !"
+    },
+    {
+        "text":"Choississez une date"
+    },
+    {
+        "text":"Pour quel motif désirez-vous venir ?"
+    },
+    {
+        "text":"Choississez un motif"
+    },
+    {
+        "text":"Réparer un véhicule"
+    },
+    {
+        "text":"Faire un lavage"
+    },
+    {
+        "text":"Remettre d'aplomb ma voiture"
+    },
+    {
+        "text":"Achat/Vente de voiture"
+    },
+    {
+        "text":"Choississez un type de service"
+    },
+    {
+        "text":"Choississez une réparation"
+    },
+    {
+        "text":"Problème de carrosserie"
+    },
+    {
+        "text":"Casse moteur"
+    },
+    {
+        "text":"Voyants défectueux"
+    },
+    {
+        "text":"Embrayage endommagé"
+    },
+    {
+        "text":"Autre.."
+    },
+    {
+        "text":"Choississez un lavage"
+    },
+    {
+        "text":"Service minimum - Rinçage (2€)"
+    },
+    {
+        "text":"Service intermédiaire (8€)"
+    },
+    {
+        "text":"Service total (20€)"
+    },
+    {
+        "text":"Service intérieur + extérieur (35€)"
+    },
+    {
+        "text":"Choississez un élément"
+    },
+    {
+        "text":"Remise d'huile"
+    },
+    {
+        "text":"Recharge de batterie"
+    },
+    {
+        "text":"Remise de produit à essuie-glace"
+    },
+    {
+        "text":"Remise de liquide de frein"
+    },
+    {
+        "text":"La totale"
+    },
+    {
+        "text":"Choississez un motif"
+    },
+    {
+        "text":"Un véhicule m'intéresse"
+    },
+    {
+        "text":"Je souhaite vendre mon véhicule"
+    },
+    {
+        "text":"Choississez une horaire"
+    },
+    {
+        "text":"Nous sommes fermé le dimanche,"
+    },
+    {
+        "text":"Merci de choisir une autre date !"
+    },
+    {
+        "text":"Nous sommes fermé à cette heure de la journée,"
+    },
+    {
+        "text":"nos horaires sont disponibles à l'accueil !"
+    },
+    {
+        "text":"Vous avez choisi une heure à 20min de la fermeture,"
+    },
+    {
+        "text":"merci de prendre rendez-vous plus tôt !"
+    },
+    {
+        "text":"Valider"
+    },
+
+    {
+        "text":"Suivez nos dernières actualités !"
+    },
+
+    {
+        "text":"Besoin d'aide ?"
+    },
+    {
+        "text":"Nous contacter"
+    },
+    {
+        "text":"Nous sommes joignables aux coordonnées suivantes :"
+    },
+    {
+        "text":"legaragedesteve@gmail.com"
+    },
+    {
+        "text":"07 54 05 77 66"
+    },
+    {
+        "text":"Questions fréquentes"
+    },
+    {
+        "text":"Les voitures possèdent-elles une garantie ?"
+    },
+    {
+        "text":"Tous nos véhicules sont garantis deux ans à l'achat."
+    },
+    {
+        "text":"Quels moyens de paiement sont acceptés ?"
+    },
+    {
+        "text":"Nous acceptons les paiements par liquide et par carte bancaire."
+    },
+    {
+        "text":"Les chèques sont refusés suite à des problèmes rencontrés par le passé."
+    },
+    {
+        "text":"Comment peut-on être prévenus des horaires imprévues ?"
+    },
+    {
+        "text":"En cas de problème, une annonce est faite sur notre page Facebook."
+    },
+    {
+        "text":" Assistance malentendants et surdité"
+    },
+    {
+        "text":"Je maitrise la langue des signes françaises (LSF), ma fille étant malentendante depuis la naissance. Vous pouvez donc venir sans soucis ni interprète au garage, tout le monde est bienvenue, on communiquera très bien ensemble !"
+    },
+    {
+        "text":"Signaler un problème"
+    },
+    {
+        "text":"Vous pouvez me contacter par mail aux "
+    },
+    {
+        "text":"coordonnées suivantes."
+    },
+    {
+        "text":"Demander un devis"
+    },
+    {
+        "text":"Les devis sont envoyés automatiquement par mail à chaque prise de rendez-vous sur notre site et sont également imprimés et donnés en main propre avant chaque reparation ou achat de véhicule. En cas de perte, consultez simplement vos mail !"
+    },
+
+    {
+        "text":"En savoir plus"
+    },
+    {
+        "text":"Mentions légales"
+    },
+    {
+        "text":"Éditeur du site : Le Garage de Steve"
+    },
+    {
+        "text":"Adresse : 17 rue du cube, Condé-sur-l'Escaut 59163"
+    },
+    {
+        "text":"Mail : legaragedesteve@gmail.com"
+    },
+    {
+        "text":"Téléphone : 07 54 05 77 66"
+    },
+    {
+        "text":"Numéro de SIRET : 000 000 000 00000"
+    },
+    {
+        "text":"Concepteur du site : Wissem H."
+    },
+    {
+        "text":"Hébergeur du site : Netlify"
+    },
+    {
+        "text":"Nos engagements"
+    },
+    {
+        "text":"Au garage de Steve, la qualité et la confiance les clés d'or de mes valeurs. Je m'engage à :"
+    },
+    {
+        "text":"Ne jamais engager de frais supplémentaires sans accord préalable."
+    },
+    {
+        "text":"Utiliser des pièces de rechange de qualité et garanties."
+    },
+    {
+        "text":"Respecter les délais annoncés lors du dépôt de votre véhicule."
+    },
+    {
+        "text":"Recycler l'huile usagée et les pièces défectueuses dans le respect de l'environnement, dans la mesure du possible."
+    },
+    {
+        "text":"Cookies et vie privée"
+    },
+    {
+        "text":"Ce site utilise le strict minimum. Les seuls cookies que nous déposons servent au bon fonctionnement du site, notamment pour le système de prise de rendez-vous en ligne. Il n'y a pas de pubs et donc aucun ciblage publicitaire : vous êtes ici pour votre voiture, et non pas pour être traqué !"
+    },
+    {
+        "text":"Conditions générales"
+    },
+    {
+        "text":"Nos devis sont gratuits et valables 30 jours à compter de leur date d'émission. Toute réparation nécessite la signature préalable du devis. Un acompte peut vous être demandé pour la commande de pièces spécifiques. Les véhicules non récupérés 15 jours après la fin des travaux pourront faire l'objet de frais de gardiennage."
+    },
+    {
+        "text":"Politique de confidentialité"
+    },
+    {
+        "text":"Les informations que vous nous confiez servent uniquement à la gestion de vos rendez-vous, l'envoi de vos devis et la facturation. Elles restent strictement entre vous et le garage de Steve et ne seront jamais revendues ou cédées à des tiers."
+    },
+    {
+        "text":"Accessibilité"
+    },
+    {
+        "text":"Le garage a été aménagé pour accueillir tout le monde dans les meilleures conditions. L'entrée, l'accueil et le bureau sont plats afin d'être totalement accessibles aux personnes à mobilité réduite et aux fauteuils roulants. De plus, comme mentionné dans la rubrique d'aide, je communique couramment en langue des signes française, les personnes malentendantes sont alors évidemment bienvenue."
+    },
+    
+    {
+        "text":"Venez recevoir de l'aide en toute confiance. Expert depuis 2009, mes avis Google Maps parlent d'eux-même. Ici, chaque bijou est traité avec soin, et oui je parle bien de véhicules."
+    },
+    {
+        "text":"17 rue du cube, Condé-sur-l'Escaut 59163"
+    },
+    {
+        "text":"Besoin d'aide ?"
+    },
+    {
+        "text":"Nous contacter"
+    },
+    {
+        "text":"Questions fréquentes"
+    },
+    {
+        "text":" Assistance malentendants/surdité"
+    },
+    {
+        "text":"Signaler un problème"
+    },
+    {
+        "text":"Demander un devis"
+    },
+    {
+        "text":"En savoir plus"
+    },
+    {
+        "text":"Mentions légales"
+    },
+    {
+        "text":"Nos engagements"
+    },
+    {
+        "text":"Cookies et vie privée"
+    },
+    {
+        "text":"Conditions générales"
+    },
+    {
+        "text":"Politique de confidentialité"
+    },
+    {
+        "text":"Accessibilité"
+    },
+    {
+        "text":"Nous suivre"
+    },
+    {
+        "text":"Cherchez un modèle"
     }
 ]

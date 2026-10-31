@@ -2,7 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useLocation } from 'react-router-dom';
-import voituresOccasion from "../assets/json/voituresOccasion.json";
+import voituresOccasionFR from "../assets/json/langages/voituresOccasionFR.json";
+import voituresOccasionANG from "../assets/json/langages/voituresOccasionANG.json";
+import voituresOccasionDE from "../assets/json/langages/voituresOccasionDE.json";
+import voituresOccasionESP from "../assets/json/langages/voituresOccasionESP.json";
+import voituresOccasionITA from "../assets/json/langages/voituresOccasionITA.json";
 
 const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPopUp, languesDispo }) => {  
   const recevoir = useLocation();
@@ -15,11 +19,19 @@ const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPo
     carouselEstActif
   } = recevoir.state || {};
 
+  const languesOccas = { //pour la langue de la BDD json
+    FR: voituresOccasionFR,
+    ANG: voituresOccasionANG,
+    DE: voituresOccasionDE,
+    ESP: voituresOccasionESP,
+    ITA: voituresOccasionITA
+  };
+
   //on cree notre propre variable pour utiliser le setter
   const [carouselActif, setCarouselActif] = useState(carouselEstActif ? carouselEstActif : false);
   
   const [noPage, setNoPage] = useState(1);
-  const [noPagesTotal, setNoPagesTotal] = useState(Math.floor((voituresOccasion.length-1)/15)+1);
+  const [noPagesTotal, setNoPagesTotal] = useState(Math.floor((voituresOccasionFR.length-1)/15)+1);
   let debutPage = ((noPage-1)*14 + (noPage-1));
   let finPage = debutPage + 15;
   //1er et dernier id de voiture affiche par page
@@ -70,7 +82,7 @@ const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPo
   }, [noPage]);
 
   const [voirPlusActif, setVoirPlusActif] = useState(
-    Array(voituresOccasion.length).fill(false)
+    Array(voituresOccasionFR.length).fill(false)
   );
   function actionnerUnBouton(i) {
     if (voirPlusActif[i-1] === false) {
@@ -115,10 +127,10 @@ const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPo
   const [carburant, setCarburant] = useState('Tous');
   const [boiteVitesse, setBoiteVitesse] = useState('Toutes');
   const [couleur, setCouleur] = useState('Toutes');
-  const[voituresTriees, setVoituresTriees] = useState(voituresOccasion);
+  const[voituresTriees, setVoituresTriees] = useState(voituresOccasionFR);
   useEffect(() => {        
     setVoituresTriees(
-      voituresOccasion.filter((valeur) =>
+      voituresOccasionFR.filter((valeur) =>
         (valeur.marque+" "+valeur.modele).toLowerCase().includes(recherche.toLowerCase())
         && (valeur.prix <= prix)
         && (valeur.km <= km)
@@ -141,7 +153,7 @@ const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPo
   const [mesValeurs, setMesValeurs] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   function trierPrix() {
     const nouvValeurs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    const voituresTrieesIndepPrix = voituresOccasion.filter((valeur) =>
+    const voituresTrieesIndepPrix = voituresOccasionFR.filter((valeur) =>
         (valeur.marque + " " + valeur.modele).toLowerCase().includes(recherche.toLowerCase())
         && (valeur.km <= km)
         && ((valeur.carburant === carburant) || (carburant === 'Tous'))
@@ -201,20 +213,20 @@ const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPo
             afficherPopUp && (
               <div id='introNosVoitures'>
                 <p onClick={() => setAfficherPopUp(false)}><i className="fa-solid fa-circle-xmark"></i></p>
-                <p>Bienvenue dans la section de vente de nos voitures !</p>
-                <p>Ici, vous pouvez voir les véhicules disponibles afin de</p>
-                <p>prendre rendez-vous pour vérifier leur état en personne.</p>
+                <p>{languesDispo[choixLangue][57].text}</p>
+                <p>{languesDispo[choixLangue][58].text}</p>
+                <p>{languesDispo[choixLangue][59].text}</p>
                 <br/>
-                <p>Bonne recherche !</p>
+                <p>{languesDispo[choixLangue][60].text}</p>
               </div>
             )
             }
           </div>
           <div id="recherchesNosVoitures">
             <form id="conditionsVoiture">
-              <input id="rechercheTxt" type="text" placeholder="Cherchez un modèle" value={recherche} onChange={(e) => setRecherche(e.target.value)}></input>
+              <input id="rechercheTxt" type="text" placeholder={languesDispo[choixLangue][188].text} value={recherche} onChange={(e) => setRecherche(e.target.value)}></input>
               <div id="texteEtPrix">
-                <p>Prix max</p>
+                <p>{languesDispo[choixLangue][61].text}</p>
                 <div id="selectionPrix">
                   {
                     mesPrix.map((valeur, i) =>
@@ -223,45 +235,44 @@ const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPo
                           <rect
                           width="100%" height={mesValeurs[i]} fill={prix === mesPrix[i]? 'rgb(237, 98, 80)' : 'rgb(60, 198, 205)'} />
                         </svg>
-                        <p className="txtSelectionPrix">{valeur}€</p>
+                        <p className="txtSelectionPrix">{valeur}{languesDispo[choixLangue][37].text}</p>
                       </div>
                     )
                   }
                 </div>
               </div>
-              <label htmlFor="voituresKm">Km max</label>
+              <label htmlFor="voituresKm">{languesDispo[choixLangue][62].text}</label>
               <div className="valeurEtDonnee">
                 <input type="range" id="voituresKm" max="500000" min="0" onChange={(e) => setKm(e.target.value)}/>
-                <p>{Number(km).toLocaleString('fr-FR')} km</p>
+                <p>{Number(km).toLocaleString('fr-FR')}{languesDispo[choixLangue][63].text}</p>
               </div> {/*affiche 20 000 au lieu de 20000*/}
               <div className="choixAddContainer">
-                <p>Type de carburant :</p>
+                <p>{languesDispo[choixLangue][64].text}</p>
                 <select className="choixAdditionnels" defaultValue="Tous" onChange={(e) => setCarburant(e.target.value)}>
-                  <option value='Tous'>Tous</option>
-                  <option value='Essence'>Essence</option>
-                  <option value='Diesel'>Diesel</option>
-                  <option value='Électrique'>Électrique</option>
-                  <option value='Hybride'>Hybride</option>
+                  <option value='Tous'>{languesDispo[choixLangue][65].text}</option>
+                  <option value='Essence'>{languesDispo[choixLangue][66].text}</option>
+                  <option value='Diesel'>{languesDispo[choixLangue][67].text}</option>
+                  <option value='Électrique'>{languesDispo[choixLangue][68].text}</option>
                 </select>
               </div>
               <div className="choixAddContainer">
-                <p>Boite à vitesse :</p>
+                <p>{languesDispo[choixLangue][69].text}</p>
                 <select className="choixAdditionnels" defaultValue="Toutes" onChange={(e) => setBoiteVitesse(e.target.value)}>
-                  <option value='Toutes' selected="selected">Toutes</option>
-                  <option value='Manuelle'>Manuelle</option>
-                  <option value='Automatique'>Automatique</option>
+                  <option value='Toutes' selected="selected">{languesDispo[choixLangue][70].text}</option>
+                  <option value='Manuelle'>{languesDispo[choixLangue][71].text}</option>
+                  <option value='Automatique'>{languesDispo[choixLangue][72].text}</option>
                 </select>
               </div>
               <div className="choixAddContainer">
-                <p>Couleur :</p>
+                <p>{languesDispo[choixLangue][73].text}</p>
                 <select className="choixAdditionnels" defaultValue="Toutes" onChange={(e) => setCouleur(e.target.value)}>
-                  <option value='Toutes' selected="selected">Toutes</option>
-                  <option value='Noire'>Noire</option>
-                  <option value='Blanche'>Blanche</option>
-                  <option value='Grise'>Grise</option>
-                  <option value='Rouge'>Rouge</option>
-                  <option value='Bleue'>Bleue</option>
-                  <option value='Jaune'>Jaune</option>
+                  <option value='Toutes' selected="selected">{languesDispo[choixLangue][70].text}</option>
+                  <option value='Noire'>{languesDispo[choixLangue][74].text}</option>
+                  <option value='Blanche'>{languesDispo[choixLangue][75].text}</option>
+                  <option value='Grise'>{languesDispo[choixLangue][76].text}</option>
+                  <option value='Rouge'>{languesDispo[choixLangue][77].text}</option>
+                  <option value='Bleue'>{languesDispo[choixLangue][78].text}</option>
+                  <option value='Jaune'>{languesDispo[choixLangue][79].text}</option>
                 </select>
               </div>
             </form>
@@ -271,37 +282,40 @@ const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPo
               (voituresTriees.length === 0) && (
                 <div id="resultatsVidesContainer">
                   <div id="resultatsVides">
-                    <p>Aucun résultat n'a été trouvé !</p>
-                    <p>Veuillez revoir les critères.</p>
+                    <p>{languesDispo[choixLangue][80].text}</p>
+                    <p>{languesDispo[choixLangue][81].text}</p>
                   </div>
                 </div>
               )
             }
             {
-              voituresTriees.slice(debutPage, finPage).map((valeur) => {
+              voituresTriees.slice(debutPage, finPage).map((v) => {
+                  const valeur = languesOccas[choixLangue].find(
+                      (voiture) => voiture.id === v.id //valeur dans la langue souhaitee
+                  );
                   return (
                     <div className='voiture' id={`voiture-${valeur.id}`} key={valeur.id}>
                       <p>{valeur.marque} {valeur.modele}</p>
                       <img src={valeur.lienImg} alt={`voiture ${valeur.marque} ${valeur.modele}`} />
-                      <p><span>{valeur.prix} €</span></p>
-                      <p>{valeur.km} km</p>
+                      <p><span>{valeur.prix} {languesDispo[choixLangue][37].text}</span></p>
+                      <p>{valeur.km} {languesDispo[choixLangue][63].text}</p>
                       <p>{valeur.carburant}</p>
                       <p>{valeur.boiteVitesse}</p>
                       <p>{valeur.annee}</p>
                       {
                         voirPlusActif[valeur.id-1]===false && (
-                          <button className="boutonVoir" onClick={() => (actionnerUnBouton(valeur.id))}>Voir plus</button>
+                          <button className="boutonVoir" onClick={() => (actionnerUnBouton(valeur.id))}>{languesDispo[choixLangue][82].text}</button>
                         )
                       }
                       {
                         voirPlusActif[valeur.id-1]===true && (
                             <div className="infosSup">
-                              <p>{valeur.nbPlaces} places</p>
-                              <p>{valeur.nbPortes} portes</p>
-                              <p>Puissance fiscale : {valeur.puissFiscale} CV</p>
-                              <p>Puissance DIN : {valeur.puissDIN} CH</p>
-                              <p>Couleur : {valeur.couleur}</p>
-                              <button className="boutonVoir" onClick={() => (actionnerUnBouton(valeur.id))}>Voir moins</button>
+                              <p>{valeur.nbPlaces}{languesDispo[choixLangue][83].text}</p>
+                              <p>{valeur.nbPortes}{languesDispo[choixLangue][84].text}</p>
+                              <p>{languesDispo[choixLangue][85].text}{valeur.puissFiscale}{languesDispo[choixLangue][86].text}</p>
+                              <p>{languesDispo[choixLangue][87].text}{valeur.puissDIN}{languesDispo[choixLangue][88].text}</p>
+                              <p>{languesDispo[choixLangue][89].text}{valeur.couleur}</p>
+                              <button className="boutonVoir" onClick={() => (actionnerUnBouton(valeur.id))}>{languesDispo[choixLangue][90].text}</button>
                             </div>
                         )
                       }
@@ -318,7 +332,7 @@ const NosVoitures = ({ choixLangue, setChoixLangue, afficherPopUp, setAfficherPo
             </ul>
           </div>
         </div>
-        <Footer />
+        <Footer choixLangue={choixLangue} setChoixLangue={setChoixLangue} languesDispo={languesDispo} />
     </div>
   );
 };
